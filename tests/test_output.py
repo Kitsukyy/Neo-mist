@@ -18,7 +18,7 @@ from mist.output import OutputContract, OutputField, load_output_contract
 from mist.safety import OutputGuard
 from mist.schemas import AuditPhase, AuditReason, Sensitivity
 from test_core import RecordingAudit, StubProvider
-from test_nvidia import Connection, Response, SYNTHETIC_KEY, EXAMPLE
+from test_nvidia import Connection, Response, SYNTHETIC_KEY, EXAMPLE, synthetic_gate
 from mist.bootstrap import create_application
 
 
@@ -35,6 +35,11 @@ def app(output):
 
 
 class OutputTests(unittest.TestCase):
+    def setUp(self):
+        gate = patch('mist.nvidia.NVIDIA_REQUEST_GATE', synthetic_gate())
+        gate.start()
+        self.addCleanup(gate.stop)
+
     def test_selected_models_receive_contract_and_invalid_json_never_commits(self):
         for mode, model in [("FAST", "nvidia/nemotron-3-super-120b-a12b"), ("PRIMARY", "moonshotai/kimi-k3")]:
             with self.subTest(mode=mode), tempfile.TemporaryDirectory() as directory:
@@ -48,7 +53,7 @@ class OutputTests(unittest.TestCase):
                 body = json.loads(connection.requests[0][2]["body"])
                 self.assertEqual(body["model"], model)
                 self.assertIn('"name":"answer"', body["messages"][0]["content"])
-                self.assertEqual(body["max_tokens"], 2048)
+                self.assertEqual(body["max_tokens"], 4096)
                 if mode == "FAST":
                     self.assertEqual(body["chat_template_kwargs"], {"enable_thinking": True})
                 else:

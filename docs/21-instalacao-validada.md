@@ -63,3 +63,11 @@ As evidências anteriores `python-3.11.json`, `python-3.14.json`, os dois arquiv
 Esta entrega verifica o limite inferior declarado e a versão 3.14 disponível no ambiente. Python 3.12/3.13, Windows e macOS não foram testados. Não ampliar a conclusão para toda combinação de versão/plataforma nem para instalação sem acesso às dependências.
 
 A pendência de instalação do P0-A foi atendida para os dois ambientes Linux acima. As rodadas comportamentais reais e correções estão no documento 23. Permanecem pendentes as condições de acesso/dados/cotas da conta NVIDIA e a revisão/integração da branch no GitHub. O pacote 0.3.0 não foi publicado em um registro de distribuição.
+
+## Revisão 0.3.1 — controle de requisições NVIDIA
+
+Wheel não editável 0.3.1 instalado nos ambientes Linux/Python 3.11.16 e 3.14.7. Em cada um, os 84 testes passaram importando o pacote instalado em modo isolado, com CLI fora do checkout e smoke offline com rede proibida. Recibos: `validation/installation/python-3.11-v0.3.1.json` e `python-3.14-v0.3.1.json`. A revisão de código registrada nos recibos é `12bab44`; os hashes registram fontes e testes usados.
+
+O wheel tem 20.358 bytes, SHA256 `3caddbda3bbbc8a63abc6480a5eaa18c372af530932f3e474b9d7179b102451c`. Seus 20 arquivos de runtime/configuração foram comparados com o código fonte sem diferenças; recibo `wheel-v0.3.1.json`. O pacote não inclui chave, resultados ou histórico. Nenhuma chamada real nesta revisão. Os recibos anteriores permanecem históricos e não validam mudanças posteriores.
+
+O [documento 24](24-controle-requisicoes-nvidia.md) descreve cadência compartilhada no processo, pausa após 429 e limites da implementação.

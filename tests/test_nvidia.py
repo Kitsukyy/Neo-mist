@@ -11,12 +11,30 @@ from mist.bootstrap import create_application
 from mist.cli import main
 from mist.config import load_config
 from mist.errors import ErrorCode, MistError
-from mist.nvidia import DESTINATION, HOST, MAX_RESPONSE_BYTES, PATH, NvidiaProvider
+from mist.nvidia import DESTINATION, HOST, MAX_RESPONSE_BYTES, PATH, NvidiaProvider, NvidiaRequestGate
 from mist.schemas import AuditReason, ModelConfig, Sensitivity
 from test_core import RecordingAudit, envelope
 
 SYNTHETIC_KEY = "nvapi-" + "synthetic-not-a-real-key-0123456789"
 EXAMPLE = Path(__file__).resolve().parents[1] / "examples" / "nvidia"
+
+
+class Clock:
+    def __init__(self):
+        self.now = 0.0
+        self.waits = []
+
+    def __call__(self):
+        return self.now
+
+    def wait(self, seconds):
+        self.waits.append(seconds)
+        self.now += seconds
+
+
+def synthetic_gate():
+    clock = Clock()
+    return NvidiaRequestGate(clock=clock, wait=clock.wait)
 
 
 def remote_envelope(text="teste"):
@@ -64,6 +82,11 @@ class Connection:
 
 
 class NvidiaTests(unittest.TestCase):
+    def setUp(self):
+        self.gate = patch('mist.nvidia.NVIDIA_REQUEST_GATE', synthetic_gate())
+        self.gate.start()
+        self.addCleanup(self.gate.stop)
+
     def assert_code(self, code, action):
         with self.assertRaises(MistError) as raised:
             action()
@@ -117,6 +140,11 @@ class NvidiaTests(unittest.TestCase):
                              (202, ErrorCode.PROVIDER_FAILURE), (500, ErrorCode.PROVIDER_FAILURE),
                              (302, ErrorCode.PROVIDER_FAILURE)):
             with self.subTest(status=status):
+                # HTTP mappings are independent; a 429 now pauses its process gate.
+                self.gate.stop()
+                self.gate = patch('mist.nvidia.NVIDIA_REQUEST_GATE', synthetic_gate())
+                self.gate.start()
+                self.addCleanup(self.gate.stop)
                 response = Response(status=status, raw=SYNTHETIC_KEY.encode())
                 connection = Connection(response)
                 self.assert_code(code, lambda: self.call(connection))
@@ -221,6 +249,10 @@ class NvidiaTests(unittest.TestCase):
             with patch("mist.nvidia.http.client.HTTPSConnection", return_value=Connection(Response(status=429))):
                 self.assert_code(ErrorCode.RATE_LIMIT, lambda: app.handle("teste"))
             self.assertEqual(audit.events[-1].reason, AuditReason.RATE_LIMIT)
+            self.gate.stop()
+            self.gate = patch('mist.nvidia.NVIDIA_REQUEST_GATE', synthetic_gate())
+            self.gate.start()
+            self.addCleanup(self.gate.stop)
             with patch("mist.nvidia.http.client.HTTPSConnection", return_value=Connection(error=KeyboardInterrupt())):
                 with self.assertRaises(KeyboardInterrupt):
                     app.handle("teste")

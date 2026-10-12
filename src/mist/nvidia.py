@@ -2,7 +2,9 @@ import http.client
 import json
 import re
 import ssl
-from time import monotonic
+from contextlib import contextmanager
+from threading import RLock
+from time import monotonic, sleep
 
 from mist.errors import ErrorCode, MistError
 from mist.schemas import Envelope
@@ -11,6 +13,42 @@ HOST = "integrate.api.nvidia.com"
 PATH = "/v1/chat/completions"
 DESTINATION = "nvidia-integrate"
 MAX_RESPONSE_BYTES = 1_000_000
+MIN_REQUEST_INTERVAL = 2.1
+
+
+class NvidiaRequestGate:
+    """One in-flight request and spaced starts across this process's adapters."""
+
+    def __init__(self, *, clock=monotonic, wait=sleep):
+        self._clock = clock
+        self._wait = wait
+        self._lock = RLock()
+        self._next_start = 0.0
+        self._paused = False
+
+    @contextmanager
+    def slot(self):
+        # Hold through the response: queued calls must observe a preceding 429.
+        with self._lock:
+            if self._paused:
+                raise MistError(ErrorCode.RATE_LIMIT)
+            while (remaining := self._next_start - self._clock()) > 0:
+                self._wait(remaining)
+            self._next_start = self._clock() + MIN_REQUEST_INTERVAL
+            yield
+
+    def pause(self):
+        with self._lock:
+            self._paused = True
+
+    def mark_start(self):
+        with self._lock:
+            # TLS/payload preparation can take time after acquiring the slot.
+            self._next_start = self._clock() + MIN_REQUEST_INTERVAL
+
+
+# Shared by FAST, PRIMARY and every application instance in this process.
+NVIDIA_REQUEST_GATE = NvidiaRequestGate()
 
 
 class NvidiaProvider:
@@ -33,6 +71,11 @@ class NvidiaProvider:
         model = envelope.model
         if model.provider != "nvidia" or not model.external or model.destination != DESTINATION:
             raise MistError(ErrorCode.GUARD_BLOCKED)
+        with NVIDIA_REQUEST_GATE.slot():
+            return self._generate(envelope)
+
+    def _generate(self, envelope: Envelope) -> str:
+        model = envelope.model
         payload = {
             "model": model.model_id,
             "messages": [{"role": message.role.value, "content": message.content}
@@ -44,13 +87,16 @@ class NvidiaProvider:
         connection = http.client.HTTPSConnection(HOST, timeout=self.timeout, context=ssl.create_default_context())
         deadline = monotonic() + self.timeout
         try:
-            connection.request("POST", PATH, body=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+            body = json.dumps(payload, ensure_ascii=False).encode("utf-8")
+            NVIDIA_REQUEST_GATE.mark_start()
+            connection.request("POST", PATH, body=body,
                                headers={"Authorization": "Bearer " + self._api_key,
                                         "Content-Type": "application/json", "Accept": "application/json"})
             response = connection.getresponse()
             if response.status in (401, 403):
                 raise MistError(ErrorCode.PROVIDER_AUTH)
             if response.status == 429:
+                NVIDIA_REQUEST_GATE.pause()
                 raise MistError(ErrorCode.RATE_LIMIT)
             if response.status in (404, 410, 502, 503, 504):
                 raise MistError(ErrorCode.PROVIDER_UNAVAILABLE)

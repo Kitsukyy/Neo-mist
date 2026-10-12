@@ -1,8 +1,8 @@
 # Documentação da Mist
 
-Versão documental: 1.8 · Atualização: 12 de outubro de 2026 · Idioma: português do Brasil.
+Versão documental: 1.9 · Atualização: 12 de outubro de 2026 · Idioma: português do Brasil.
 
-Este conjunto documenta as decisões recuperadas sobre a nova Mist e organiza a especificação para implementação. Os documentos 01–15 preservam a especificação consolidada. Os documentos 16–23 registram o núcleo offline, a integração NVIDIA, o benchmark com seleção provisória de modelos e contratos opcionais de saída estruturada, avaliação local e real da identidade e instalação verificada; capacidades futuras continuam identificadas como tal.
+Este conjunto documenta as decisões recuperadas sobre a nova Mist e organiza a especificação para implementação. Os documentos 01–15 preservam a especificação consolidada. Os documentos 16–24 registram o núcleo offline, a integração NVIDIA, o benchmark com seleção provisória de modelos e contratos opcionais de saída estruturada, avaliação local e real da identidade e instalação verificada; capacidades futuras continuam identificadas como tal.
 
 ## Como interpretar o estado de uma informação
 
@@ -28,6 +28,7 @@ Uma diretriz documental não significa implementação concluída. Testes só po
 8. [Saída estruturada](19-saida-estruturada.md), [avaliação da identidade](20-avaliacao-identidade.md), [instalação validada](21-instalacao-validada.md) e [condições NVIDIA](22-condicoes-nvidia.md).
 
 9. [Resultados reais da identidade e correções](23-avaliacao-real-identidade.md).
+10. [Controle preventivo de requisições NVIDIA](24-controle-requisicoes-nvidia.md).
 
 ## Precedência entre documentos
 

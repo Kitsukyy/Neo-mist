@@ -11,7 +11,7 @@ from time import monotonic
 
 from mist import __version__
 from mist.bootstrap import create_application
-from mist.errors import MistError
+from mist.errors import ErrorCode, MistError
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -75,6 +75,8 @@ def run(output: Path, *, real: bool = False, deadline_seconds: float = 600, api_
                 except MistError as exc:
                     record["turns"].append({"index": index, "prompt": prompt, "error": exc.code.value,
                                            "provider_metadata": provider_metadata(app)})
+                    if exc.code in (ErrorCode.RATE_LIMIT, ErrorCode.PROVIDER_AUTH, ErrorCode.AUDIT_FAILURE):
+                        stopped = True
                     break
                 except KeyboardInterrupt:
                     stopped = True

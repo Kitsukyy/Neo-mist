@@ -30,7 +30,7 @@ MESSAGES = {
     ErrorCode.PROVIDER_FAILURE: "Falha no provedor. A solicitação não foi concluída.",
     ErrorCode.PROVIDER_AUTH: "Credencial ausente, inválida ou sem acesso ao provedor.",
     ErrorCode.PROVIDER_TIMEOUT: "O provedor excedeu o tempo de espera. Não houve nova tentativa automática.",
-    ErrorCode.RATE_LIMIT: "Limite do provedor atingido. Não houve nova tentativa automática.",
+    ErrorCode.RATE_LIMIT: "Limite do provedor atingido. Envios NVIDIA pausados neste processo; sem nova tentativa automática. Aguarde e confira o serviço antes de iniciar outra sessão.",
     ErrorCode.PROVIDER_UNAVAILABLE: "Modelo ou serviço externo indisponível. Confira a configuração.",
     ErrorCode.EXTERNAL_DISABLED: "Envio externo desabilitado. Use --allow-external somente para a configuração desejada.",
 }

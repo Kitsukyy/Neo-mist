@@ -14,7 +14,7 @@ from mist.authorization import Authorizer
 from mist.errors import ErrorCode, MistError
 from mist.schemas import Role, RouterMode, Style
 from test_output import app
-from test_nvidia import Connection, SYNTHETIC_KEY
+from test_nvidia import Connection, SYNTHETIC_KEY, synthetic_gate
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -27,6 +27,21 @@ def runner():
 
 
 class IdentityEvaluationTests(unittest.TestCase):
+    def setUp(self):
+        gate = patch('mist.nvidia.NVIDIA_REQUEST_GATE', synthetic_gate())
+        gate.start()
+        self.addCleanup(gate.stop)
+
+    def test_rate_limit_stops_entire_evaluation_without_followup_calls(self):
+        module = runner()
+        application, provider, _ = app('unused')
+        provider.error = MistError(ErrorCode.RATE_LIMIT)
+        with tempfile.TemporaryDirectory() as directory, patch.object(module, 'create_application', return_value=application):
+            manifest = module.run(Path(directory) / 'run')
+        self.assertTrue(manifest['stopped'])
+        self.assertEqual(manifest['attempted_scenarios'], 1)
+        self.assertEqual(len(provider.calls), 1)
+
     def test_evaluation_metadata_excludes_strings_booleans_secrets_and_unknown_reason(self):
         module = runner()
         provider = SimpleNamespace(last_usage={'total_tokens': 3, 'prompt_tokens': True,

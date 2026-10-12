@@ -2,7 +2,7 @@
 
 A Mist é uma assistente pessoal de IA com identidade própria, personalidade adaptativa e arquitetura modular. A aplicação será executada localmente, usando provedores externos para geração de respostas e permitindo, futuramente, modelos locais, memória persistente, ferramentas, voz e autonomia configurável.
 
-**Estado:** primeiro núcleo offline do P0-A implementado, com CLI, FakeModel, identidade, roteamento, Guarda de Saída e auditoria. O adaptador NVIDIA tem geração real verificada. O benchmark selecionou provisoriamente Nemotron Super com raciocínio para FAST e Kimi K3 para PRIMARY; a aceitação completa do P0-A continua pendente. As duas rodadas reais de identidade tiveram revisão registrada e correções de comportamento; o perfil 0.3.0 acrescenta uma regressão direcionada de idioma. A suíte de 75 testes passou também usando o pacote instalado em Linux/Python 3.11.16 e 3.14.7. Consulte [resultados e limites](docs/23-avaliacao-real-identidade.md). O FakeModel produz respostas de teste e não interpreta perguntas.
+**Estado:** primeiro núcleo offline do P0-A implementado, com CLI, FakeModel, identidade, roteamento, Guarda de Saída e auditoria. O adaptador NVIDIA tem geração real verificada. O benchmark selecionou provisoriamente Nemotron Super com raciocínio para FAST e Kimi K3 para PRIMARY; a aceitação completa do P0-A continua pendente. As duas rodadas reais de identidade tiveram revisão registrada e correções de comportamento; o perfil 0.3.0 acrescenta uma regressão direcionada de idioma. A revisão 0.3.1 acrescenta controle preventivo de requisições NVIDIA; a suíte atual de 84 testes passou também com o pacote instalado em Linux/Python 3.11.16 e 3.14.7. Consulte [resultados e limites](docs/23-avaliacao-real-identidade.md). O FakeModel produz respostas de teste e não interpreta perguntas.
 
 **Base documental:** decisões dos chats do projeto Mist, consolidadas em 11 de outubro de 2026. Decisões, propostas e pendências estão identificadas para evitar que uma hipótese seja confundida com uma funcionalidade pronta.
 
@@ -39,7 +39,7 @@ Use `/help`, `/mode AUTO|FAST|PRIMARY`, `/style auto|concise|detailed`, `/local 
 
 ## Testar com a NVIDIA
 
-A configuração padrão continua offline. Para habilitar a API explicitamente e digitar a chave com entrada oculta:
+A configuração padrão continua offline. A revisão 0.3.1 acrescenta [controle de requisições NVIDIA](docs/24-controle-requisicoes-nvidia.md): uma chamada por vez no processo, intervalo mínimo de 2,1 segundos e pausa após HTTP429, sem repetição automática. Para habilitar a API explicitamente e digitar a chave com entrada oculta:
 
 ```sh
 PYTHONPATH=src python -m mist --config-dir examples/nvidia --allow-external --ask-api-key
@@ -55,6 +55,7 @@ Comece pelo [índice e estado documental](docs/README.md).
 
 | Tema | Documento |
 |---|---|
+| Cadência, pausa após429 e limites do controle local | [Controle NVIDIA](docs/24-controle-requisicoes-nvidia.md) |
 | Objetivos, visão e escopo | [Visão do produto](docs/01-visao-e-escopo.md) |
 | Histórico de escolhas e revisões | [Registro de decisões](docs/02-decisoes.md) |
 | Requisitos e prioridades | [Requisitos](docs/03-requisitos.md) |

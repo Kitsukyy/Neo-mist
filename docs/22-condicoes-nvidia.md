@@ -24,13 +24,15 @@ checkpoint não determina, por si, cotas, retenção ou uso em produção da API
 |---|---|
 | Endpoint/IDs e parâmetros | Implementados e geração sintética real registrada nos documentos 17 e 18. |
 | Oferta e contrato aceitos na conta | Não confirmados; registrar produto/programa, versão/data e documento aplicável. |
-| Cota, rate limit e cobrança | Sem valor confirmado para a conta; não preencher com estimativas ou números de fóruns. |
+| Cota, rate limit e cobrança | Usuário lembra 40 RPM; referência reconhecida no aviso oficial do fórum, sem confirmação vigente da conta. Cadência local e pausa ao receber 429 implementadas no documento 24, sem garantia de capacidade; oferta/cobrança continuam pendentes. |
 | Retenção, treinamento e exceções por modelo | Não confirmados para a oferta atual; não prometer confidencialidade com base no funcionamento da API. |
 | Licenças dos modelos | Verificação específica ainda pendente; distinta da licença de distribuição do código da Mist. |
 | Uso neste estágio | Avaliação interna com dados sintéticos; external opt-in, Guarda e auditoria permanecem obrigatórios. |
 | Credencial ativa | Chave temporária reutilizada após confirmação explícita do usuário, apenas por entrada oculta; não persistida no ambiente ou no repositório. |
 
 Para completar o registro da conta, consultar suas telas de oferta/limites e o contrato aplicável. O acesso à página pública não substitui a confirmação desses campos. Qualquer mudança para serviço de produção precisa de condições compatíveis com esse uso.
+
+O [controle NVIDIA 0.3.1](24-controle-requisicoes-nvidia.md) registra fontes e limites: mínimo 2,1 segundos entre envios e pausa no processo após 429. Não foi confirmada regra oficial de banimento automático por atingir 40 RPM.
 
 ## Avaliação real com entrada oculta
 
