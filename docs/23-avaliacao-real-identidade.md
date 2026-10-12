@@ -107,8 +107,11 @@ Python 3.11.16/3.14.7; veja [instalação](21-instalacao-validada.md). A escolha
 FAST/PRIMARY continua provisória. Os percentuais/latências do benchmark no
 documento 18 pertencem a outro perfil/contrato e ao teto de 2.048 tokens.
 
-P0-A permanece com pendências de publicação no GitHub e confirmação da oferta,
+P0-A permanece com pendências de revisão/integração no GitHub e confirmação da oferta,
 cotas, política de dados e licenças aplicáveis à conta. O login e o acesso à sessão autenticada do editor foram autorizados pelo
-usuário após um bloqueio inicial da revisão automática. Não houve publicação de código nesta etapa
-até este registro. O próximo desenvolvimento é P0-B, após o fechamento dessas
+usuário após um bloqueio inicial da revisão automática. Código e evidências foram publicados na branch `mist-p0a-validacao`. O
+primeiro commit remoto é `415acdcf617f11c4a3a969c28a1d57e6beceaaf2`; sua
+árvore foi comparada com a revisão local `5049f1e`, sem diferenças. Esta nota
+de publicação é uma atualização documental posterior, sem alterar execução
+ou resultados. A integração em main ainda depende da revisão. O próximo desenvolvimento é P0-B, após o fechamento dessas
 pendências; memória persistente ainda não foi implementada.

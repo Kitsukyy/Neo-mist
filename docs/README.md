@@ -44,7 +44,7 @@ A publicação inicial continha a documentação e um README. A primeira impleme
 - Guarda de Saída, auditoria de metadados e autonomia zero;
 - testes de integração e de bloqueio, descritos no [guia de execução](16-primeiro-nucleo.md).
 
-O P0-A está em andamento: geração NVIDIA e benchmark real foram executados, com seleção provisória FAST/PRIMARY. Consulte [a integração NVIDIA](17-integracao-nvidia.md) e [os resultados do benchmark](18-benchmark-modelos.md). A avaliação real e suas correções estão no [documento 23](23-avaliacao-real-identidade.md). Faltam condições da conta, publicação do código atualizado e critérios restantes de aceitação. A seleção continua provisória, com limites das amostras registrados. Não há memória persistente ou execução de ferramentas. Os exemplos conceituais dos documentos 10 e 11 não substituem os contratos e arquivos executáveis de `src/mist`.
+O P0-A está em andamento: geração NVIDIA e benchmark real foram executados, com seleção provisória FAST/PRIMARY. Consulte [a integração NVIDIA](17-integracao-nvidia.md) e [os resultados do benchmark](18-benchmark-modelos.md). A avaliação real e suas correções estão no [documento 23](23-avaliacao-real-identidade.md). Faltam condições da conta, revisão/integração da branch publicada e critérios restantes de aceitação. A seleção continua provisória, com limites das amostras registrados. Não há memória persistente ou execução de ferramentas. Os exemplos conceituais dos documentos 10 e 11 não substituem os contratos e arquivos executáveis de `src/mist`.
 
 ## Glossário
 

@@ -36,6 +36,6 @@ Essa matriz não declara P0-A concluído. Ainda faltam:
 1. Rodadas reais revisadas e falhas detectadas corrigidas; manter a seleção provisória e ampliar a avaliação com tarefas de uso real antes de homologação definitiva. A regressão v3 é direcionada, não uma nova rodada completa com o perfil final.
 2. Registrar cotas, condições de acesso/gratuidade e política de dados aplicáveis à conta NVIDIA. Não deduzir esses termos a partir de uma chamada bem-sucedida.
 3. Instalação de 0.3.0 validada com 75 testes em Linux/Python 3.11.16 e 3.14.7: ver [evidências](21-instalacao-validada.md). Outras versões/plataformas permanecem sem verificação.
-4. Publicar o código e as evidências no GitHub; as entregas de implementação permanecem locais.
+4. Código e evidências publicados na branch `mist-p0a-validacao`, com comparação integral contra a entrega local. Revisão/integração em main permanece pendente.
 
 Depois do fechamento do P0-A, o próximo marco de desenvolvimento é P0-B, com memória persistente, proveniência, correção, recuperação lexical e exclusão. Esses recursos não foram antecipados nesta entrega.

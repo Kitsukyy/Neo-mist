@@ -1,6 +1,6 @@
 # Instalação e compatibilidade verificadas
 
-Estado: pacote local construído e validado em 12/10/2026. Não publicado no PyPI nem no GitHub.
+Estado: pacote local construído e validado em 12/10/2026. Não publicado no PyPI. Código e evidências publicados na branch de revisão `mist-p0a-validacao` do GitHub.
 
 ## Resultado
 
@@ -62,4 +62,4 @@ As evidências anteriores `python-3.11.json`, `python-3.14.json`, os dois arquiv
 
 Esta entrega verifica o limite inferior declarado e a versão 3.14 disponível no ambiente. Python 3.12/3.13, Windows e macOS não foram testados. Não ampliar a conclusão para toda combinação de versão/plataforma nem para instalação sem acesso às dependências.
 
-A pendência de instalação do P0-A foi atendida para os dois ambientes Linux acima. As rodadas comportamentais reais e correções estão no documento 23. Permanecem pendentes as condições de acesso/dados/cotas da conta NVIDIA e a publicação no GitHub. O pacote 0.3.0 não foi publicado em um registro de distribuição.
+A pendência de instalação do P0-A foi atendida para os dois ambientes Linux acima. As rodadas comportamentais reais e correções estão no documento 23. Permanecem pendentes as condições de acesso/dados/cotas da conta NVIDIA e a revisão/integração da branch no GitHub. O pacote 0.3.0 não foi publicado em um registro de distribuição.

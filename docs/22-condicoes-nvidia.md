@@ -47,4 +47,4 @@ A revisão deste runner passou com 68 testes em Python 3.11.16 e 3.14.7, incluin
 
 ## Estado do P0-A
 
-Concluída a consulta das fontes públicas, mas não a confirmação das condições da conta. A avaliação comportamental real foi executada e revisada, com correções e limitações registradas no documento 23. Permanece pendente a publicação do código atualizado no GitHub. Não declarar o marco encerrado a partir desta consulta.
+Concluída a consulta das fontes públicas, mas não a confirmação das condições da conta. A avaliação comportamental real foi executada e revisada, com correções e limitações registradas no documento 23. Código atualizado publicado na branch `mist-p0a-validacao`; sua revisão/integração em main permanece pendente. Não declarar o marco encerrado a partir desta consulta.
