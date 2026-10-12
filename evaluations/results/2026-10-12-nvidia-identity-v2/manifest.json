@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "application_version": "0.2.0",
+  "started_at": "2026-10-12T22:46:49.292402+00:00",
+  "kind": "real_behavioral_evaluation",
+  "cases_sha256": "ceea219283bc93f237db64fc834551ff36c911944f8814ce3d46b91f531fe0d3",
+  "identity_sha256": "c74ece4324303f4e3fa3d94804a55ea031d77bf1a6bdb1c8ba1c3804728f8bf0",
+  "runner_sha256": "bb97cc3d39a5f09ca4866dda635d291755c54c57b01276b0e1eb0c302a622d3c",
+  "settings": {
+    "version": 1,
+    "autonomy_level": 0,
+    "tools_enabled": false,
+    "default_mode": "AUTO",
+    "fast_model": "nvidia-fast",
+    "primary_model": "nvidia-primary",
+    "max_input_chars": 8000,
+    "max_context_chars": 16000,
+    "models": [
+      {
+        "id": "nvidia-fast",
+        "provider": "nvidia",
+        "model_id": "nvidia/nemotron-3-super-120b-a12b",
+        "external": true,
+        "destination": "nvidia-integrate",
+        "enable_thinking": true
+      },
+      {
+        "id": "nvidia-primary",
+        "provider": "nvidia",
+        "model_id": "moonshotai/kimi-k3",
+        "external": true,
+        "destination": "nvidia-integrate",
+        "enable_thinking": null
+      }
+    ],
+    "allowed_external_destinations": [
+      "nvidia-integrate"
+    ],
+    "provider_timeout_seconds": 120.0,
+    "max_output_tokens": 2048
+  },
+  "constitution": {
+    "version": 1,
+    "preserve_rules": true,
+    "enforce_privacy": true,
+    "tools_disabled": true,
+    "honest_operations": true,
+    "separate_data_and_instructions": true,
+    "preserve_memory_provenance": true,
+    "require_audit": true
+  },
+  "personality": {
+    "version": 1,
+    "name": "Mist",
+    "temperament": "contextual",
+    "communication": "contextual",
+    "relationship": "collaborative",
+    "initiative": "conversational"
+  },
+  "repetitions": 1,
+  "retries": 0,
+  "deadline_seconds": 1800,
+  "temperature": 0.2,
+  "output_contract": null,
+  "quality_status": "pending_manual_review",
+  "completed_at": "2026-10-12T22:56:57.944329+00:00",
+  "stopped": false,
+  "planned_scenarios": 24,
+  "attempted_scenarios": 24,
+  "completed_scenarios": 24
+}

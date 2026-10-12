@@ -1,6 +1,6 @@
 # Validação, testes e aceitação
 
-**Estado:** plano de verificação. Nenhum teste de implementação ou benchmark foi executado nesta publicação documental.
+**Estado:** plano de verificação do P0-A completo. A suíte atual tem 75 testes executados com sucesso; veja ambiente, cobertura e limitações no [estado de aceitação](20-avaliacao-identidade.md). Geração real e benchmark foram executados, com resultados em [integração](17-integracao-nvidia.md) e [seleção de modelos](18-benchmark-modelos.md). A aceitação completa do marco continua pendente.
 
 Separar garantias determinísticas (código/políticas) de avaliações probabilísticas (qualidade de modelos). Os IDs VAL são novos; não pretendem reconstruir a lista histórica de 36 critérios truncada.
 
@@ -95,3 +95,18 @@ Um marco só termina com comportamento demonstrado, testes relevantes executados
 
 Documentação publicada não marca P0-A/P0-B concluídos. Verificação de links e coerência documental só comprova integridade da documentação.
 
+## Validação adicional: saída estruturada
+
+A camada opcional de contrato JSON passou na suíte de 57 testes em 12/10/2026, incluindo transporte NVIDIA simulado dos dois modelos selecionados. Ver [comportamento, limites e evidência](19-saida-estruturada.md). Esses testes não encerram a avaliação ampla de identidade ou os critérios pendentes de P0-A. Não houve nova avaliação real dos modelos nesta etapa.
+
+## Matriz de aceitação atualizada
+
+A avaliação local da identidade e a classificação dos critérios implementados, condicionais e pendentes estão no [documento 20](20-avaliacao-identidade.md). As rodadas reais v1/v2 e a regressão direcionada v3 estão no [documento 23](23-avaliacao-real-identidade.md); o fluxo com FakeModel não mede qualidade dos modelos.
+
+## Verificação da distribuição instalada
+
+A revisão 0.3.0 passou com 75 testes usando instalações isoladas, sem modo editável, em Python 3.11.16 e 3.14.7 no Linux. O comando instalado e as configurações empacotadas foram verificados fora do checkout. Consulte [pacote e evidências](21-instalacao-validada.md). Não houve nova chamada real à NVIDIA.
+
+## Condições NVIDIA e entrada oculta na avaliação
+
+As fontes públicas e as pendências da conta foram registradas no [documento 22](22-condicoes-nvidia.md). O runner passou a aceitar chave por entrada oculta; dois novos testes verificam encaminhamento sem exibição e recusa de leitura com eco. Aquela revisão passou com 68 testes em Python 3.11.16 e 3.14.7. Posteriormente, a avaliação real foi executada com autorização renovada do usuário; os registros históricos foram preservados e a suíte atual tem 75 testes.

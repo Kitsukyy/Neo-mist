@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "autonomy_level": 0,
+  "tools_enabled": false,
+  "default_mode": "AUTO",
+  "fast_model": "nvidia-fast",
+  "primary_model": "nvidia-primary",
+  "max_input_chars": 8000,
+  "max_context_chars": 16000,
+  "models": [
+    {
+      "id": "nvidia-fast",
+      "provider": "nvidia",
+      "model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "external": true,
+      "destination": "nvidia-integrate",
+      "enable_thinking": true
+    },
+    {
+      "id": "nvidia-primary",
+      "provider": "nvidia",
+      "model_id": "moonshotai/kimi-k3",
+      "external": true,
+      "destination": "nvidia-integrate",
+      "enable_thinking": null
+    }
+  ],
+  "allowed_external_destinations": [
+    "nvidia-integrate"
+  ],
+  "max_output_tokens": 4096,
+  "provider_timeout_seconds": 120.0
+}

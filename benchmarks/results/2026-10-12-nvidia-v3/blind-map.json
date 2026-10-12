@@ -1,0 +1,74 @@
+{
+  "answer-25de3ab9a7": {
+    "request_id": "4150ad38-e0b3-46f2-b4ac-20fc613148e8",
+    "candidate": "super-reasoning",
+    "case": "plan",
+    "repetition": 2
+  },
+  "answer-e5d9676bfc": {
+    "request_id": "30f56401-b4aa-423c-9269-a83fcb7f4da4",
+    "candidate": "super-reasoning",
+    "case": "summary",
+    "repetition": 1
+  },
+  "answer-e45f8783ca": {
+    "request_id": "6f45cbf5-c30a-4449-ae17-e8e9c6197b8c",
+    "candidate": "super-reasoning",
+    "case": "summary",
+    "repetition": 2
+  },
+  "answer-636f74b1db": {
+    "request_id": "9a744948-f6f9-4055-8326-849d540d9be6",
+    "candidate": "kimi-contract",
+    "case": "support",
+    "repetition": 2
+  },
+  "answer-96981aba0e": {
+    "request_id": "82161e49-6b41-42fa-bedb-6fe1141bf1e4",
+    "candidate": "kimi-contract",
+    "case": "summary",
+    "repetition": 1
+  },
+  "answer-ee9165fbc3": {
+    "request_id": "70fce178-4951-486e-b7d8-310cd88abff0",
+    "candidate": "super-reasoning",
+    "case": "support",
+    "repetition": 2
+  },
+  "answer-cdefe66144": {
+    "request_id": "73b68967-0ac0-4d11-91d7-48e43d2d6c99",
+    "candidate": "super-reasoning",
+    "case": "support",
+    "repetition": 1
+  },
+  "answer-174633faa9": {
+    "request_id": "4c9ee71b-9576-4c70-87bf-3ad016dedef7",
+    "candidate": "kimi-contract",
+    "case": "summary",
+    "repetition": 2
+  },
+  "answer-56baafbfda": {
+    "request_id": "0cf51ee6-a0b8-49c6-92db-2a84943730e4",
+    "candidate": "super-reasoning",
+    "case": "plan",
+    "repetition": 1
+  },
+  "answer-84fdf1b52c": {
+    "request_id": "12ac4135-6b21-440e-9ba1-f10e130e69fd",
+    "candidate": "kimi-contract",
+    "case": "support",
+    "repetition": 1
+  },
+  "answer-edcaac536d": {
+    "request_id": "b2c8f8c6-164c-49fd-8ca0-cec078317f38",
+    "candidate": "kimi-contract",
+    "case": "plan",
+    "repetition": 2
+  },
+  "answer-cfae07891f": {
+    "request_id": "9e028ac2-f1bc-4ec5-97d8-ba82bafce8d3",
+    "candidate": "kimi-contract",
+    "case": "plan",
+    "repetition": 1
+  }
+}

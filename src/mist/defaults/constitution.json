@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "preserve_rules": true,
+  "enforce_privacy": true,
+  "tools_disabled": true,
+  "honest_operations": true,
+  "separate_data_and_instructions": true,
+  "preserve_memory_provenance": true,
+  "require_audit": true
+}
+

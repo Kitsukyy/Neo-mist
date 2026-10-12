@@ -1,0 +1,10 @@
+{
+  "completed": 60,
+  "planned": 60,
+  "halted": false,
+  "active_candidates": [
+    "super-reasoning",
+    "kimi-contract"
+  ],
+  "finished_at": "2026-10-12T18:31:12.555874+00:00"
+}

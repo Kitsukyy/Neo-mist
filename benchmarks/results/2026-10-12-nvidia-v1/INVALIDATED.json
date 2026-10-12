@@ -1,0 +1,5 @@
+{
+  "reason": "System identity omitted the explicit autonomy level 0 required by expected answers. Scored results are invalidated; availability probes remain usable.",
+  "scored_results_valid": false,
+  "qualification_valid": true
+}

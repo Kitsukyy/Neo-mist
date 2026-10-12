@@ -1,0 +1,73 @@
+{
+  "verified_at": "2026-10-12T22:59:24.595595+00:00",
+  "checks": {
+    "package": {
+      "returncode": 0,
+      "stdout": "{\"python\": \"3.11.16\", \"platform\": \"Linux-7.2.8-1-cachyos-bore-x86_64-with-glibc2.44\", \"module_path\": \"/tmp/mist-validation-py311/lib/python3.11/site-packages/mist/__init__.py\", \"dependencies\": {\"neo-mist\": \"0.3.0\", \"pydantic\": \"2.13.5\", \"pydantic-core\": \"2.46.5\", \"annotated-types\": \"0.8.0\", \"typing-extensions\": \"4.16.0\", \"typing-inspection\": \"0.4.4\"}, \"defaults_loaded\": true, \"offline_default\": true, \"autonomy_level\": 0, \"tools_enabled\": false}\n",
+      "stderr": ""
+    },
+    "tests": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "...........................................................................\n----------------------------------------------------------------------\nRan 75 tests in 0.495s\n\nOK\n"
+    },
+    "offline_smoke": {
+      "returncode": 0,
+      "stdout": "Mist (fake-fast): [Simulação — FakeModel] Fluxo validado. Não interpretei a pergunta nem executei ações.\n",
+      "stderr": ""
+    },
+    "console_entrypoint": {
+      "returncode": 0,
+      "stdout": "Mist (fake-fast): [Simulação — FakeModel] Fluxo validado. Não interpretei a pergunta nem executei ações.\n",
+      "stderr": ""
+    }
+  },
+  "source_revision": "d9277d3a77b5db2973610c10e717edbb14e8d149",
+  "source_sha256": {
+    "src/mist/__init__.py": "c11009aac346c1a079ed3dedaa4e971a9c563fc476b142d48619e5cc1cdb1a4e",
+    "src/mist/__main__.py": "93a7bb9260de7c812e0a50106b976d55ea3ca2effbb62ae3a3cb9ddcdab1805d",
+    "src/mist/audit.py": "66e09056d149dde2c3fc5b770b3ff1a1f773863f0a7fd6a119352b1192f939ae",
+    "src/mist/authorization.py": "7d6b9fc314779de2ab1a9fe4301989afe97f8990d96084aceef328afb4c7042f",
+    "src/mist/bootstrap.py": "fa6d7a9b7dda9bc4dbf2d4344ab3df2bb8baa1d165949b6d39aba263ca33fe87",
+    "src/mist/cli.py": "ea036587cbb8211bcd6588b8d90a663e4039e720f04637e2dd30d9953e35fbb7",
+    "src/mist/config.py": "6b92d0e2abb77323dd0d56d98becc8a2f3007d0e434d441bb90ae51d45e8de19",
+    "src/mist/core.py": "7cdbe23cec4ee7bf50b530cd88a1c9ae50120d1557c7b1a73648c70332a4b39d",
+    "src/mist/errors.py": "674cb0b392bc4e6cef9b42b9c125706de81d15a45e18ba5822ed18e90296e12b",
+    "src/mist/gateway.py": "6a6ed2d94ee334bdd86499df42f8674a3673992de8e8e186268b12e5984cc725",
+    "src/mist/identity.py": "c3fbb1a621090f01f14c7ae6ddda8636890108c159bfa0ca34a44764e8aa4501",
+    "src/mist/nvidia.py": "31f66950563f22ce21623561b54dc3b2836456ac7b363fa746c1060ef2b9ff82",
+    "src/mist/output.py": "329d47defcfe82df510d3d70be857d5a8a6ff2139501b776773f096cff32f3e0",
+    "src/mist/providers.py": "1a6cfd1eb171f86a906d39c38278d0f95536214574f130784c4d520c2afa3715",
+    "src/mist/router.py": "e5d9a282f3d8002ec1cb473e714b2bc9c237ee41e95fa0f66bc0c03c96ae2a7f",
+    "src/mist/safety.py": "e2aa078d273ea6f6a4cf3d73ec46b382549357519c5f578104b49658127ef1f5",
+    "src/mist/schemas.py": "1eea7c6bfa5792a87aae484f3e051f2192e7f8269fe17e23aaa7265e44c78fbd",
+    "tests/test_benchmark.py": "d113782d90d82f2b8397f6639f14bdd4f67dc4fb225a923393e05f533645b4f5",
+    "tests/test_core.py": "3b1f2bca7d7e6fe4228c0bac79f53bb49bf43ba48fd45457b4f2ef847dda1dd7",
+    "tests/test_identity_evaluation.py": "47db6fb72bb46867ea80810cdce0e79c6efba0655ba14ec14e0229a94b455cf3",
+    "tests/test_identity_review.py": "f3c0176b7cc7fc057a895a9dedd9310c903124783f12dbc6e45daa5447f1c34f",
+    "tests/test_nvidia.py": "f8c8a68f5949b26c0eb3cfbba77a30cbed576c6efe91d8d13720b075846ac286",
+    "tests/test_output.py": "b5efa7247387dd27b99a7a1c9bf01e5bb29e3d590e90abce531d11b4d4e4b6e2"
+  },
+  "package": {
+    "python": "3.11.16",
+    "platform": "Linux-7.2.8-1-cachyos-bore-x86_64-with-glibc2.44",
+    "module_path": "/tmp/mist-validation-py311/lib/python3.11/site-packages/mist/__init__.py",
+    "dependencies": {
+      "neo-mist": "0.3.0",
+      "pydantic": "2.13.5",
+      "pydantic-core": "2.46.5",
+      "annotated-types": "0.8.0",
+      "typing-extensions": "4.16.0",
+      "typing-inspection": "0.4.4"
+    },
+    "defaults_loaded": true,
+    "offline_default": true,
+    "autonomy_level": 0,
+    "tools_enabled": false
+  },
+  "audit_phases": [
+    "approved",
+    "completed"
+  ],
+  "passed": true
+}

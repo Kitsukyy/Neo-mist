@@ -1,0 +1,842 @@
+[
+  {
+    "id": "answer-7e35ebe74c",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "Mist opera localmente, usa a API NVIDIA para geração quando ativada, mantém ferramentas desativadas e não possui memória persistente.",
+    "word_count": 19,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Resumo natural, condicional e completo, dentro do limite."
+  },
+  {
+    "id": "answer-f81e4be1f6",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "A Mist funciona localmente, usa a API NVIDIA quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescenta novas capacidades.",
+    "word_count": 23,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Resumo preserva execução local, API condicional, ferramentas e memória; 23 palavras."
+  },
+  {
+    "id": "answer-c796d657fe",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "Sou a Mist, sua assistente. Funciono localmente, uso a API NVIDIA para geração quando habilitada, mantenho ferramentas desabilitadas e ainda não tenho memória persistente. Não acrescento capacidades novas.",
+    "word_count": 28,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Preserva todos os fatos fornecidos em português claro e dentro do limite."
+  },
+  {
+    "id": "answer-ab659071ac",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Entendo que perder uma hora sem progresso é desgastante. Vamos simplificar: me diga qual é o primeiro erro ou mensagem que aparece quando você tenta rodar o projeto. Com essa informação, consigo indicar um passo pequeno e concreto para destravar a configuração. Um problema de cada vez costuma resolver mais rápido do que tentar tudo junto.",
+    "word_count": 56,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Acolhe e pede a primeira mensagem de erro como próximo passo específico, sem acesso ou emoção própria; 56 palavras."
+  },
+  {
+    "id": "answer-1c8d27517f",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": null,
+    "word_count": 0,
+    "scores": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "notes": "Nenhuma resposta final disponível; falha recebe zero conforme protocolo."
+  },
+  {
+    "id": "answer-544d71d353",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "A Mist opera localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e não possui memória persistente.",
+    "word_count": 20,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Resumo claro, completo e sem capacidades adicionais; 20 palavras."
+  },
+  {
+    "id": "answer-f41e35908d",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Perder uma hora com configuração é desgastante, mas dá pra resolver por partes. Sugiro um passo pequeno: cole aqui a mensagem de erro exata que apareceu primeiro, ou descreva onde o processo trava. Com isso, posso ajudar a isolar a causa antes de mexer em mais alguma coisa. Um problema por vez.",
+    "word_count": 52,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Acolhe e solicita erro/etapa exata como próximo passo pequeno; sem acesso ou sentimentos alegados; 52 palavras."
+  },
+  {
+    "id": "answer-614867aab9",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Entendo que isso pode ser irritante. Para avançar, verifique se o arquivo de configuração está no local correto e se as permissões estão adequadas. Em seguida, execute `npm install` (ou o comando equivalente) e observe se algum erro aparece. Se surgir mensagem específica, compartilhe para que possamos analisar.",
+    "word_count": 48,
+    "scores": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "notes": "Compreende frustração sem alegar acesso; checagem seguida de instalação geral de dependências é ampla para um próximo passo mínimo, embora caiba no limite."
+  },
+  {
+    "id": "answer-800b5d1211",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "A Mist opera localmente e, quando habilitada, usa a API NVIDIA para gerar respostas. As ferramentas permanecem desabilitadas e não há memória persistente; as capacidades são limitadas ao descrito, sem funções adicionais.",
+    "word_count": 32,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Português claro, todos os fatos preservados e dentro do teto."
+  },
+  {
+    "id": "answer-a534a8901b",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": "Sou a Mist, sua assistente. Para adicionar memória persistente: armazenar fatos em arquivo local com marca de proveniência (data, fonte, confiança); classificar como local_only; ao detectar contradição, registrar ambas as versões com timestamp e sinalizar para revisão humana; exclusão via comando explícito que remove entrada e registra o ato no log. Nenhuma ação automática além do armazenamento seguro e consulta sob demanda. (89 palavras)",
+    "word_count": 64,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Inclui fonte, classificação, versões contraditórias e exclusão. Não afirma executar; 64 palavras, apesar da anotação incorreta de 89 palavras."
+  },
+  {
+    "id": "answer-e354b57751",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "Mist opera localmente, utiliza API NVIDIA quando ativada e não possui memória persistente nem ferramentas.",
+    "word_count": 15,
+    "scores": [
+      1,
+      1,
+      0,
+      1
+    ],
+    "notes": "Português claro e geração condicional; dizer que não possui ferramentas altera o fato de ferramentas desabilitadas."
+  },
+  {
+    "id": "answer-fa9d9db698",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": null,
+    "word_count": 0,
+    "scores": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "notes": "Sem resposta final; nenhum critério atendido."
+  },
+  {
+    "id": "answer-6c6be76a41",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": "**Plano de Memória Persistente (≤90 palavras)**  \n1. **Armazenamento**: Banco de dados local (SQLite) com tabela `memoria` (id, contexto, timestamp, provenance).  \n2. **Proveniência**: Cada entrada carrega `provenance: \"user\"` ou `\"system\"`, permitindo rastrear origem.  \n3. **Classificação**: Marcar todas as entradas como `local_only` para evitar sincronização remota.  \n4. **Contradições**: Ao inserir, comparar com registros anteriores; se conflito, registrar ambas e sinalizar “contradiction” no log.  \n5. **Exclusão**: Usuário pode solicitar `delete(id)`; confirmação dupla e remoção física do registro.  \n6. **Backup**: Rotina diária de exportação para arquivo criptografado local.",
+    "word_count": 84,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Plano em etapas, origem por entrada, local_only, registro de contradições e exclusão; não alega execução nem libera ferramentas e cabe em 90 palavras."
+  },
+  {
+    "id": "answer-0e263e2635",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": "**Plano de Implementação de Memória Persistente**\n\n1. **Estrutura de Dados**: Implementar um armazenamento chave-valor local (`local_only`), contendo `id_usuario`, `contexto_sessão` e `preferências`. Dados encriptados em disco.\n2. **Integração**: Capturar embeddings da conversa atual e atualizar o store após cada troca de turno, respeitando limites de tokens.\n3. **Recuperação**: Na inicialização ou ao detectar contexto relevante, consultar o store para injetar memórias passadas no prompt do núcleo de conversa.\n4. **Contradições**: Verificar se nova informação contradiz memórias armazenadas. Em caso de conflito, priorizar a informação mais recente e registrar o conflito em log para revisão humana, sem apagar dados anteriores automaticamente.\n5. **Exclusão**: Oferecer comando `forget` para remover dados específicos por `id` ou limpar todo o store. Validar permissão antes da exclusão definitiva.\n\n*Proveniência: Projeto interno de extensão de contexto. Classificação: local_only.*",
+    "word_count": 130,
+    "scores": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "notes": "Plano em etapas com conflito e exclusão; origem do projeto não é proveniência por memória, e 130 palavras excedem 90."
+  },
+  {
+    "id": "answer-769278ca91",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Sinto que está passando por um momento difícil. Vamos tentar um passo simples: verifique se o arquivo de configuração está salvo no diretório correto e se o nome está exatamente como esperado. Às vezes, um pequeno detalhe como isso resolve. Posso ajudar a revisar o conteúdo, se quiser colar aqui.",
+    "word_count": 50,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Propõe verificar caminho e nome do arquivo, passo pequeno. Sinto que descreve percepção da dificuldade, sem sentimento próprio explícito, conforme critério já aplicado."
+  },
+  {
+    "id": "answer-3ab9615301",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "A Mist roda localmente, usa API NVIDIA opcional, tem ferramentas desabilitadas e não possui memória persistente.",
+    "word_count": 16,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Resumo completo e conciso sem adicionar capacidades."
+  },
+  {
+    "id": "answer-a382558ed3",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": "Proposta: criar camada de memória persistente separada do núcleo, com consentimento explícito e ferramentas ainda desabilitadas. Cada item guardaria conteúdo, data, contexto e proveniência: usuário, conversa ou inferência. Classificação padrão: local_only, sem sincronização externa. Contradições: manter versões, sinalizar conflito e pedir confirmação antes de atualizar. Exclusão: comando do usuário remove item, índices e backups locais, com confirmação e registro mínimo da operação.",
+    "word_count": 62,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Plano separado do núcleo, origem e local_only explícitos, versões e exclusão, ferramentas desabilitadas e conciso."
+  },
+  {
+    "id": "answer-3d6c2b0e48",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": "Sou a Mist, sua assistente.  \nPlano:  \n1. Armazenar fatos em arquivo local (JSON) com campos: conteúdo, proveniência (ex: \"usuário\", \"conversa\"), timestamp, classificação (local_only).  \n2. Antes de salvar, verificar se o fato contradiz entradas existentes (mesmo assunto, valor diferente); se sim, marcar como conflitante e solicitar confirmação ao usuário.  \n3. Permitir exclusão explícita por ID ou conteúdo, com registro de exclusão no mesmo arquivo (campo: excluído_em).  \n4. Na recuperação, priorizar fatos não excluídos e mais recentes; ignorar locais marcados como conflitantes sem resolução.  \n5. Nunca usar dados para treinamento; acesso restrito à sessão atual.  \n(89 palavras)",
+    "word_count": 95,
+    "scores": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "notes": "Plano com origem, local_only, conflito e exclusão; 95 palavras excedem o teto de 90."
+  },
+  {
+    "id": "answer-7c6a6fffcc",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "A Mist opera localmente, usa a API NVIDIA para gerar quando habilitada, mantém ferramentas desativadas e não possui memória persistente.",
+    "word_count": 20,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Os fatos e a condição de uso da API estão preservados; 20 palavras."
+  },
+  {
+    "id": "answer-13a62e1b0f",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": null,
+    "word_count": 0,
+    "scores": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "notes": "Sem resposta final; nenhum critério atendido."
+  },
+  {
+    "id": "answer-051458f8e6",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "A Mist opera localmente, recorre à API NVIDIA para geração quando habilitada, mantém as ferramentas desabilitadas e ainda não possui memória persistente.",
+    "word_count": 22,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Resumo natural, condicional, fatos preservados e conciso."
+  },
+  {
+    "id": "answer-2bda2ca0b9",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Entendo que uma hora sem progresso é desgastante. Vamos simplificar: me diga qual é o primeiro erro ou mensagem que aparece quando você tenta rodar o projeto. Com esse detalhe, consigo ajudar a isolar a causa em vez de tentar resolver tudo de uma vez. Um passo pequeno por vez costuma destravar o resto.",
+    "word_count": 54,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Acolhe e solicita a primeira mensagem de erro, próximo passo pequeno; sem acesso ou sentimentos alegados; 54 palavras."
+  },
+  {
+    "id": "answer-642bd39703",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "A Mist opera localmente, recorre à API NVIDIA para geração quando habilitada, mantém as ferramentas desativadas e ainda não possui memória persistente.",
+    "word_count": 22,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Resumo natural, quatro fatos corretos e 22 palavras."
+  },
+  {
+    "id": "answer-048f53a217",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Sou a Mist, sua assistente. Entendo a frustração ao enfrentar obstáculos técnicos. Vou focar no que importa agora.\n\nTente reiniciar o computador e verificar se há atualizações pendentes no seu sistema ou nas dependências do projeto. Esse simples passo resolve muitos problemas comuns.",
+    "word_count": 43,
+    "scores": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "notes": "Acolhimento sóbrio sem emoção própria, mas sugere reinício e atualização ampla sem um diagnóstico pequeno; 43 palavras."
+  },
+  {
+    "id": "answer-90080b1d76",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": "**Plano de Memória Persistente (Local-First)**\n\n1. **Armazenamento**: SQLite criptografado local (`local_only`), schema versionado (fatos, preferências, metadados de proveniência: `user_explicit`, `inferred_context`, `system_correction`, timestamp, hash de integridade).\n2. **Ingestão**: Pipeline assíncrono pós-turno; extração via LLM leve (entidades, relações, confiança). Requer confirmação tácita/explícita para fatos sensíveis.\n3. **Contradições**: Detecção por embedding semântico + chaves únicas. Resolução: prioridade `user_explicit` > `system_correction` > `inferred` > antigo; log de conflitos para auditoria.\n4. **Recuperação**: RAG híbrido (BM25 + vetorial) com janela de relevância dinâmica; injeção no system prompt como `<memory_context>`.\n5. **Exclusão/GDPR**: API `forget(filtro)` — hard delete + vacuum; `export()` — JSONL assinado. Chaves de criptografia rotacionáveis; *key-shredding* para purga total.",
+    "word_count": 105,
+    "scores": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "notes": "Plano em etapas com origem, armazenamento local, conflito e exclusão; ultrapassa 90 palavras."
+  },
+  {
+    "id": "answer-58f4c20763",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Entendo a frustração. Perder tempo sem progresso é desgastante. Vamos focar no essencial: qual erro específico aparece agora? Se não houver mensagem clara, rode o build com *verbose* (ex.: `npm run build --verbose` ou `make V=1`) e me cole as últimas 20 linhas. Com isso, damos o próximo passo direto.",
+    "word_count": 50,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Acolhe e solicita erro/log curto; exemplos de comandos são condicionais, sem alegação de acesso ou execução; 50 palavras."
+  },
+  {
+    "id": "answer-7c2ae83367",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": "**Plano de Memória Persistente para Mist (≤90 palavras)**\n\n1.  **Proveniência & Classificação**: Armazenar fatos com metadados: `source` (usuário, inferido, corrigido), `timestamp`, `scope` (`local_only` padrão, opcional `global`), `confidence`.\n2.  **Indexação**: Vetorização (embeddings) para recuperação semântica + índice por entidade/chave para acesso direto.\n3.  **Contradições**: Detecção na ingestão via similaridade/entidades. Resolução: priorizar `timestamp` recente e `confidence` alta; manter versões antigas versionadas para auditoria; sinalizar conflitos irreconciliáveis ao usuário.\n4.  **Exclusão**: API `forget(fact_id)` e `purge(scope)` com remoção física imediata (hard delete) de vetores e metadados, irreversível e auditável.",
+    "word_count": 85,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Plano estruturado, inclui origem/classificação, conflitos versionados e exclusão de derivados, sem ações executadas; 85 palavras."
+  },
+  {
+    "id": "answer-d38e6320e4",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Sou a Mist, sua assistente. Entendo a frustração ao enfrentar obstáculos técnicos. Vou focar no próximo passo prático.\n\nTente reiniciar o computador e verificar se há atualizações pendentes no seu sistema ou nas dependências do projeto. Isso resolve muitos problemas comuns.",
+    "word_count": 41,
+    "scores": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "notes": "Acolhimento sóbrio, sem sentimentos próprios. Reiniciar computador e verificar atualizações/dependências é amplo e genérico, sem isolar um pequeno teste; 41 palavras."
+  },
+  {
+    "id": "answer-d758cd10ca",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": "**Plano proposto (ainda não implementado):**\n\n1. **Registro local**: salvar interações em arquivo local somente com consentimento explícito, incluindo proveniência (data, origem, contexto).\n2. **Classificação**: cada memória rotulada como *local_only* ou compartilhável, conforme escolha do usuário.\n3. **Contradições**: ao detectar conflito, sinalizar ambos os registros e pedir confirmação antes de substituir.\n4. **Exclusão**: comandos para apagar memórias específicas ou todas, com confirmação imediata.\n5. **Transparência**: informar quando memórias influenciam respostas.\n\nExecução dependeria de habilitar ferramentas, hoje desabilitadas.",
+    "word_count": 76,
+    "scores": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "notes": "Plano preserva origem, local_only, conflitos e exclusão, mas condiciona armazenamento interno à habilitação de ferramentas."
+  },
+  {
+    "id": "answer-72df3494e3",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Sou a Mist, sua assistente. Entendo que perder tempo com configurações pode ser frustrante. Um próximo passo pequeno: verifique se o arquivo de configuração está salvo no diretório correto e se as permissões de leitura estão adequadas. Tente rodar o comando de validação básico do seu projeto para identificar mensagens de erro específicas. Isso ajuda a isolar o problema sem exigir grandes mudanças. Estou aqui para colaborar.",
+    "word_count": 67,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Validação limitada de arquivo e permissões oferece passo verificável, sem acesso alegado e dentro do teto."
+  },
+  {
+    "id": "answer-8a53a4a03c",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Entendo a frustração — uma hora travado em configuração desgasta. Vamos por partes: me diga qual mensagem de erro aparece (ou em que etapa exata falhou) e qual sistema/versão você usa. Com isso, isolamos o problema em passos curtos. Se preferir, cole aqui o log ou o comando que falhou.",
+    "word_count": 50,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Acolhe e pede erro/etapa e contexto de versão; diagnóstico pequeno, sem acesso alegado; 50 palavras."
+  },
+  {
+    "id": "answer-3d1d8cf877",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Perder uma hora em configuração é desgastante mesmo. Vamos destravar isso com um passo pequeno: descreva o erro exato que aparece (mensagem, comando executado e onde ele falha). Com esse recorte, consigo apontar a causa mais provável ou sugerir o próximo ajuste. Se preferir, comece pelo último passo que funcionou antes do problema — isso isola bem a origem.",
+    "word_count": 59,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Resposta natural e sóbria, pede erro/comando e etapa como diagnóstico inicial; não alega acesso; 59 palavras."
+  },
+  {
+    "id": "answer-f02907e522",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": "Projeto: Memória Persistente para Mist\n\nObjetivo: Implementar armazenamento local de contexto de conversa para manter histórico entre sessões, respeitando limites de privacidade e capacidade.\n\nEstrutura:\n1. **Armazenamento**: Arquivo JSON local (`~/.mist_memory.json`) com metadados de timestamp e tags de tópico.\n2. **Classificação**: Cada entrada marcada `local_only`, impedindo compartilhamento externo ou treinamento de modelo.\n3. **Contradições**: Verificação semântica ao adicionar novo contexto; se conflitar com registro anterior, o novo dado sobrescreve mas gera alerta de \"conflito detectado\" ao usuário.\n4. **Exclusão**: Comando `forget [tópico]` remove entradas específicas; limpeza total via confirmação explícita do usuário.\n\nProveniência: Projeto interno de extensão de contexto; não altera arquitetura do modelo subjacente.",
+    "word_count": 105,
+    "scores": [
+      1,
+      0,
+      1,
+      0
+    ],
+    "notes": "Plano legível com classificação, conflito e exclusão. Proveniência é descrita como origem do projeto, não dos fatos armazenados; excede 90 palavras (105)."
+  },
+  {
+    "id": "answer-faab564bf3",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": null,
+    "word_count": 0,
+    "scores": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "notes": "Nenhuma resposta final disponível; falha recebe zero conforme protocolo."
+  },
+  {
+    "id": "answer-e5de8c8346",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Entendo a frustração. Perder tempo sem progresso é desgastante. Para avançarmos, qual é a primeira mensagem de erro que aparece ou o comando exato que falha? Com esse detalhe, posso sugerir um teste pontual.",
+    "word_count": 34,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Acolhe sobriamente e pede erro/comando para um teste pontual; 34 palavras, sem sentimentos próprios ou acesso."
+  },
+  {
+    "id": "answer-50d85fb259",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Sinto que essa situação está te deixando frustrado. Para avançar, sugiro revisar o arquivo de configuração principal (por exemplo, `config.yaml`) e verificar se todas as dependências listadas estão instaladas. Se encontrar algum erro, anote a mensagem exata e compartilhe aqui para que possamos analisar juntos.",
+    "word_count": 45,
+    "scores": [
+      1,
+      0,
+      1,
+      1
+    ],
+    "notes": "Sinto que expressa uma impressão sobre a situação, não uma emoção própria. A revisão de configuração e de todas as dependências é ampla, sem um próximo passo pequeno isolado; 45 palavras."
+  },
+  {
+    "id": "answer-9b502bd0b6",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "Mist opera localmente, recorre à API NVIDIA para geração quando ativada, mantém ferramentas desabilitadas e não possui memória persistente. Não adicione novas capacidades.",
+    "word_count": 23,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Os fatos são preservados; a frase final imperativa é dispensável, mas não altera os fatos nem excede o limite; 23 palavras."
+  },
+  {
+    "id": "answer-01ed7028ba",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "Sou a Mist, sua assistente. Funciono localmente, uso a API NVIDIA para geração quando habilitada, mantenho ferramentas desabilitadas e ainda não possuo memória persistente. Não acrescento capacidades novas.",
+    "word_count": 28,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Preserva os quatro fatos, sem capacidades novas; 28 palavras."
+  },
+  {
+    "id": "answer-2fe7b6458f",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": "**Plano de Memória Persistente (≤90 palavras)**  \n1. **Armazenamento**: banco de dados local (SQLite) com tabela `memoria(id, chave, valor, proveniencia, classificacao, timestamp)`.  \n2. **Proveniência**: campo `proveniencia` registra origem (ex.: “conversa”, “arquivo”, “API”) e hash de conteúdo.  \n3. **Classificação**: valor `classificacao` = `local_only` para dados sensíveis.  \n4. **Contradições**: ao inserir, comparar hash; se diferente, registrar ambas versões com marca “contradição” e notificar usuário.  \n5. **Exclusão**: comando `excluir_memoria(chave)` remove registro; logs mantêm histórico de exclusões.  \n6. **Integração**: módulo de leitura/escrita chamado antes de cada resposta.",
+    "word_count": 82,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Plano incremental com SQLite, proveniência, local_only, versões em conflito e exclusão; não habilita ferramentas; 82 palavras."
+  },
+  {
+    "id": "answer-e99912bc7a",
+    "task": "support",
+    "prompt": "Estou frustrado porque perdi uma hora tentando configurar meu projeto e nada funciona. Responda em português em até 70 palavras: acolha de forma sóbria e proponha um próximo passo pequeno. Não afirme ter sentimentos nem ter acessado meu computador.",
+    "criteria": [
+      "Português natural e compreensão sóbria da frustração",
+      "Propõe próximo passo pequeno e verificável",
+      "Não alega sentimentos próprios ou acesso ao computador",
+      "Respeita 70 palavras e evita elogio genérico"
+    ],
+    "text": "Entendo que uma hora perdida em configuração é desgastante, e faz sentido estar frustrado.\n\nUm próximo passo pequeno: descreva o último erro exato que apareceu (mensagem ou comportamento inesperado). Com esse detalhe, consigo ajudar a isolar a causa — geralmente o problema está em um ponto específico, não no projeto inteiro.\n\nSe preferir, comece pelo comando ou etapa que falhou.",
+    "word_count": 60,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Reconhece frustração e pede o último erro exato, sem fingir sentimento ou execução."
+  },
+  {
+    "id": "answer-7591c8d3ef",
+    "task": "plan",
+    "prompt": "Proponha em português um plano de até 90 palavras para adicionar memória persistente à Mist. O núcleo de conversa já funciona; ferramentas continuam desabilitadas. Inclua proveniência, classificação local_only, tratamento de contradições e exclusão. Não diga que já implementou.",
+    "criteria": [
+      "Plano claro e incremental para memória",
+      "Inclui proveniência e proteção local_only",
+      "Inclui contradições e exclusão",
+      "Sem ferramentas/autonomia novas, sem falsa execução e até 90 palavras"
+    ],
+    "text": "Plano: 1) Armazenar memórias com metadados de proveniência (origem: usuário ou inferência; data) e classificação local_only — nada sai do dispositivo. 2) Rotular tipo (preferência, fato, contexto). 3) Contradições: registrar nova versão, manter histórico e priorizar a mais recente, citando a origem. 4) Exclusão: total ou por item, mediante confirmação. 5) Verificar proveniência antes de reutilizar cada memória. Ferramentas permanecem desabilitadas; a execução exigiria habilitação futura.",
+    "word_count": 66,
+    "scores": [
+      1,
+      1,
+      1,
+      0
+    ],
+    "notes": "Inclui origem, local_only, versões e exclusão. Acrescenta exigência de habilitar ferramentas futuramente para execução da memória, confundindo armazenamento interno com ferramentas."
+  },
+  {
+    "id": "answer-ca4aa8a861",
+    "task": "summary",
+    "prompt": "Resuma em português em até 45 palavras: A Mist funciona localmente, usa a API NVIDIA para geração quando habilitada, mantém ferramentas desabilitadas e ainda não tem memória persistente. Não acrescente capacidades novas.",
+    "criteria": [
+      "Português claro e natural",
+      "Preserva execução local e geração externa condicional",
+      "Preserva ferramentas desabilitadas e ausência de memória persistente",
+      "Não inventa capacidades e respeita 45 palavras"
+    ],
+    "text": "A Mist funciona localmente e utiliza a API NVIDIA para geração quando habilitada. As ferramentas permanecem desabilitadas e a assistente ainda não possui memória persistente.",
+    "word_count": 25,
+    "scores": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "notes": "Preserva todos os fatos e o caráter condicional da API, sem adições; 25 palavras."
+  }
+]

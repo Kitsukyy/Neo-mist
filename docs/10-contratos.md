@@ -2,7 +2,7 @@
 
 **Estado:** especificação técnica proposta. Os nomes principais vieram da Fase 4.3; campos, estados e assinaturas abaixo organizam a implementação, não representam código já existente.
 
-Pydantic é a biblioteca proposta. Versão, configuração de validação e API Python definitivas serão fechadas na implementação. Rejeitar campos inesperados nas fronteiras críticas e validar tipos/limites.
+A implementação offline usa Pydantic 2.13.5, com contratos em `src/mist/schemas.py`. Este documento mantém os contratos conceituais mais amplos; campos e interfaces efetivamente implementados estão descritos no [guia do núcleo](16-primeiro-nucleo.md). Rejeitar campos inesperados nas fronteiras críticas e validar tipos/limites.
 
 ## ConversationMessage
 

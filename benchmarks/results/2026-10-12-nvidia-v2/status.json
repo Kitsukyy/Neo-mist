@@ -1,0 +1,16 @@
+{
+  "completed": 210,
+  "planned": 210,
+  "halted": false,
+  "active_candidates": [
+    "lightning",
+    "super",
+    "ultra",
+    "kimi",
+    "glm",
+    "glm-flash",
+    "gpt-oss"
+  ],
+  "finished_at": "2026-10-12T18:24:46.493850+00:00",
+  "continued": true
+}

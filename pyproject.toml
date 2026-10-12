@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "neo-mist"
+version = "0.3.0"
+description = "Núcleo conversacional da Mist com FakeModel e API NVIDIA"
+requires-python = ">=3.11"
+dependencies = ["pydantic==2.13.5"]
+
+[project.scripts]
+mist = "mist.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+mist = ["defaults/*.json"]

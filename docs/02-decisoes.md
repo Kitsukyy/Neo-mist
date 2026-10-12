@@ -43,9 +43,9 @@ Este registro resolve conflitos entre propostas antigas e o estado mais recente.
 |---|---|---|
 | DOC-DEC-26 | Pydantic | Proposta de validação; versão e ergonomia a verificar. |
 | DOC-DEC-27 | SQLite/FTS5 | Proposta inicial para P0-B; validar disponibilidade, recuperação e migrations. |
-| DOC-DEC-28 | Dois modelos e AUTO/FAST/PRIMARY | Estratégia no documento mestre; regras e parâmetros finais pendentes. |
-| DOC-DEC-29 | Modelo rápido | Documento mestre sugere DeepSeek V4.1 Flash/Token Harbor; não foi localizada escolha explícita correspondente do usuário. |
-| DOC-DEC-30 | Modelo principal | Ainda não escolhido; comparar qualidade, latência e consistência. |
+| DOC-DEC-28 | Dois modelos e AUTO/FAST/PRIMARY | Modos implementados; configuração NVIDIA usa seleção provisória do benchmark de 12/10/2026. |
+| DOC-DEC-29 | Modelo rápido | Nemotron Super com raciocínio ativado, seleção técnica provisória baseada no [benchmark](18-benchmark-modelos.md), substituindo a sugestão histórica não confirmada de DeepSeek/Token Harbor. |
+| DOC-DEC-30 | Modelo principal | Kimi K3, seleção técnica provisória baseada no mesmo benchmark; tarefas extensas e condições da conta ainda requerem avaliação. |
 | DOC-DEC-31 | Credenciais | Ambiente/cofre local em avaliação; mecanismo definitivo não escolhido. |
 | DOC-DEC-32 | Sensibilidade e detecção | Políticas obrigatórias; taxonomia e biblioteca ainda pendentes. |
 | DOC-DEC-33 | Configuração YAML | Formato e estrutura propostos; parser e versões não fechados. |
@@ -68,4 +68,3 @@ Este registro resolve conflitos entre propostas antigas e o estado mais recente.
 Registrar problema, alternativas, evidência, estado, impacto, critérios de aceitação e possibilidade de reversão. Mudanças fundamentais devem ter revisão explícita do responsável pelo projeto. Preferências inferidas não alteram este registro automaticamente.
 
 Números de desempenho, limites de contexto, contagem de tentativas e pesos de avaliação só se tornam metas quando houver condições de medição definidas.
-

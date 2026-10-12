@@ -1,0 +1,12 @@
+{
+  "artifact": "neo_mist-0.3.0-py3-none-any.whl",
+  "sha256": "8429d54e912da3ef9f80ca7c6b349587384e5e91a7e85660f1ac154f973a2f11",
+  "size_bytes": 19832,
+  "source_revision": "d9277d3",
+  "source_files_verified": 20,
+  "contains_only_runtime_and_package_metadata": true,
+  "verified_installed_versions": [
+    "3.11.16",
+    "3.14.7"
+  ]
+}
