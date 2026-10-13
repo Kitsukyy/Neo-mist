@@ -68,3 +68,7 @@ Este registro resolve conflitos entre propostas antigas e o estado mais recente.
 Registrar problema, alternativas, evidência, estado, impacto, critérios de aceitação e possibilidade de reversão. Mudanças fundamentais devem ter revisão explícita do responsável pelo projeto. Preferências inferidas não alteram este registro automaticamente.
 
 Números de desempenho, limites de contexto, contagem de tentativas e pesos de avaliação só se tornam metas quando houver condições de medição definidas.
+
+## 13/10/2026 — Memória automática
+
+**Decisão explícita do usuário:** guardar automaticamente informações úteis, com opção de excluir. A implementação 0.4.0 começa por captura local conservadora de declarações reconhecidas, com fontes e estados, sem gravar toda conversa nem persistir respostas de modelos como fatos. Padrões de captura, orçamento e snapshots manuais são escolhas técnicas deste incremento; não são critérios universais aprovados. Conteúdo novo fica local, e permitir envio externo é operação separada. Ver [documento 25](25-memoria-persistente.md).

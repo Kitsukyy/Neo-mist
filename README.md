@@ -2,7 +2,7 @@
 
 A Mist é uma assistente pessoal de IA com identidade própria, personalidade adaptativa e arquitetura modular. A aplicação será executada localmente, usando provedores externos para geração de respostas e permitindo, futuramente, modelos locais, memória persistente, ferramentas, voz e autonomia configurável.
 
-**Estado:** primeiro núcleo offline do P0-A implementado, com CLI, FakeModel, identidade, roteamento, Guarda de Saída e auditoria. O adaptador NVIDIA tem geração real verificada. O benchmark selecionou provisoriamente Nemotron Super com raciocínio para FAST e Kimi K3 para PRIMARY; a aceitação completa do P0-A continua pendente. As duas rodadas reais de identidade tiveram revisão registrada e correções de comportamento; o perfil 0.3.0 acrescenta uma regressão direcionada de idioma. A revisão 0.3.1 acrescenta controle preventivo de requisições NVIDIA; a suíte atual de 84 testes passou também com o pacote instalado em Linux/Python 3.11.16 e 3.14.7. Consulte [resultados e limites](docs/23-avaliacao-real-identidade.md). O FakeModel produz respostas de teste e não interpreta perguntas.
+**Estado:** Mist 0.4.0 com núcleo conversacional, NVIDIA, saída estruturada e memória local opcional. A memória captura declarações úteis por padrões conservadores, mantém fontes/versões, busca lexical por projeto, correção, exclusão e restauração que respeita exclusões anteriores. A suíte atual contém 132 testes; resultados e limites no [guia de memória](docs/25-memoria-persistente.md). FAST/PRIMARY seguem provisórios; condições da conta NVIDIA e revisão/integração da entrega continuam pendentes. Autonomia zero e ferramentas desabilitadas. FakeModel simula o fluxo, sem interpretar perguntas.
 
 **Base documental:** decisões dos chats do projeto Mist, consolidadas em 11 de outubro de 2026. Decisões, propostas e pendências estão identificadas para evitar que uma hipótese seja confundida com uma funcionalidade pronta.
 
@@ -37,6 +37,14 @@ PYTHONPATH=src python -m unittest discover -s tests -v
 
 Use `/help`, `/mode AUTO|FAST|PRIMARY`, `/style auto|concise|detailed`, `/local TEXTO`, `/status`, `/reset` e `/quit`. Veja configuração, auditoria, limites e validação no [guia do núcleo offline](docs/16-primeiro-nucleo.md).
 
+## Memória entre sessões
+
+```sh
+PYTHONPATH=src python -m mist --memory-dir runtime/memory
+```
+
+Captura automática de declarações reconhecidas, local por padrão. Use `/memory` para consultar comandos e `/project NOME` para separar projetos. Veja [privacidade, correção, exclusão e backup](docs/25-memoria-persistente.md).
+
 ## Testar com a NVIDIA
 
 A configuração padrão continua offline. A revisão 0.3.1 acrescenta [controle de requisições NVIDIA](docs/24-controle-requisicoes-nvidia.md): uma chamada por vez no processo, intervalo mínimo de 2,1 segundos e pausa após HTTP429, sem repetição automática. Para habilitar a API explicitamente e digitar a chave com entrada oculta:
@@ -55,6 +63,7 @@ Comece pelo [índice e estado documental](docs/README.md).
 
 | Tema | Documento |
 |---|---|
+| Memória automática local, recuperação e exclusão | [Memória implementada](docs/25-memoria-persistente.md) |
 | Cadência, pausa após429 e limites do controle local | [Controle NVIDIA](docs/24-controle-requisicoes-nvidia.md) |
 | Objetivos, visão e escopo | [Visão do produto](docs/01-visao-e-escopo.md) |
 | Histórico de escolhas e revisões | [Registro de decisões](docs/02-decisoes.md) |
@@ -84,7 +93,7 @@ Comece pelo [índice e estado documental](docs/README.md).
 
 O **P0-A** entregará uma conversa funcional no terminal com configuração validada, identidade configurável, FakeModel para testes offline, Gateway de modelos, Guarda de Saída, auditoria e pelo menos um provedor real validado.
 
-O **P0-B** acrescentará memória persistente confiável, proveniência, recuperação lexical, tratamento de contradições, atualização e exclusão.
+O **P0-B** tem uma implementação inicial de memória persistente, proveniência, recuperação lexical, atualização, conflitos e exclusão. Avaliação de utilidade/qualidade ampla continua incremental.
 
 Voz, interface desktop, ferramentas, modelos locais e autonomia ampliada pertencem à evolução posterior. Veja o [plano](docs/13-roadmap.md).
 

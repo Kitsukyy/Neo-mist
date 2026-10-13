@@ -39,3 +39,7 @@ Essa matriz não declara P0-A concluído. Ainda faltam:
 4. Código e evidências publicados na branch `mist-p0a-validacao`, com comparação integral contra a entrega local. Revisão/integração em main permanece pendente.
 
 Depois do fechamento do P0-A, o próximo marco de desenvolvimento é P0-B, com memória persistente, proveniência, correção, recuperação lexical e exclusão. Esses recursos não foram antecipados nesta entrega.
+
+## Evolução local 0.4.0 — memória
+
+A memória opcional do P0-B foi implementada por autorização do usuário enquanto as condições da conta NVIDIA continuam pendentes. Captura automática escolhida pelo usuário, inicialmente por padrões conservadores, com privacidade local por padrão. A suíte de 132 testes inclui recuperação entre sessões, proveniência, estados, correções, isolamento, exclusão/restauração e integração com Guarda. Ver [documento 25](25-memoria-persistente.md). Não houve avaliação textual real da identidade com memória; resultados históricos dos modelos não validam automaticamente o perfil/contexto atual.

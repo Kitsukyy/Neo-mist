@@ -51,6 +51,12 @@ class ModelConfig(StrictModel):
     enable_thinking: bool | None = None
 
 
+class MemorySettings(StrictModel):
+    automatic: bool = True
+    max_items: int = Field(default=5, ge=1, le=20)
+    max_chars: int = Field(default=2500, ge=256, le=8000)
+
+
 class Settings(StrictModel):
     version: Literal[1] = 1
     autonomy_level: Literal[0] = 0
@@ -64,6 +70,7 @@ class Settings(StrictModel):
     allowed_external_destinations: tuple[Identifier, ...] = ()
     provider_timeout_seconds: float = Field(default=45.0, ge=1, le=120, allow_inf_nan=False)
     max_output_tokens: int = Field(default=512, ge=1, le=4096)
+    memory: MemorySettings = Field(default_factory=MemorySettings)
 
 
 class Constitution(StrictModel):

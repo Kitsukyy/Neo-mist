@@ -1,4 +1,4 @@
-# Snapshot verified on Linux x86_64 with Python 3.11.16 and 3.14.7, 2026-10-12.
+# Snapshot verified on Linux x86_64 with Python 3.11.16 and 3.14.7, 2026-10-13.
 # Optional constraints for runtime installation; not a complete build-environment lock.
 annotated-types==0.8.0
 pydantic==2.13.5

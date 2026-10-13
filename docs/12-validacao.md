@@ -1,6 +1,6 @@
 # Validação, testes e aceitação
 
-**Estado:** plano de verificação do P0-A completo. A suíte atual tem 75 testes executados com sucesso; veja ambiente, cobertura e limitações no [estado de aceitação](20-avaliacao-identidade.md). Geração real e benchmark foram executados, com resultados em [integração](17-integracao-nvidia.md) e [seleção de modelos](18-benchmark-modelos.md). A aceitação completa do marco continua pendente.
+**Estado:** plano de verificação do P0-A completo. A suíte atual contém 132 testes, incluindo memória local 0.4.0; veja ambiente, cobertura e limitações no [estado de aceitação](20-avaliacao-identidade.md). Geração real e benchmark foram executados, com resultados em [integração](17-integracao-nvidia.md) e [seleção de modelos](18-benchmark-modelos.md). A aceitação completa do marco continua pendente.
 
 Separar garantias determinísticas (código/políticas) de avaliações probabilísticas (qualidade de modelos). Os IDs VAL são novos; não pretendem reconstruir a lista histórica de 36 critérios truncada.
 
@@ -109,4 +109,8 @@ A revisão 0.3.0 passou com 75 testes usando instalações isoladas, sem modo ed
 
 ## Condições NVIDIA e entrada oculta na avaliação
 
-As fontes públicas e as pendências da conta foram registradas no [documento 22](22-condicoes-nvidia.md). O runner passou a aceitar chave por entrada oculta; dois novos testes verificam encaminhamento sem exibição e recusa de leitura com eco. Aquela revisão passou com 68 testes em Python 3.11.16 e 3.14.7. Posteriormente, a avaliação real foi executada com autorização renovada do usuário; os registros históricos foram preservados e a suíte atual tem 75 testes.
+As fontes públicas e as pendências da conta foram registradas no [documento 22](22-condicoes-nvidia.md). O runner passou a aceitar chave por entrada oculta; dois novos testes verificam encaminhamento sem exibição e recusa de leitura com eco. Aquela revisão passou com 68 testes em Python 3.11.16 e 3.14.7. Posteriormente, a avaliação real foi executada com autorização renovada do usuário; os registros históricos foram preservados e a revisão histórica tinha 75 testes; a revisão de memória 0.4.0 contém 130.
+
+## Memória local 0.4.0
+
+O [documento 25](25-memoria-persistente.md) relaciona implementação e validação do P0-B: 48 testes novos e experimento lexical sintético com dez mil itens. A política de exclusão depende do registro sobrevivente e não promete apagar cópias externas. Conversas reais com memória não foram avaliadas nesta entrega.

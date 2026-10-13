@@ -7,6 +7,7 @@ from mist.core import Application
 from mist.errors import ErrorCode, MistError
 from mist.gateway import Gateway
 from mist.identity import Identity
+from mist.memory import MemoryStore
 from mist.nvidia import NvidiaProvider
 from mist.providers import FakeModel
 from mist.safety import OutputGuard
@@ -19,7 +20,8 @@ def default_audit_path() -> Path:
 
 
 def create_application(config_dir: Path | None = None, audit_path: Path | None = None,
-                       *, allow_external: bool = False, api_key: str | None = None) -> Application:
+                       *, allow_external: bool = False, api_key: str | None = None,
+                       memory_dir: Path | None = None, project: str | None = None) -> Application:
     settings, constitution, personality = load_config(config_dir)
     providers = {"fake": FakeModel()}
     if any(model.external for model in settings.models):
@@ -33,4 +35,10 @@ def create_application(config_dir: Path | None = None, audit_path: Path | None =
         providers, OutputGuard(settings.allowed_external_destinations),
         JsonAudit(audit_path if audit_path is not None else default_audit_path()),
     )
-    return Application(settings, Identity(constitution, personality), gateway)
+    memory = MemoryStore(memory_dir) if memory_dir is not None else None
+    try:
+        return Application(settings, Identity(constitution, personality), gateway, memory, project)
+    except Exception:
+        if memory is not None:
+            memory.close()
+        raise

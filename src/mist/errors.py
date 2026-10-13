@@ -16,9 +16,15 @@ class ErrorCode(StrEnum):
     RATE_LIMIT = "RATE_LIMIT"
     PROVIDER_UNAVAILABLE = "PROVIDER_UNAVAILABLE"
     EXTERNAL_DISABLED = "EXTERNAL_DISABLED"
+    MEMORY_UNAVAILABLE = "MEMORY_UNAVAILABLE"
+    MEMORY_INVALID = "MEMORY_INVALID"
+    MEMORY_NOT_FOUND = "MEMORY_NOT_FOUND"
 
 
 MESSAGES = {
+    ErrorCode.MEMORY_UNAVAILABLE: "Memória local indisponível ou ocupada. Nenhum envio foi iniciado; confira o armazenamento.",
+    ErrorCode.MEMORY_INVALID: "Operação de memória inválida. Confira o conteúdo, os campos e o escopo.",
+    ErrorCode.MEMORY_NOT_FOUND: "Memória ausente, excluída ou fora do escopo atual.",
     ErrorCode.CONFIGURATION: "Configuração inválida. Confira os arquivos, campos e referências.",
     ErrorCode.INVALID_INPUT: "Entrada inválida ou maior que o orçamento de contexto.",
     ErrorCode.UNKNOWN_MODEL: "Modelo ou provedor indisponível na configuração.",

@@ -71,3 +71,9 @@ Wheel não editável 0.3.1 instalado nos ambientes Linux/Python 3.11.16 e 3.14.7
 O wheel tem 20.358 bytes, SHA256 `3caddbda3bbbc8a63abc6480a5eaa18c372af530932f3e474b9d7179b102451c`. Seus 20 arquivos de runtime/configuração foram comparados com o código fonte sem diferenças; recibo `wheel-v0.3.1.json`. O pacote não inclui chave, resultados ou histórico. Nenhuma chamada real nesta revisão. Os recibos anteriores permanecem históricos e não validam mudanças posteriores.
 
 O [documento 24](24-controle-requisicoes-nvidia.md) descreve cadência compartilhada no processo, pausa após 429 e limites da implementação.
+
+## Revisão 0.4.0 — memória persistente
+
+A revisão de memória possui 132 testes e novos recibos `python-3.11-v0.4.0.json`, `python-3.14-v0.4.0.json` e `wheel-v0.4.0.json` em validation/installation. O modo de memória requer Linux e SQLite >=3.42 com FTS5; conversa sem memória continua disponível. Consultar versões, caminhos, hashes e resultado efetivamente registrados nesses recibos. A sondagem lexical instalada em ambas as versões está em validation/memory; não foi medida qualidade de LLM nem feito envio NVIDIA nesta etapa. Ver [guia e limites](25-memoria-persistente.md).
+
+O wheel0.4.0 validado tem34.565bytes, SHA256 `710741efdd211ac6294763b938e2ed89bb315d58f1172aa99e2fc0d3fed27aaf`;25arquivos de runtime/configuração comparados sem diferenças. Recibos de instalação referem o commit341308b; sondagens lexicais referem aaaf5fa. SQLite3.53.4 disponível em ambos os ambientes medidos.

@@ -115,3 +115,7 @@ Código é estável para testes; mensagem pública é segura. Erros não incluem
 
 Versionar contratos que mudem comportamento entre módulos. Testar substituição de provedor e limites de importação. Exemplos devem ser sintéticos; Pydantic valida estrutura, não a veracidade de conteúdo nem a autorização de transmissão.
 
+
+## Contratos de memória implementados em 0.4.0
+
+`memory_types.py` define candidato, fonte, item versionado, estados e snapshot; `MemorySettings` está em schemas.py. `memory.py` implementa persistência/FTS5, operações versionadas e registro de restauração. `memory_capture.py` captura padrões locais e `memory_cli.py` oferece operações explícitas. A integração com Core conserva a Guarda sobre o envelope final. Campos e limites no [guia executável](25-memoria-persistente.md); esta implementação não realiza todas as propostas conceituais acima.

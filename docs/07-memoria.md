@@ -1,5 +1,7 @@
 # Sistema de memória
 
+**Implementação:** a revisão 0.4.0 entrega memória local opcional e captura automática conservadora escolhida pelo usuário. Contratos, comandos, fontes, limitações e exclusão/restauração estão no [documento 25](25-memoria-persistente.md). O restante deste documento preserva a especificação conceitual; propostas não descritas como implementadas continuam futuras.
+
 **Escopo:** persistência entra no P0-B. No P0-A há histórico de sessão e contexto temporário. A Mist começa com armazenamento vazio, sem importação de dados ou calibrações antigas.
 
 **Tecnologia proposta:** SQLite com FTS5 para recuperação lexical. Validar no ambiente antes de fechar o schema. Não há decisão de usar embeddings, Supabase, PostgreSQL ou banco vetorial no primeiro núcleo.
