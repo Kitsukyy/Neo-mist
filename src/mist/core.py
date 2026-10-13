@@ -8,6 +8,7 @@ from mist.output import OutputContract
 from mist.memory import MemoryStore
 from mist.memory_capture import capture_declaration
 from mist.memory_types import MemoryCandidate, MemorySource, now, render_items
+from mist.projects import ProjectStore
 from mist.router import Router
 from mist.schemas import (
     ConversationMessage, Envelope, GenerationRequest, GenerationResponse,
@@ -17,7 +18,8 @@ from mist.schemas import (
 
 class Application:
     def __init__(self, settings: Settings, identity: Identity, gateway: Gateway,
-                 memory: MemoryStore | None = None, project: str | None = None):
+                 memory: MemoryStore | None = None, project: str | None = None,
+                 projects: ProjectStore | None = None):
         self.settings = settings
         self.identity = identity
         self.gateway = gateway
@@ -26,6 +28,7 @@ class Application:
         self.style = Style.AUTO
         self._history: list[ConversationMessage] = []
         self.memory = memory
+        self.projects = projects
         self.session_id = uuid4()
         self.project = None
         self.last_memory_changes = ()
@@ -44,6 +47,16 @@ class Application:
         if self.memory is None:
             raise MistError(ErrorCode.MEMORY_UNAVAILABLE)
         return self.memory
+
+    def require_projects(self):
+        if self.projects is None:
+            raise MistError(ErrorCode.PROJECT_UNAVAILABLE)
+        return self.projects
+
+    def use_project(self,key):
+        item=self.require_projects().get(key,active=True)
+        self.set_project(item.key)
+        return item
 
     def remember(self, text):
         try:

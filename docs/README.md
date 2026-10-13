@@ -1,8 +1,8 @@
 # Documentação da Mist
 
-Versão documental: 2.1 · Atualização: 13 de outubro de 2026 · Idioma: português do Brasil.
+Versão documental: 2.2 · Atualização: 13 de outubro de 2026 · Idioma: português do Brasil.
 
-Este conjunto documenta as decisões recuperadas sobre a nova Mist e organiza a especificação para implementação. Os documentos 01–15 preservam a especificação consolidada. Os documentos 16–26 registram o núcleo offline, a integração NVIDIA, o benchmark com seleção provisória de modelos e contratos opcionais de saída estruturada, avaliação local e real da identidade e instalação verificada; capacidades futuras continuam identificadas como tal.
+Este conjunto documenta as decisões recuperadas sobre a nova Mist e organiza a especificação para implementação. Os documentos 01–15 preservam a especificação consolidada. Os documentos 16–27 registram o núcleo offline, a integração NVIDIA, o benchmark com seleção provisória de modelos e contratos opcionais de saída estruturada, avaliação local e real da identidade e instalação verificada; capacidades futuras continuam identificadas como tal.
 
 ## Como interpretar o estado de uma informação
 
@@ -31,6 +31,7 @@ Uma diretriz documental não significa implementação concluída. Testes só po
 10. [Controle preventivo de requisições NVIDIA](24-controle-requisicoes-nvidia.md).
 11. [Memória persistente, captura automática e restauração](25-memoria-persistente.md).
 12. [Avaliação real de memória e ajuste de proveniência](26-avaliacao-real-memoria.md).
+13. [Projetos, tarefas e progresso local](27-projetos-e-tarefas.md).
 
 ## Precedência entre documentos
 
@@ -47,7 +48,7 @@ A publicação inicial continha a documentação e um README. A primeira impleme
 - Guarda de Saída, auditoria de metadados e autonomia zero;
 - testes de integração e de bloqueio, descritos no [guia de execução](16-primeiro-nucleo.md).
 
-O P0-A está em andamento: geração NVIDIA e benchmark real foram executados, com seleção provisória FAST/PRIMARY. Consulte [a integração NVIDIA](17-integracao-nvidia.md) e [os resultados do benchmark](18-benchmark-modelos.md). A avaliação real e suas correções estão no [documento 23](23-avaliacao-real-identidade.md). Faltam condições de dados/termos da conta, revisão/integração da branch publicada e critérios restantes de aceitação. A seleção continua provisória, com limites das amostras registrados. A revisão 0.4.1 tem memória persistente opcional descrita no documento 25; não há execução de ferramentas. Os exemplos conceituais dos documentos 10 e 11 não substituem os contratos e arquivos executáveis de `src/mist`.
+O P0-A está em andamento: geração NVIDIA e benchmark real foram executados, com seleção provisória FAST/PRIMARY. Consulte [a integração NVIDIA](17-integracao-nvidia.md) e [os resultados do benchmark](18-benchmark-modelos.md). A avaliação real e suas correções estão no [documento 23](23-avaliacao-real-identidade.md). Faltam condições de dados/termos da conta, revisão/integração da branch publicada e critérios restantes de aceitação. A seleção continua provisória, com limites das amostras registrados. A revisão 0.5.0 acrescenta projetos/tarefas locais no documento 27 e tem memória persistente opcional descrita no documento 25; não há execução de ferramentas. Os exemplos conceituais dos documentos 10 e 11 não substituem os contratos e arquivos executáveis de `src/mist`.
 
 ## Glossário
 

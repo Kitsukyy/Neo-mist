@@ -10,6 +10,7 @@ from mist.identity import Identity
 from mist.memory import MemoryStore
 from mist.nvidia import NvidiaProvider
 from mist.providers import FakeModel
+from mist.projects import ProjectStore
 from mist.safety import OutputGuard
 
 
@@ -37,8 +38,9 @@ def create_application(config_dir: Path | None = None, audit_path: Path | None =
     )
     memory = MemoryStore(memory_dir) if memory_dir is not None else None
     try:
-        return Application(settings, Identity(constitution, personality), gateway, memory, project)
-    except Exception:
+        projects = ProjectStore(memory) if memory is not None else None
+        return Application(settings, Identity(constitution, personality), gateway, memory, project, projects)
+    except BaseException:
         if memory is not None:
             memory.close()
         raise

@@ -15,7 +15,7 @@ Os IDs REQ deste documento são novos e organizam a especificação recuperada. 
 | REQ-C05 | Histórico e contexto temporário com limite configurável. | P0-A |
 | REQ-C06 | Nenhum segredo no código, configurações públicas ou logs. | P0-A |
 | REQ-C07 | Testes sem rede e sem credenciais. | P0-A |
-| REQ-C08 | Gerenciar tarefas, checkpoints e cancelamento. | Futuro |
+| REQ-C08 | Tarefas manuais locais em 0.5.0; checkpoints/cancelamento de execução futuros. | P1 / futuro |
 | REQ-C09 | Interfaces e documentação evoluem com o código. | Todos |
 
 ## Gateway
@@ -80,7 +80,7 @@ Precisão de conteúdo e estilo são avaliados por cenários. Permissões e bloq
 | REQ-M09 | Schema e migrations versionados; recuperação após falhas. | P0-B |
 | REQ-M10 | Exportação em formato aberto e testes de restauração. | P0-B/evolução |
 | REQ-M11 | Memórias episódicas, semânticas, preferências e escopo de projeto. | P0-B inicial |
-| REQ-M12 | Projetos completos, relações e consolidação de episódios. | P1 |
+| REQ-M12 | Cadastro e tarefas locais em 0.5.0; relações/consolidação de episódios futuras. | P1 |
 | REQ-M13 | Procedimentos com evidência de resultado. | P2 |
 | REQ-M14 | Embeddings só após avaliação; modelo/dimensão/versão registrados. | Futuro |
 

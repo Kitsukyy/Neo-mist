@@ -19,9 +19,17 @@ class ErrorCode(StrEnum):
     MEMORY_UNAVAILABLE = "MEMORY_UNAVAILABLE"
     MEMORY_INVALID = "MEMORY_INVALID"
     MEMORY_NOT_FOUND = "MEMORY_NOT_FOUND"
+    PROJECT_UNAVAILABLE = "PROJECT_UNAVAILABLE"
+    PROJECT_INVALID = "PROJECT_INVALID"
+    PROJECT_NOT_FOUND = "PROJECT_NOT_FOUND"
+    PROJECT_ARCHIVED = "PROJECT_ARCHIVED"
 
 
 MESSAGES = {
+    ErrorCode.PROJECT_UNAVAILABLE: "Catálogo local de projetos indisponível. Confira o armazenamento; a operação não foi concluída.",
+    ErrorCode.PROJECT_INVALID: "Operação de projeto inválida. Confira identificador, conteúdo, campos e limites.",
+    ErrorCode.PROJECT_NOT_FOUND: "Projeto ou tarefa ausente ou fora do projeto informado.",
+    ErrorCode.PROJECT_ARCHIVED: "Projeto arquivado. Reabra-o antes de selecionar ou atualizar tarefas.",
     ErrorCode.MEMORY_UNAVAILABLE: "Memória local indisponível ou ocupada. Nenhum envio foi iniciado; confira o armazenamento.",
     ErrorCode.MEMORY_INVALID: "Operação de memória inválida. Confira o conteúdo, os campos e o escopo.",
     ErrorCode.MEMORY_NOT_FOUND: "Memória ausente, excluída ou fora do escopo atual.",

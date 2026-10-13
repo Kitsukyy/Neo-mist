@@ -11,12 +11,13 @@ from mist.errors import ErrorCode, MistError
 from mist.output import load_output_contract
 from mist.memory_cli import automatic_notice, memory_command
 from mist.memory_recovery import recover_memory
+from mist.project_cli import project_command
 from mist.schemas import Sensitivity
 
 HELP = (
     "/help | /mode AUTO|FAST|PRIMARY | /style auto|concise|detailed\n"
     "/local TEXTO | /status | /reset | /quit\n"
-    "/memory (com --memory-dir) | /project NOME | /project global\n"
+    "/memory e /projects (com --memory-dir) | /project NOME | /project global\n"
     "FakeModel é uma simulação. O modo NVIDIA envia contexto permitido à API. Ferramentas desabilitadas."
 )
 
@@ -29,7 +30,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--output-contract", type=Path, help="Contrato JSON de saída para --message")
     parser.add_argument("--allow-external", action="store_true", help="Habilitar envio ao destino externo configurado")
     parser.add_argument("--ask-api-key", action="store_true", help="Ler a chave NVIDIA com entrada oculta, sem salvá-la")
-    parser.add_argument("--memory-dir", type=Path, help="Habilitar memória local neste diretório privado (gravação automática por padrão)")
+    parser.add_argument("--memory-dir", type=Path, help="Habilitar memória e projetos locais neste diretório privado (gravação automática de memória por padrão)")
     parser.add_argument("--project", help="Escopo de projeto das memórias; omitido usa escopo global")
     parser.add_argument("--recover-memory", type=Path, help="Restaurar snapshot local mantendo o registro de exclusões; não inicia conversa nem rede")
     args = parser.parse_args(argv)
@@ -111,6 +112,8 @@ def main(argv: list[str] | None = None) -> int:
                 print(f"{label} | modo={app.mode} | estilo={app.style} | autonomia=0 | turnos={len(app.history)//2} | memória={'ativa' if app.memory else 'desligada'} | projeto={app.project or 'global'}")
             elif line == '/memory' or line.startswith('/memory '):
                 print(memory_command(app, line))
+            elif line == '/projects' or line.startswith('/projects '):
+                print(project_command(app,line))
             elif line.startswith('/project '):
                 name = line[9:].strip()
                 app.set_project(None if name == 'global' else name)

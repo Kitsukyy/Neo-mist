@@ -90,3 +90,22 @@ Wheel 34.678 bytes, SHA256 `642a5e0845aa80df9a33a4c42258e2678e8c22079a357180c3a2
 25 arquivos de runtime/configuração comparados byte a byte sem diferenças,
 conforme `wheel-v0.4.1.json`. Os artefatos 0.4.0 não foram sobrescritos.
 Essa verificação local é distinta das chamadas NVIDIA fictícias do documento 26.
+
+## Revisão 0.5.0 — projetos e tarefas
+
+Recibos novos `python-3.11-v0.5.0.json` e `python-3.14-v0.5.0.json`: 166 testes
+aprovados no wheel instalado, configurações de site-packages e CLI offline fora
+do checkout. Runtime/testes da fonte ebba477, com hashes completos nos recibos.
+As dependências verificadas da instalação anterior foram reutilizadas; a tentativa
+de resolução online falhou por DNS restrito e o wheel local foi instalado offline
+sem reinstalar dependências. Isso não altera o sucesso dos testes registrados.
+
+Wheel 41.531 bytes, SHA256 `2f05c82ab43d8d037ef991be840e444c98268244baf5d7f8311f738147e2124e`;
+28 arquivos de runtime/configuração idênticos à fonte, conforme `wheel-v0.5.0.json`.
+Não é publicação no PyPI nem garantia em outras plataformas.
+
+[Fluxo sintético de projetos](../validation/projects/README.md) verificado por
+quatro processos isolados em cada versão: duas sessões CLI, leituras entre
+sessões, IDs/status/prazo/progresso persistentes, arquivamento/retomada, socket
+bloqueado e nenhuma geração. Recibos adjacentes incluem saídas e gabaritos.
+O [guia de projetos](27-projetos-e-tarefas.md) descreve comandos e limites.

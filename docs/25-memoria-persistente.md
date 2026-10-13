@@ -97,3 +97,11 @@ O perfil esclarece origens user/application/model e a citação de declarações
 Avaliação externa com dados fictícios em [documento 26](26-avaliacao-real-memoria.md);
 nenhuma memória pessoal foi enviada. A sondagem lexical anterior continua
 vinculada ao armazenamento inalterado, sem atribuir seu desempenho ao novo perfil.
+
+## Ligação com projetos 0.5.0
+
+O catálogo opcional é criado ao iniciar com `--memory-dir`, conforme documento
+27. A memória mantém schema 1 e seu registro de exclusões. `/projects use ID`
+seleciona cadastro ativo e aplica o mesmo ID como escopo de memória; o seletor
+anterior de escopo livre continua disponível. Snapshots/restauração de memória
+não incluem nem substituem o catálogo de projetos/tarefas.

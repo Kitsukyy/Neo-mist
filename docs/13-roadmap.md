@@ -12,7 +12,7 @@ Não há prazo ou calendário aprovado. As fases descrevem dependências, sem pr
 | Fase 4 — Tecnologias e identidade | Consolidação com pendências. | Configuração, modelos e políticas verificáveis. |
 | Fase 5 — Experimentos | Provedor NVIDIA e benchmark de modelos executados; sondagem lexical e avaliação real dirigida de memória executadas. | Evidência das escolhas técnicas relevantes. |
 | Fase 6 — Núcleo mínimo | Core, NVIDIA, saída estruturada e memória local 0.4.1 implementados; validação offline/instalação e avaliação incremental; condições da conta e revisão pendentes. | P0-A, seguido de P0-B validado. |
-| Fase 7 — Expansão modular | Futuro. | Ferramentas, projetos e autonomia limitada. |
+| Fase 7 — Expansão modular | Projetos e tarefas locais 0.5.0 implementados; demais recursos futuros. | Evolução de projetos, ferramentas e autonomia limitada. |
 | Fases 8–9 — Avaliação/estabilização | Futuro. | Comparações, qualidade e operação confiável. |
 | Fase 10 — Evolução contínua | Futuro. | Melhorias controladas e reversíveis. |
 
@@ -86,3 +86,11 @@ Avaliação real de memória com fixtures e correção de proveniência no docum
 26. Oferta/painel NVIDIA transcritos pelo usuário no documento 22, sem confirmação
 de retenção/treinamento. Próxima decisão de produto: escolher o primeiro recurso
 usável de P1 e seu escopo; execução de ferramentas permanece desabilitada.
+
+### Projetos 0.5.0
+
+O usuário escolheu projetos como primeiro incremento de P1. Cadastro e tarefas
+locais foram implementados no documento 27, ligados ao seletor de memórias.
+Progresso manual, sem execução de tarefas ou montagem automática do catálogo
+no contexto externo. Próximos incrementos: uso em conversa sob política definida,
+relações/consolidação e interface; ferramentas continuam exigindo escopo próprio.
