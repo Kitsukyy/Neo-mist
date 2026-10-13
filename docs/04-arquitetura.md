@@ -110,3 +110,13 @@ Percepção, ferramentas, planejamento e autonomia ampliada usam interfaces expl
 
 Modularidade deve ser demonstrada por substituição e limites de importação, não pela quantidade de pastas.
 
+
+
+## Interface visual implementada em 0.6.0
+
+`mist.ui` serve assets empacotados e uma API local de estado/operações tipadas.
+`HTTPServer` serial mantém Core e conexão SQLite na thread proprietária. Token
+por processo, Host/origem, revisão da sessão e rotas enumeradas limitam a
+fronteira HTTP. A página não recebe credenciais nem executa comandos gerados.
+CLI e interface reutilizam Core/MemoryStore/ProjectStore. Contratos operacionais
+e limites estão no [documento 28](28-interface-visual-local.md).

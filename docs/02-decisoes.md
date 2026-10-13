@@ -82,3 +82,14 @@ cadastro local, objetivo, tarefas/status/prioridade/prazo, progresso declarado,
 arquivamento/retomada e exportação. IDs, limites e comandos são escolhas técnicas
 do incremento. Não autoriza execução de tarefas, acesso a pastas de trabalho
 nem envio automático de conteúdo do catálogo. Ver [documento 27](27-projetos-e-tarefas.md).
+
+
+## 13/10/2026 — Interface visual local
+
+**Decisões explícitas do usuário:** escolher a interface visual local como próximo
+incremento; para app, usar visual inspirado no ChatGPT (alternativa de terminal
+seria Claude/OpenCode). A revisão 0.6.0 implementa o app local no navegador,
+com conversa central, projetos, tarefas e memórias. Servidor serial em loopback,
+assets empacotados e chave somente no backend são escolhas técnicas deste
+incremento. Não amplia autonomia, não autoriza ferramentas nem grava todo
+histórico de chats. Ver [documento 28](28-interface-visual-local.md).

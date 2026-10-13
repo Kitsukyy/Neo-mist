@@ -1,0 +1,31 @@
+{
+  "verified_at": "2026-10-13T20:42:00Z",
+  "runtime_revision": "08b749ea816e1fdf3cc1f3ba7fc952d5b124e93c",
+  "package_version": "0.6.0",
+  "method": "Official CUA in-app browser; manual UI operations and read-only DOM inspection",
+  "fixtures": "Fictitious Aurora and Lunar projects; presentation tasks and preferences; no personal data or credentials",
+  "checks": {
+    "project_creation_name_objective_auto_identifier": true,
+    "task_creation_edit_state_priority_due_date": true,
+    "manual_progress_50_percent": true,
+    "automatic_local_memory_notice": true,
+    "memory_correction_revision_and_local_privacy": true,
+    "memory_display_filter": true,
+    "project_archive_reopen": true,
+    "installed_app_restart_persistence": true,
+    "new_conversation_clears_context": true,
+    "responsive_390x844_no_horizontal_overflow": true
+  },
+  "responsive_observation": {
+    "innerWidth": 390,
+    "innerHeight": 844,
+    "scrollWidth": 390,
+    "clientWidth": 390
+  },
+  "limits": [
+    "Offline FakeModel; no new NVIDIA request",
+    "Single in-app browser, not a browser compatibility matrix",
+    "Python tests cover deletion and HTTP attacks; permanent deletion was not operated through the browser"
+  ],
+  "passed": true
+}

@@ -109,3 +109,24 @@ quatro processos isolados em cada versão: duas sessões CLI, leituras entre
 sessões, IDs/status/prazo/progresso persistentes, arquivamento/retomada, socket
 bloqueado e nenhuma geração. Recibos adjacentes incluem saídas e gabaritos.
 O [guia de projetos](27-projetos-e-tarefas.md) descreve comandos e limites.
+
+
+## Revisão 0.6.0 — interface visual local
+
+Recibos `python-3.11-v0.6.0.json` e `python-3.14-v0.6.0.json`: 190 testes
+aprovados no wheel não editável instalado, fora do checkout. Fonte de runtime e
+testes: 08b749e, com hashes nos recibos. Dependências existentes reutilizadas,
+instalação offline sem resolução adicional.
+
+Wheel 56.914 bytes, SHA256 `045473a09f83badd87db217a013c26d115c34b4c1ff0dddb0176cc78868d71ac`;
+32 arquivos de runtime/defaults/assets comparados byte a byte sem diferenças.
+A distribuição inclui os comandos `mist` e `mist-ui` e todos os assets locais.
+
+O [verificador de interface instalada](../tools/verify_ui.py) executou duas sessões
+HTTP do comando `mist-ui` em cada Python, com fixtures fictícias: geração offline,
+captura automática, projeto, tarefas, prazo, progresso, estado após reinício,
+arquivamento/retomada e rejeição de aba desatualizada. Recibos em
+[validation/ui](../validation/ui/README.md), com hashes dos assets instalados
+e do runner. A correção UTF-8 do runner foi aplicada após o commit de runtime;
+a fonte do app e o wheel permaneceram os mesmos. Isso é validação local,
+sem novas chamadas NVIDIA ou publicação no PyPI.

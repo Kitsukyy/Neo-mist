@@ -1,0 +1,28 @@
+{
+  "verified_at": "2026-10-13T20:40:35.321317+00:00",
+  "package": {
+    "version": "0.6.0",
+    "python": "3.11.16",
+    "module_path": "/tmp/mist-memory-py311/lib/python3.11/site-packages/mist/__init__.py",
+    "asset_sha256": {
+      "index.html": "98d329a63b63d99ae2e2977b806f5ef6b710f3c4d4de80e4a75d8478cba7e68f",
+      "style.css": "22528b54f9fff3f8bbaf627b1d7dd049e2c930f1a14742eda435892511c0943a",
+      "app.js": "51225843e3e22ea9864b9fa8d0b0d42d004cb04a55f8eb6161740e949c143ae7"
+    }
+  },
+  "source_revision": "08b749ea816e1fdf3cc1f3ba7fc952d5b124e93c",
+  "runner_sha256": "2538d3c90fc22033a02b9d100b9fc2e70e95b671cdfeef8e62e7ff1798bcfc41",
+  "fixtures": "Fixed fictitious Aurora project, tasks and preference; no credentials or personal data",
+  "checks": {
+    "loopback_authentication": true,
+    "installed_assets_and_headers": true,
+    "local_conversation_and_automatic_memory": true,
+    "stale_tab_denied_without_mutation": true,
+    "manual_progress_and_task_fields": true,
+    "restart_persists_projects_tasks_memory_not_chat": true,
+    "archive_reopen_preserve_data": true,
+    "single_offline_generation_audited": true,
+    "graceful_shutdown_releases_storage": true
+  },
+  "passed": true
+}

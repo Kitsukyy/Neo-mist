@@ -2,7 +2,7 @@
 
 A Mist é uma assistente pessoal de IA com identidade própria, personalidade adaptativa e arquitetura modular. A aplicação será executada localmente, usando provedores externos para geração de respostas e permitindo, futuramente, modelos locais, ferramentas, voz e autonomia configurável.
 
-**Estado:** Mist 0.5.0 com núcleo conversacional, NVIDIA, saída estruturada e memória local opcional. A memória captura declarações úteis por padrões conservadores, mantém fontes/versões, busca lexical por projeto, correção, exclusão e restauração que respeita exclusões anteriores. A suíte atual contém 166 testes; resultados e limites no [guia de memória](docs/25-memoria-persistente.md). Projetos e tarefas locais estão implementados no [guia de projetos](docs/27-projetos-e-tarefas.md). A revisão 0.4.1 explicita a origem das hipóteses; veja a [avaliação real de memória](docs/26-avaliacao-real-memoria.md). FAST/PRIMARY seguem provisórios; condições de dados da conta NVIDIA e revisão/integração da entrega continuam pendentes. Autonomia zero e ferramentas desabilitadas. FakeModel simula o fluxo, sem interpretar perguntas.
+**Estado:** Mist 0.6.0 com interface visual local, núcleo conversacional, NVIDIA, saída estruturada e memória persistente. A memória captura declarações úteis por padrões conservadores, mantém fontes/versões, busca lexical por projeto, correção, exclusão e restauração que respeita exclusões anteriores. A suíte atual contém 190 testes; resultados e limites no [guia de memória](docs/25-memoria-persistente.md). Projetos e tarefas locais estão implementados no [guia de projetos](docs/27-projetos-e-tarefas.md). A revisão 0.4.1 explicita a origem das hipóteses; veja a [avaliação real de memória](docs/26-avaliacao-real-memoria.md). FAST/PRIMARY seguem provisórios; condições de dados da conta NVIDIA e revisão/integração da entrega continuam pendentes. Autonomia zero e ferramentas desabilitadas. FakeModel simula o fluxo, sem interpretar perguntas.
 
 **Base documental:** decisões dos chats do projeto Mist, consolidadas em 11 de outubro de 2026. Decisões, propostas e pendências estão identificadas para evitar que uma hipótese seja confundida com uma funcionalidade pronta.
 
@@ -60,6 +60,16 @@ Com o mesmo `--memory-dir`, use `/projects` para consultar os comandos:
 Projetos e tarefas ficam locais. O progresso é declarado por você; escolher um
 projeto também seleciona suas memórias. Veja [status, prazos, arquivamento e exportação](docs/27-projetos-e-tarefas.md).
 
+## Usar a interface visual local
+
+```sh
+.venv/bin/mist-ui --open-browser
+```
+
+Conversa central, barra lateral de projetos e áreas de tarefas/memórias. O padrão
+é uma simulação offline; a chave NVIDIA fica no terminal. Veja [instalação,
+privacidade e limites](docs/28-interface-visual-local.md).
+
 ## Testar com a NVIDIA
 
 A configuração padrão continua offline. A revisão 0.3.1 acrescenta [controle de requisições NVIDIA](docs/24-controle-requisicoes-nvidia.md): uma chamada por vez no processo, intervalo mínimo de 2,1 segundos e pausa após HTTP429, sem repetição automática. Para habilitar a API explicitamente e digitar a chave com entrada oculta:
@@ -78,6 +88,7 @@ Comece pelo [índice e estado documental](docs/README.md).
 
 | Tema | Documento |
 |---|---|
+| App local, conversa, projetos e memórias | [Interface visual](docs/28-interface-visual-local.md) |
 | Cadastro local, tarefas, progresso e arquivamento | [Projetos implementados](docs/27-projetos-e-tarefas.md) |
 | Testes reais de lembrança, hipótese, correção e exclusão | [Avaliação de memória](docs/26-avaliacao-real-memoria.md) |
 | Memória automática local, recuperação e exclusão | [Memória implementada](docs/25-memoria-persistente.md) |
@@ -112,7 +123,7 @@ O **P0-A** entregará uma conversa funcional no terminal com configuração vali
 
 O **P0-B** tem uma implementação inicial de memória persistente, proveniência, recuperação lexical, atualização, conflitos e exclusão. Avaliação de utilidade/qualidade ampla continua incremental.
 
-Voz, interface desktop, ferramentas, modelos locais e autonomia ampliada pertencem à evolução posterior. Veja o [plano](docs/13-roadmap.md).
+A interface visual local está implementada em 0.6.0. Voz, aplicativo desktop nativo, ferramentas, modelos locais e autonomia ampliada pertencem à evolução posterior. Veja o [plano](docs/13-roadmap.md).
 
 ## Como contribuir nesta etapa
 

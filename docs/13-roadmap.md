@@ -12,7 +12,7 @@ Não há prazo ou calendário aprovado. As fases descrevem dependências, sem pr
 | Fase 4 — Tecnologias e identidade | Consolidação com pendências. | Configuração, modelos e políticas verificáveis. |
 | Fase 5 — Experimentos | Provedor NVIDIA e benchmark de modelos executados; sondagem lexical e avaliação real dirigida de memória executadas. | Evidência das escolhas técnicas relevantes. |
 | Fase 6 — Núcleo mínimo | Core, NVIDIA, saída estruturada e memória local 0.4.1 implementados; validação offline/instalação e avaliação incremental; condições da conta e revisão pendentes. | P0-A, seguido de P0-B validado. |
-| Fase 7 — Expansão modular | Projetos e tarefas locais 0.5.0 implementados; demais recursos futuros. | Evolução de projetos, ferramentas e autonomia limitada. |
+| Fase 7 — Expansão modular | Projetos/tarefas 0.5.0 e interface visual local 0.6.0 implementados; demais recursos futuros. | Evolução de projetos, ferramentas e autonomia limitada. |
 | Fases 8–9 — Avaliação/estabilização | Futuro. | Comparações, qualidade e operação confiável. |
 | Fase 10 — Evolução contínua | Futuro. | Melhorias controladas e reversíveis. |
 
@@ -94,3 +94,13 @@ locais foram implementados no documento 27, ligados ao seletor de memórias.
 Progresso manual, sem execução de tarefas ou montagem automática do catálogo
 no contexto externo. Próximos incrementos: uso em conversa sob política definida,
 relações/consolidação e interface; ferramentas continuam exigindo escopo próprio.
+
+
+### Interface visual 0.6.0
+
+Escolhida pelo usuário, com visual de app inspirado no ChatGPT. Conversa,
+projetos/tarefas e revisão de memórias no documento 28; sem ferramentas,
+execução automática, hospedagem ou chave na página. Próximos recursos de
+planejamento/consolidação e acesso a arquivos exigem requisitos e permissões
+próprios. A aceitação de uso real e a integração da branch continuam etapas
+separadas da validação offline.

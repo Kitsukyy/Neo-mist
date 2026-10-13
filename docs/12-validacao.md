@@ -114,3 +114,14 @@ As fontes públicas e as pendências da conta foram registradas no [documento 22
 ## Memória local 0.4.0
 
 O [documento 25](25-memoria-persistente.md) relaciona implementação e validação do P0-B: 48 testes novos e experimento lexical sintético com dez mil itens. A política de exclusão depende do registro sobrevivente e não promete apagar cópias externas. Conversas reais com memória não foram avaliadas nesta entrega.
+
+
+## Incremento visual 0.6.0
+
+190 testes aprovados no pacote instalado em Linux/Python 3.11.16 e 3.14.7,
+incluindo bloqueios HTTP e fluxo da sessão. Execução do comando visual fora
+do checkout verificada por duas sessões por versão; fixtures e resultados em
+[validation/ui](../validation/ui/README.md). Verificação do navegador registrada
+separadamente, com dados fictícios e imagens; não equivale a testes automáticos
+de todos os navegadores nem a homologação de produção. Detalhes no
+[documento 28](28-interface-visual-local.md).

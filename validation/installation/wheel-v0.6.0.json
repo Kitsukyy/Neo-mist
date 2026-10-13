@@ -1,0 +1,11 @@
+{
+  "wheel": "neo_mist-0.6.0-py3-none-any.whl",
+  "bytes": 56914,
+  "sha256": "045473a09f83badd87db217a013c26d115c34b4c1ff0dddb0176cc78868d71ac",
+  "runtime_files": 32,
+  "differences": [],
+  "entrypoints": [
+    "mist",
+    "mist-ui"
+  ]
+}

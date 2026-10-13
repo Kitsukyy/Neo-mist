@@ -16,7 +16,7 @@ Os IDs REQ deste documento são novos e organizam a especificação recuperada. 
 | REQ-C06 | Nenhum segredo no código, configurações públicas ou logs. | P0-A |
 | REQ-C07 | Testes sem rede e sem credenciais. | P0-A |
 | REQ-C08 | Tarefas manuais locais em 0.5.0; checkpoints/cancelamento de execução futuros. | P1 / futuro |
-| REQ-C09 | Interfaces e documentação evoluem com o código. | Todos |
+| REQ-C09 | Interfaces e documentação evoluem com o código. Interface visual local em 0.6.0, conforme documento 28. | Todos |
 
 ## Gateway
 
