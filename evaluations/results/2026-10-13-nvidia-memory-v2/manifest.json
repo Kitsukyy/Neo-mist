@@ -1,0 +1,100 @@
+{
+  "version": 2,
+  "application_version": "0.4.1",
+  "python": "3.14.7",
+  "started_at": "2026-10-13T19:08:12.252403+00:00",
+  "kind": "real_synthetic_memory_regression",
+  "cases_sha256": "ec9fd1ac2b4a43651c406a36d033f3302a84028470eb9b58ffef72fb279c9bed",
+  "runner_sha256": "726ac26f7bc9770e7e622134a011c5a4b102d8c81e79bd7b82f841b971db9e83",
+  "source_sha256": {
+    "src/mist/__init__.py": "434f93f68e74bc89075072dcaf0b90de957186f09d52245aaac802342f24dad6",
+    "src/mist/__main__.py": "93a7bb9260de7c812e0a50106b976d55ea3ca2effbb62ae3a3cb9ddcdab1805d",
+    "src/mist/audit.py": "66e09056d149dde2c3fc5b770b3ff1a1f773863f0a7fd6a119352b1192f939ae",
+    "src/mist/authorization.py": "7d6b9fc314779de2ab1a9fe4301989afe97f8990d96084aceef328afb4c7042f",
+    "src/mist/bootstrap.py": "c4617deeb74a554aaaa1e72e9202d12fd96c7dd635248e1dcfc045e1ffa756f0",
+    "src/mist/cli.py": "8086a90f3654eabb66407016dd02ee613226d29393ddda35c5e2bc6f76abd69f",
+    "src/mist/config.py": "6b92d0e2abb77323dd0d56d98becc8a2f3007d0e434d441bb90ae51d45e8de19",
+    "src/mist/core.py": "ac1231a8f1dad02000cbf9d1a5a3570b5a27e90876d657eebba17eaff8d1b1e1",
+    "src/mist/errors.py": "d8defc4e203e231471d3d47cdf9336f7d10a4e32d9b5e8f161702f4b69c88968",
+    "src/mist/gateway.py": "6a6ed2d94ee334bdd86499df42f8674a3673992de8e8e186268b12e5984cc725",
+    "src/mist/identity.py": "6b00e4040bd2b1e79454f9f3e771a85f1cdde2963f3675f13b20e619dfd4f6dd",
+    "src/mist/memory.py": "b57eb510179dd26571c528c0b8c86817aec1ada29012fd495ef21356fc1d05d1",
+    "src/mist/memory_capture.py": "4c4a7262cffb7f6baf8d92277a2de1df45daff7e58a24c0e17bc942196ca7e53",
+    "src/mist/memory_cli.py": "b4e7f300caa5ea55bff1baa76e24a9ee55efd3af43c610dbd98b0b40ac281f93",
+    "src/mist/memory_recovery.py": "b7d8d6a788839239c0d0ef589f4cf751332917a8d71d3b9927844ce0fc3e5721",
+    "src/mist/memory_types.py": "4fc6dcfd7f5afaede788d1a97758c059a29d341310eadebd9c4e0b0e10477fd6",
+    "src/mist/nvidia.py": "53f0a0f3353ed971b41070757d3ddd60ca8dcde11fd891c27dbd6dc984222cf9",
+    "src/mist/output.py": "329d47defcfe82df510d3d70be857d5a8a6ff2139501b776773f096cff32f3e0",
+    "src/mist/providers.py": "1a6cfd1eb171f86a906d39c38278d0f95536214574f130784c4d520c2afa3715",
+    "src/mist/router.py": "e5d9a282f3d8002ec1cb473e714b2bc9c237ee41e95fa0f66bc0c03c96ae2a7f",
+    "src/mist/safety.py": "e2aa078d273ea6f6a4cf3d73ec46b382549357519c5f578104b49658127ef1f5",
+    "src/mist/schemas.py": "9ed152e4134ec59227f8b249cfcd68914e84654ef36a112fb0d19e00532adcb3"
+  },
+  "settings": {
+    "version": 1,
+    "autonomy_level": 0,
+    "tools_enabled": false,
+    "default_mode": "AUTO",
+    "fast_model": "nvidia-fast",
+    "primary_model": "nvidia-primary",
+    "max_input_chars": 8000,
+    "max_context_chars": 16000,
+    "models": [
+      {
+        "id": "nvidia-fast",
+        "provider": "nvidia",
+        "model_id": "nvidia/nemotron-3-super-120b-a12b",
+        "external": true,
+        "destination": "nvidia-integrate",
+        "enable_thinking": true
+      },
+      {
+        "id": "nvidia-primary",
+        "provider": "nvidia",
+        "model_id": "moonshotai/kimi-k3",
+        "external": true,
+        "destination": "nvidia-integrate",
+        "enable_thinking": null
+      }
+    ],
+    "allowed_external_destinations": [
+      "nvidia-integrate"
+    ],
+    "provider_timeout_seconds": 120.0,
+    "max_output_tokens": 4096,
+    "memory": {
+      "automatic": true,
+      "max_items": 5,
+      "max_chars": 2500
+    }
+  },
+  "identity_sha256": {
+    "constitution": "5e8560c55baf1f454a94b2f86b703f776f46d6b1370903dc3f0c8f64ae521fcd",
+    "personality": "4a56e11844611e31babdafd1f9eb4547d41ce65b281a783086c7dd2a1b6e88db"
+  },
+  "temperature": 0.2,
+  "output_contract": "validated text; no tools; finish_reason stop",
+  "min_external_start_interval_seconds": 2.1,
+  "case_set": "all",
+  "selected_cases": [
+    "cross_session_declared_name",
+    "local_memory_not_sent",
+    "hypothesis_not_fact",
+    "corrected_name_current_revision",
+    "deleted_name_absent"
+  ],
+  "modes": [
+    "FAST",
+    "PRIMARY"
+  ],
+  "planned_cases": 10,
+  "deadline_seconds": 600,
+  "retries": 0,
+  "quality_status": "pending_manual_review",
+  "privacy": "fixed fictitious records only; keys never persisted; runtime databases excluded from publication",
+  "completed_at": "2026-10-13T19:12:55.012819+00:00",
+  "attempted_cases": 10,
+  "completed_cases": 10,
+  "stopped": false,
+  "dispatched_generations": 10
+}

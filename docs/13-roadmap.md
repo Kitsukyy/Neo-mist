@@ -10,8 +10,8 @@ Não há prazo ou calendário aprovado. As fases descrevem dependências, sem pr
 | Fase 2 — Requisitos | Recuperados parcialmente e revisados. | Visão e prioridades consolidadas neste conjunto. |
 | Fase 3 — Arquitetura | Revisão corretiva como base. | Modularidade, Guarda, autonomia zero e divisão P0. |
 | Fase 4 — Tecnologias e identidade | Consolidação com pendências. | Configuração, modelos e políticas verificáveis. |
-| Fase 5 — Experimentos | Provedor NVIDIA e benchmark de modelos executados; experimentos de memória pendentes. | Evidência das escolhas técnicas relevantes. |
-| Fase 6 — Núcleo mínimo | Core, NVIDIA, saída estruturada e memória local 0.4.0 implementados; validação offline/instalação e avaliação incremental; condições da conta e revisão pendentes. | P0-A, seguido de P0-B validado. |
+| Fase 5 — Experimentos | Provedor NVIDIA e benchmark de modelos executados; sondagem lexical e avaliação real dirigida de memória executadas. | Evidência das escolhas técnicas relevantes. |
+| Fase 6 — Núcleo mínimo | Core, NVIDIA, saída estruturada e memória local 0.4.1 implementados; validação offline/instalação e avaliação incremental; condições da conta e revisão pendentes. | P0-A, seguido de P0-B validado. |
 | Fase 7 — Expansão modular | Futuro. | Ferramentas, projetos e autonomia limitada. |
 | Fases 8–9 — Avaliação/estabilização | Futuro. | Comparações, qualidade e operação confiável. |
 | Fase 10 — Evolução contínua | Futuro. | Melhorias controladas e reversíveis. |
@@ -60,7 +60,7 @@ Prioridades de P1–P3 são herdadas das propostas de requisitos e devem ser rev
 | Python/dependências | Instalação e pacote local verificados em Linux 3.11.16/3.14.7; outras versões/plataformas não testadas. | Início do P0-A. |
 | Constituição | Redação/esquema executáveis implementados e testados. | Antes de habilitar geração real. |
 | Perfis | Regras e duas rodadas reais revisadas; correção final de idioma com regressão direcionada, sem homologação universal. | P0-A. |
-| APIs | Endpoint/IDs/autenticação verificados; fontes públicas consultadas, oferta/cotas/política aplicável à conta pendentes. | Antes de integrar cada provedor. |
+| APIs | Endpoint/IDs/autenticação verificados; fontes públicas consultadas, oferta gratuita e até 40 RPM relatados pelo usuário; política de dados/termos aplicáveis pendentes. | Antes de integrar cada provedor. |
 | Modelo principal | Kimi K3 selecionado provisoriamente; repetir com tarefas inéditas e extensas. | Antes de homologação definitiva. |
 | Modelo rápido | Super com raciocínio selecionado provisoriamente; acompanhar latência e restrições de comunicação. | Antes de homologação definitiva. |
 | Credenciais | Leitura oculta usada com autorização renovada; chave temporária não persistida nem incluída no pacote. | Integração real. |
@@ -79,3 +79,10 @@ A identidade evolui por configuração e preferências verificadas; políticas f
 ## Próxima ação concreta
 
 A base offline foi implementada e testada: passos 1–5 têm uma versão mínima funcional, com os limites registrados no [guia](16-primeiro-nucleo.md). O adaptador NVIDIA tem geração real verificada e [benchmark com seleção provisória](18-benchmark-modelos.md). A saída estruturada foi implementada no [documento 19](19-saida-estruturada.md); a instalação foi validada no [documento 21](21-instalacao-validada.md). As rodadas reais e os ajustes estão no [documento 23](23-avaliacao-real-identidade.md). Próximo passo: revisar/integrar a branch `mist-p0a-validacao` publicada no GitHub e registrar oferta/cotas/condições de dados da conta conforme [fontes e pendências](22-condicoes-nvidia.md). O usuário concluiu o login do editor e autorizou seu acesso; a árvore publicada foi comparada integralmente com a entrega local. Enquanto as condições da conta permanecem pendentes, o desenvolvimento local do P0-B avançou por autorização do usuário: [memória 0.4.0](25-memoria-persistente.md), com captura automática escolhida explicitamente. Próxima validação é utilidade/qualidade em conversas inéditas sob política de envio definida; recursos P1 exigem escopo e permissões próprios. O envio externo exige configuração permitida e habilitação explícita.
+
+### Incremento atual — 0.4.1
+
+Avaliação real de memória com fixtures e correção de proveniência no documento
+26. Oferta/painel NVIDIA transcritos pelo usuário no documento 22, sem confirmação
+de retenção/treinamento. Próxima decisão de produto: escolher o primeiro recurso
+usável de P1 e seu escopo; execução de ferramentas permanece desabilitada.

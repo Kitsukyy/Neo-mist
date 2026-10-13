@@ -182,11 +182,17 @@ class MemoryCoreTests(unittest.TestCase):
         self.assertNotIn('Luna', self.provider.calls[-1].request.model_dump_json())
 
     def test_memory_budget_and_invalid_remember_do_not_leak(self):
-        self.app.settings = self.settings.model_copy(update={'max_context_chars': 3000})
+        query = 'Aurora ' + 'u' * 400
+        self.app.handle(query)
+        baseline = sum(len(m.content) for m in self.provider.calls[-1].request.messages)
+        self.app.reset()
+        budget = baseline + 500
+        self.app.settings = self.settings.model_copy(update={'max_context_chars': budget})
         for _ in range(3):
             self.app.remember('Aurora ' + 'a' * 900)
-        self.app.handle('Aurora ' + 'u' * 400)
-        self.assertLessEqual(sum(len(m.content) for m in self.provider.calls[-1].request.messages), 3000)
+        self.app.handle(query)
+        self.assertLessEqual(sum(len(m.content) for m in self.provider.calls[-1].request.messages), budget)
+        self.assertNotIn('a' * 900, self.provider.calls[-1].request.model_dump_json())
         with self.assertRaises(MistError) as raised:
             self.app.remember('private-secret' * 1000)
         self.assertEqual(raised.exception.code, ErrorCode.MEMORY_INVALID)

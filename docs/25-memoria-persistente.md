@@ -82,8 +82,18 @@ Snapshots são limitados a 20 MB, dez mil itens e cem mil versões; exceder os l
 
 Schema 1 e migração inicial transacional. Conteúdo, FTS e auditoria de metadados são atualizados na mesma transação; exclusões e versões do registro separado participam da transação SQLite em journal DELETE e synchronous FULL. A [documentação SQLite](https://www.sqlite.org/lang_attach.html) descreve a atomicidade entre bancos anexados sob essas condições. A [opção secure-delete do FTS5](https://www.sqlite.org/fts5.html#the_secure_delete_configuration_option) é usada junto de `PRAGMA secure_delete`; não garante eliminação de cópias fora do banco.
 
-A suíte contém 132 testes: 46 novos para memória e integração, além dos 84 anteriores. Verifica persistência, fontes/dedup, hipótese, conflito, correção, escopo, validade, orçamento, credenciais, privacidade de derivados, falhas de auditoria, rollback, interrupção de processo antes do commit, migração interrompida, recuperação, restauração antiga e CLI offline. São garantias de fluxo/política, não homologação da qualidade textual de um LLM.
+A suíte contém 132 testes: 48 novos para memória e integração, além dos 84 anteriores. Verifica persistência, fontes/dedup, hipótese, conflito, correção, escopo, validade, orçamento, credenciais, privacidade de derivados, falhas de auditoria, rollback, interrupção de processo antes do commit, migração interrompida, recuperação, restauração antiga e CLI offline. São garantias de fluxo/política, não homologação da qualidade textual de um LLM.
 
 `tools/verify_memory.py` gera dez mil registros e cem consultas por âncoras sintéticas únicas. Gabarito determinístico, filtros locais/projeto, medição da recuperação incluindo registro SQLite. Conexão aquecida e cache do sistema não controlado; montagem do corpus excluída da latência. Relatórios finais em `validation/memory/`. Esse cenário favorável não demonstra qualidade semântica, cache frio, hardware de produção ou a proposta histórica de p95 <=300ms em uso geral.
 
-Próximas avaliações: conversas inéditas com lembranças/correções em modelos reais sob política aprovada, critérios de utilidade e ampliação da captura para textos livres. Embeddings, importação do legado, projetos completos e execução de ferramentas continuam fora desta entrega.
+A avaliação real dirigida foi executada no documento 26. Próximas avaliações: conversas inéditas com lembranças/correções, critérios de utilidade e ampliação da captura para textos livres, sob política de envio definida. Embeddings, importação do legado, projetos completos e execução de ferramentas continuam fora desta entrega.
+
+## Revisão 0.4.1
+
+A suíte atual tem 141 testes: os 132 da entrega de memória, seis para o runner
+sintético (incluindo continuação fixa) e três para integridade da revisão. Os
+registros 0.4.0 permanecem históricos. O armazenamento e sua política não mudaram.
+O perfil esclarece origens user/application/model e a citação de declarações.
+Avaliação externa com dados fictícios em [documento 26](26-avaliacao-real-memoria.md);
+nenhuma memória pessoal foi enviada. A sondagem lexical anterior continua
+vinculada ao armazenamento inalterado, sem atribuir seu desempenho ao novo perfil.

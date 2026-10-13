@@ -43,3 +43,11 @@ Depois do fechamento do P0-A, o próximo marco de desenvolvimento é P0-B, com m
 ## Evolução local 0.4.0 — memória
 
 A memória opcional do P0-B foi implementada por autorização do usuário enquanto as condições da conta NVIDIA continuam pendentes. Captura automática escolhida pelo usuário, inicialmente por padrões conservadores, com privacidade local por padrão. A suíte de 132 testes inclui recuperação entre sessões, proveniência, estados, correções, isolamento, exclusão/restauração e integração com Guarda. Ver [documento 25](25-memoria-persistente.md). Não houve avaliação textual real da identidade com memória; resultados históricos dos modelos não validam automaticamente o perfil/contexto atual.
+
+## Revisão 0.4.1
+
+O perfil opcional de memória agora distingue explicitamente a origem application
+de uma declaração do usuário e pede aspas para citações em primeira pessoa.
+A suíte local contém 141 testes; novas avaliações reais sintéticas e limites
+estão no [documento 26](26-avaliacao-real-memoria.md). Isso não transfere a
+aprovação dos cenários históricos para todo comportamento com memória.

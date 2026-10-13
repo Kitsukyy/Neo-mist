@@ -1,8 +1,8 @@
 # Neo-mist — Mist
 
-A Mist é uma assistente pessoal de IA com identidade própria, personalidade adaptativa e arquitetura modular. A aplicação será executada localmente, usando provedores externos para geração de respostas e permitindo, futuramente, modelos locais, memória persistente, ferramentas, voz e autonomia configurável.
+A Mist é uma assistente pessoal de IA com identidade própria, personalidade adaptativa e arquitetura modular. A aplicação será executada localmente, usando provedores externos para geração de respostas e permitindo, futuramente, modelos locais, ferramentas, voz e autonomia configurável.
 
-**Estado:** Mist 0.4.0 com núcleo conversacional, NVIDIA, saída estruturada e memória local opcional. A memória captura declarações úteis por padrões conservadores, mantém fontes/versões, busca lexical por projeto, correção, exclusão e restauração que respeita exclusões anteriores. A suíte atual contém 132 testes; resultados e limites no [guia de memória](docs/25-memoria-persistente.md). FAST/PRIMARY seguem provisórios; condições da conta NVIDIA e revisão/integração da entrega continuam pendentes. Autonomia zero e ferramentas desabilitadas. FakeModel simula o fluxo, sem interpretar perguntas.
+**Estado:** Mist 0.4.1 com núcleo conversacional, NVIDIA, saída estruturada e memória local opcional. A memória captura declarações úteis por padrões conservadores, mantém fontes/versões, busca lexical por projeto, correção, exclusão e restauração que respeita exclusões anteriores. A suíte atual contém 141 testes; resultados e limites no [guia de memória](docs/25-memoria-persistente.md). A revisão 0.4.1 explicita a origem das hipóteses; veja a [avaliação real de memória](docs/26-avaliacao-real-memoria.md). FAST/PRIMARY seguem provisórios; condições de dados da conta NVIDIA e revisão/integração da entrega continuam pendentes. Autonomia zero e ferramentas desabilitadas. FakeModel simula o fluxo, sem interpretar perguntas.
 
 **Base documental:** decisões dos chats do projeto Mist, consolidadas em 11 de outubro de 2026. Decisões, propostas e pendências estão identificadas para evitar que uma hipótese seja confundida com uma funcionalidade pronta.
 
@@ -63,6 +63,7 @@ Comece pelo [índice e estado documental](docs/README.md).
 
 | Tema | Documento |
 |---|---|
+| Testes reais de lembrança, hipótese, correção e exclusão | [Avaliação de memória](docs/26-avaliacao-real-memoria.md) |
 | Memória automática local, recuperação e exclusão | [Memória implementada](docs/25-memoria-persistente.md) |
 | Cadência, pausa após429 e limites do controle local | [Controle NVIDIA](docs/24-controle-requisicoes-nvidia.md) |
 | Objetivos, visão e escopo | [Visão do produto](docs/01-visao-e-escopo.md) |

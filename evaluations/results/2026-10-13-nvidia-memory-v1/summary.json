@@ -1,0 +1,27 @@
+{
+  "reviewer": "Codex",
+  "blind": false,
+  "independent": false,
+  "planned": 10,
+  "attempted": 8,
+  "completed": 7,
+  "approved": 6,
+  "unattempted": 2,
+  "errors": {
+    "CANCELLED": 1
+  },
+  "modes": {
+    "FAST": {
+      "planned": 5,
+      "completed": 5,
+      "approved": 4
+    },
+    "PRIMARY": {
+      "planned": 5,
+      "completed": 2,
+      "approved": 2
+    }
+  },
+  "sample_gate_passed": false,
+  "scope": "fixed directed synthetic sample only; no universal or production acceptance"
+}

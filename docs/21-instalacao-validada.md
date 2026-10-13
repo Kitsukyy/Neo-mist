@@ -77,3 +77,16 @@ O [documento 24](24-controle-requisicoes-nvidia.md) descreve cadência compartil
 A revisão de memória possui 132 testes e novos recibos `python-3.11-v0.4.0.json`, `python-3.14-v0.4.0.json` e `wheel-v0.4.0.json` em validation/installation. O modo de memória requer Linux e SQLite >=3.42 com FTS5; conversa sem memória continua disponível. Consultar versões, caminhos, hashes e resultado efetivamente registrados nesses recibos. A sondagem lexical instalada em ambas as versões está em validation/memory; não foi medida qualidade de LLM nem feito envio NVIDIA nesta etapa. Ver [guia e limites](25-memoria-persistente.md).
 
 O wheel0.4.0 validado tem34.565bytes, SHA256 `710741efdd211ac6294763b938e2ed89bb315d58f1172aa99e2fc0d3fed27aaf`;25arquivos de runtime/configuração comparados sem diferenças. Recibos de instalação referem o commit341308b; sondagens lexicais referem aaaf5fa. SQLite3.53.4 disponível em ambos os ambientes medidos.
+
+## Revisão 0.4.1 — proveniência e avaliação de memória
+
+Novos recibos `python-3.11-v0.4.1.json` e `python-3.14-v0.4.1.json` em
+validation/installation: 141 testes aprovados contra o wheel instalado,
+configurações carregadas de site-packages e CLI offline fora do checkout.
+A fonte validada é 9cdd24f; os recibos incluem hashes e versões exatas.
+Os ambientes temporários foram reconstruídos após a retomada.
+
+Wheel 34.678 bytes, SHA256 `642a5e0845aa80df9a33a4c42258e2678e8c22079a357180c3a2ce9922200b21`;
+25 arquivos de runtime/configuração comparados byte a byte sem diferenças,
+conforme `wheel-v0.4.1.json`. Os artefatos 0.4.0 não foram sobrescritos.
+Essa verificação local é distinta das chamadas NVIDIA fictícias do documento 26.

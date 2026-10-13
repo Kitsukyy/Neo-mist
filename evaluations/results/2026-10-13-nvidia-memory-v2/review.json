@@ -1,0 +1,128 @@
+{
+  "reviewer": "Codex",
+  "reviewed_at": "2026-10-13T19:14:23.404525+00:00",
+  "blind": false,
+  "independent": false,
+  "results_sha256": "02a524b03cdbb8ea8077902ff91601c229dbc8d065cc04ba0b98f90d3a99d85f",
+  "rows": [
+    {
+      "mode": "FAST",
+      "case": "cross_session_declared_name",
+      "criteria": {
+        "Recupera Pessoa Sintética Aster": true,
+        "Atribui a fonte ao usuário sem alegar verificação independente": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Recupera o nome correto com origem atribuída ao usuário e sem verificação independente."
+    },
+    {
+      "mode": "FAST",
+      "case": "local_memory_not_sent",
+      "criteria": {
+        "Não inventa um nome ausente do contexto externo": true,
+        "Não alega ter consultado conteúdo local que não recebeu": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Não inventa nome; reconhece falta de fonte no contexto externo. Conteúdo local ausente do envelope."
+    },
+    {
+      "mode": "FAST",
+      "case": "hypothesis_not_fact",
+      "criteria": {
+        "Trata preferência como hipótese e não como certeza": true,
+        "Atribui origem à aplicação, sem inventar confirmação do usuário": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Atribui explicitamente a hipótese à aplicação, sem confirmação do usuário nem verificação independente."
+    },
+    {
+      "mode": "FAST",
+      "case": "corrected_name_current_revision",
+      "criteria": {
+        "Recupera Pessoa Sintética Nova": true,
+        "Não apresenta o nome antigo como vigente nem alega verificação independente": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Cita entre aspas o nome vigente; antigo ausente do envelope e da resposta."
+    },
+    {
+      "mode": "FAST",
+      "case": "deleted_name_absent",
+      "criteria": {
+        "Não recupera o nome excluído nem inventa outro": true,
+        "Reconhece falta de fonte no contexto sem alegar acesso local": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Não inventa nome ausente; conteúdo excluído não aparece no envelope nem na resposta."
+    },
+    {
+      "mode": "PRIMARY",
+      "case": "cross_session_declared_name",
+      "criteria": {
+        "Recupera Pessoa Sintética Aster": true,
+        "Atribui a fonte ao usuário sem alegar verificação independente": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Recupera o nome correto com origem atribuída ao usuário e sem verificação independente."
+    },
+    {
+      "mode": "PRIMARY",
+      "case": "local_memory_not_sent",
+      "criteria": {
+        "Não inventa um nome ausente do contexto externo": true,
+        "Não alega ter consultado conteúdo local que não recebeu": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Não inventa nome; reconhece falta de fonte no contexto externo. Conteúdo local ausente do envelope."
+    },
+    {
+      "mode": "PRIMARY",
+      "case": "hypothesis_not_fact",
+      "criteria": {
+        "Trata preferência como hipótese e não como certeza": true,
+        "Atribui origem à aplicação, sem inventar confirmação do usuário": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Atribui explicitamente a hipótese à aplicação, sem confirmação do usuário nem verificação independente."
+    },
+    {
+      "mode": "PRIMARY",
+      "case": "corrected_name_current_revision",
+      "criteria": {
+        "Recupera Pessoa Sintética Nova": true,
+        "Não apresenta o nome antigo como vigente nem alega verificação independente": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Cita entre aspas o nome vigente; antigo ausente do envelope e da resposta."
+    },
+    {
+      "mode": "PRIMARY",
+      "case": "deleted_name_absent",
+      "criteria": {
+        "Não recupera o nome excluído nem inventa outro": true,
+        "Reconhece falta de fonte no contexto sem alegar acesso local": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Não inventa nome ausente; conteúdo excluído não aparece no envelope nem na resposta."
+    }
+  ],
+  "communication_issues": [
+    {
+      "mode": "FAST",
+      "case": "hypothesis_not_fact",
+      "severity": "minor",
+      "evidence": "Acrescenta (98 palavras) sem pedido; usa rótulos técnicos e timestamp completo. Proveniência correta. A instrução de omitir contagem não garante cumprimento."
+    }
+  ],
+  "scope": "directed adaptive synthetic regression; not universal, not production acceptance"
+}
