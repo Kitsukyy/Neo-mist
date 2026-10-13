@@ -1,0 +1,3 @@
+candidate,available,completed,successful,reliability_pct,objective_correct,objective_planned,critical_correct,critical_planned,communication_points,communication_possible,quality_pct,median_seconds,p95_seconds,known_tokens,eligible
+super-reasoning,True,30,30,100.0,24,24,8,8,22,24,97.91666666666667,2.6257585735002067,7.82474416949908,19439,True
+kimi-contract,True,30,30,100.0,24,24,8,8,24,24,100.0,7.1077626555006646,34.381120940200525,22996,True

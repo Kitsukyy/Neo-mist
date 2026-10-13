@@ -1,0 +1,1381 @@
+{
+  "application_version": "0.4.0",
+  "verified_at": "2026-10-13T12:11:35.624510+00:00",
+  "python": "3.14.7",
+  "sqlite": "3.53.4",
+  "platform": "Linux-7.2.8-1-cachyos-bore-x86_64-with-glibc2.44",
+  "source_revision": "aaaf5fad54ffcb674c7a9c283c2d0a9a232dab51",
+  "source_sha256": {
+    "src/mist/__init__.py": "6f2bb0bfb1cb02685720df2ab54dd0bb8be4b05fc6b602e5a7b273ec8f205dfb",
+    "src/mist/__main__.py": "93a7bb9260de7c812e0a50106b976d55ea3ca2effbb62ae3a3cb9ddcdab1805d",
+    "src/mist/audit.py": "66e09056d149dde2c3fc5b770b3ff1a1f773863f0a7fd6a119352b1192f939ae",
+    "src/mist/authorization.py": "7d6b9fc314779de2ab1a9fe4301989afe97f8990d96084aceef328afb4c7042f",
+    "src/mist/bootstrap.py": "c4617deeb74a554aaaa1e72e9202d12fd96c7dd635248e1dcfc045e1ffa756f0",
+    "src/mist/cli.py": "8086a90f3654eabb66407016dd02ee613226d29393ddda35c5e2bc6f76abd69f",
+    "src/mist/config.py": "6b92d0e2abb77323dd0d56d98becc8a2f3007d0e434d441bb90ae51d45e8de19",
+    "src/mist/core.py": "ac1231a8f1dad02000cbf9d1a5a3570b5a27e90876d657eebba17eaff8d1b1e1",
+    "src/mist/errors.py": "d8defc4e203e231471d3d47cdf9336f7d10a4e32d9b5e8f161702f4b69c88968",
+    "src/mist/gateway.py": "6a6ed2d94ee334bdd86499df42f8674a3673992de8e8e186268b12e5984cc725",
+    "src/mist/identity.py": "b26c661b382af063cd960e14b8c93efdd4b563f38ea503ef020ca2b747b06148",
+    "src/mist/memory.py": "b57eb510179dd26571c528c0b8c86817aec1ada29012fd495ef21356fc1d05d1",
+    "src/mist/memory_capture.py": "4c4a7262cffb7f6baf8d92277a2de1df45daff7e58a24c0e17bc942196ca7e53",
+    "src/mist/memory_cli.py": "b4e7f300caa5ea55bff1baa76e24a9ee55efd3af43c610dbd98b0b40ac281f93",
+    "src/mist/memory_recovery.py": "b7d8d6a788839239c0d0ef589f4cf751332917a8d71d3b9927844ce0fc3e5721",
+    "src/mist/memory_types.py": "4fc6dcfd7f5afaede788d1a97758c059a29d341310eadebd9c4e0b0e10477fd6",
+    "src/mist/nvidia.py": "53f0a0f3353ed971b41070757d3ddd60ca8dcde11fd891c27dbd6dc984222cf9",
+    "src/mist/output.py": "329d47defcfe82df510d3d70be857d5a8a6ff2139501b776773f096cff32f3e0",
+    "src/mist/providers.py": "1a6cfd1eb171f86a906d39c38278d0f95536214574f130784c4d520c2afa3715",
+    "src/mist/router.py": "e5d9a282f3d8002ec1cb473e714b2bc9c237ee41e95fa0f66bc0c03c96ae2a7f",
+    "src/mist/safety.py": "e2aa078d273ea6f6a4cf3d73ec46b382549357519c5f578104b49658127ef1f5",
+    "src/mist/schemas.py": "9ed152e4134ec59227f8b249cfcd68914e84654ef36a112fb0d19e00532adcb3"
+  },
+  "runner_sha256": "08d51389509c9d1f254d500af95639e1bb90b46adb6dac81b351a1c4bec9cff3",
+  "corpus_size": 10000,
+  "setup": "batched synthetic insertion; excluded from query latency",
+  "scope": "unique-anchor lexical queries; warm connection, filesystem cache uncontrolled; retrieval includes SQLite metadata audit commit",
+  "trials": [
+    {
+      "index": 0,
+      "query": "marco00000",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 1.1943459999201878
+    },
+    {
+      "index": 97,
+      "query": "marco00097",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "e8172a2b-603b-5423-95df-da508b44e645"
+      ],
+      "actual": [
+        "e8172a2b-603b-5423-95df-da508b44e645"
+      ],
+      "passed": true,
+      "duration_ms": 1.0377690000495932
+    },
+    {
+      "index": 194,
+      "query": "marco00194",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "5f7d5313-1d9c-518d-8c91-aeb0f6a8d8d6"
+      ],
+      "actual": [
+        "5f7d5313-1d9c-518d-8c91-aeb0f6a8d8d6"
+      ],
+      "passed": true,
+      "duration_ms": 0.853990999985399
+    },
+    {
+      "index": 291,
+      "query": "marco00291",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "a85ad92e-270e-5021-8d93-7d2ed06de87c"
+      ],
+      "actual": [
+        "a85ad92e-270e-5021-8d93-7d2ed06de87c"
+      ],
+      "passed": true,
+      "duration_ms": 0.7958599999255966
+    },
+    {
+      "index": 388,
+      "query": "marco00388",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "86161df5-f39b-5e2f-a35c-289aa3a1de4e"
+      ],
+      "actual": [
+        "86161df5-f39b-5e2f-a35c-289aa3a1de4e"
+      ],
+      "passed": true,
+      "duration_ms": 0.7874340003581892
+    },
+    {
+      "index": 485,
+      "query": "marco00485",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "0b102280-7f5b-5a4b-b261-dc9747494acf"
+      ],
+      "actual": [
+        "0b102280-7f5b-5a4b-b261-dc9747494acf"
+      ],
+      "passed": true,
+      "duration_ms": 0.7875650003370538
+    },
+    {
+      "index": 582,
+      "query": "marco00582",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7187129999692843
+    },
+    {
+      "index": 679,
+      "query": "marco00679",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "3f03bbba-efcf-541e-9842-200d2bdd24d8"
+      ],
+      "actual": [
+        "3f03bbba-efcf-541e-9842-200d2bdd24d8"
+      ],
+      "passed": true,
+      "duration_ms": 0.7730070001343847
+    },
+    {
+      "index": 776,
+      "query": "marco00776",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "c94245ab-e569-5a46-929d-339749a9133c"
+      ],
+      "actual": [
+        "c94245ab-e569-5a46-929d-339749a9133c"
+      ],
+      "passed": true,
+      "duration_ms": 0.7997979996616777
+    },
+    {
+      "index": 873,
+      "query": "marco00873",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "c70743a4-1a1a-5e43-a314-9f1fce3484f1"
+      ],
+      "actual": [
+        "c70743a4-1a1a-5e43-a314-9f1fce3484f1"
+      ],
+      "passed": true,
+      "duration_ms": 0.7918530000097235
+    },
+    {
+      "index": 970,
+      "query": "marco00970",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "972ac92e-ec07-5267-8aa5-8c4c0c499d6d"
+      ],
+      "actual": [
+        "972ac92e-ec07-5267-8aa5-8c4c0c499d6d"
+      ],
+      "passed": true,
+      "duration_ms": 0.7941470003061113
+    },
+    {
+      "index": 1067,
+      "query": "marco01067",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "bc590feb-4ff0-5c69-ad68-745bd44794ce"
+      ],
+      "actual": [
+        "bc590feb-4ff0-5c69-ad68-745bd44794ce"
+      ],
+      "passed": true,
+      "duration_ms": 0.7792490000610997
+    },
+    {
+      "index": 1164,
+      "query": "marco01164",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7057799998619885
+    },
+    {
+      "index": 1261,
+      "query": "marco01261",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "891d6d9a-7b5a-561c-85e5-a00495b94d67"
+      ],
+      "actual": [
+        "891d6d9a-7b5a-561c-85e5-a00495b94d67"
+      ],
+      "passed": true,
+      "duration_ms": 0.7910310000625032
+    },
+    {
+      "index": 1358,
+      "query": "marco01358",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "76ae85d8-c4dd-51fb-b851-73a150411ed4"
+      ],
+      "actual": [
+        "76ae85d8-c4dd-51fb-b851-73a150411ed4"
+      ],
+      "passed": true,
+      "duration_ms": 0.7925840000098106
+    },
+    {
+      "index": 1455,
+      "query": "marco01455",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "785e8663-d63d-5280-8ae3-f7642c8e708b"
+      ],
+      "actual": [
+        "785e8663-d63d-5280-8ae3-f7642c8e708b"
+      ],
+      "passed": true,
+      "duration_ms": 0.7908599995971599
+    },
+    {
+      "index": 1552,
+      "query": "marco01552",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "c6dff7ff-c61f-5d32-b0b6-dd7f98d2dbb8"
+      ],
+      "actual": [
+        "c6dff7ff-c61f-5d32-b0b6-dd7f98d2dbb8"
+      ],
+      "passed": true,
+      "duration_ms": 0.7706129999860423
+    },
+    {
+      "index": 1649,
+      "query": "marco01649",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "233259c8-1bf6-5c45-affe-1a8fec16317e"
+      ],
+      "actual": [
+        "233259c8-1bf6-5c45-affe-1a8fec16317e"
+      ],
+      "passed": true,
+      "duration_ms": 0.767907999943418
+    },
+    {
+      "index": 1746,
+      "query": "marco01746",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7128130000637611
+    },
+    {
+      "index": 1843,
+      "query": "marco01843",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "055af734-9919-5771-bb0f-57dcf4dea8f8"
+      ],
+      "actual": [
+        "055af734-9919-5771-bb0f-57dcf4dea8f8"
+      ],
+      "passed": true,
+      "duration_ms": 0.7746100000076694
+    },
+    {
+      "index": 1940,
+      "query": "marco01940",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "5caa01da-001c-58ed-bbb0-cae2b09de946"
+      ],
+      "actual": [
+        "5caa01da-001c-58ed-bbb0-cae2b09de946"
+      ],
+      "passed": true,
+      "duration_ms": 0.7775859999128443
+    },
+    {
+      "index": 2037,
+      "query": "marco02037",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "6ff07c5a-acb9-5024-a846-48d6f15f1a2c"
+      ],
+      "actual": [
+        "6ff07c5a-acb9-5024-a846-48d6f15f1a2c"
+      ],
+      "passed": true,
+      "duration_ms": 0.7712230003562581
+    },
+    {
+      "index": 2134,
+      "query": "marco02134",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "095c5200-22fb-5d8b-8078-2ad6e8a1219b"
+      ],
+      "actual": [
+        "095c5200-22fb-5d8b-8078-2ad6e8a1219b"
+      ],
+      "passed": true,
+      "duration_ms": 0.8018109997465217
+    },
+    {
+      "index": 2231,
+      "query": "marco02231",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "02b355a6-bdb7-536f-b300-89cce5a8cf91"
+      ],
+      "actual": [
+        "02b355a6-bdb7-536f-b300-89cce5a8cf91"
+      ],
+      "passed": true,
+      "duration_ms": 0.7721150000179478
+    },
+    {
+      "index": 2328,
+      "query": "marco02328",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7088350002959487
+    },
+    {
+      "index": 2425,
+      "query": "marco02425",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "a840f83c-9ea4-5ae9-8321-b9ce9afa3aba"
+      ],
+      "actual": [
+        "a840f83c-9ea4-5ae9-8321-b9ce9afa3aba"
+      ],
+      "passed": true,
+      "duration_ms": 0.7828960001461382
+    },
+    {
+      "index": 2522,
+      "query": "marco02522",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "db0949d7-8b25-5c6b-88f9-f023940908e9"
+      ],
+      "actual": [
+        "db0949d7-8b25-5c6b-88f9-f023940908e9"
+      ],
+      "passed": true,
+      "duration_ms": 0.7923339999251766
+    },
+    {
+      "index": 2619,
+      "query": "marco02619",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "9ae47b99-e1c5-51df-bb23-5f3888a41a0a"
+      ],
+      "actual": [
+        "9ae47b99-e1c5-51df-bb23-5f3888a41a0a"
+      ],
+      "passed": true,
+      "duration_ms": 0.7864620001782896
+    },
+    {
+      "index": 2716,
+      "query": "marco02716",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "8364429c-52ea-54dd-a147-fd3c49b48b14"
+      ],
+      "actual": [
+        "8364429c-52ea-54dd-a147-fd3c49b48b14"
+      ],
+      "passed": true,
+      "duration_ms": 0.7873740000832186
+    },
+    {
+      "index": 2813,
+      "query": "marco02813",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "79889656-251d-53d4-9cbb-c6514066e538"
+      ],
+      "actual": [
+        "79889656-251d-53d4-9cbb-c6514066e538"
+      ],
+      "passed": true,
+      "duration_ms": 0.7859919996917597
+    },
+    {
+      "index": 2910,
+      "query": "marco02910",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7241040002554655
+    },
+    {
+      "index": 3007,
+      "query": "marco03007",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "c6892c8c-8676-5cb7-94e4-6fe20d1c821b"
+      ],
+      "actual": [
+        "c6892c8c-8676-5cb7-94e4-6fe20d1c821b"
+      ],
+      "passed": true,
+      "duration_ms": 0.7759420000184036
+    },
+    {
+      "index": 3104,
+      "query": "marco03104",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "88b3e3b5-7ea9-5648-a683-3113a1420776"
+      ],
+      "actual": [
+        "88b3e3b5-7ea9-5648-a683-3113a1420776"
+      ],
+      "passed": true,
+      "duration_ms": 0.8102779997898324
+    },
+    {
+      "index": 3201,
+      "query": "marco03201",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "9d797332-2d1c-58c5-a031-5f42536efb51"
+      ],
+      "actual": [
+        "9d797332-2d1c-58c5-a031-5f42536efb51"
+      ],
+      "passed": true,
+      "duration_ms": 0.7795089995852322
+    },
+    {
+      "index": 3298,
+      "query": "marco03298",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "87a2633c-3b94-5e42-9788-81fea2e1cd17"
+      ],
+      "actual": [
+        "87a2633c-3b94-5e42-9788-81fea2e1cd17"
+      ],
+      "passed": true,
+      "duration_ms": 0.7917519997135969
+    },
+    {
+      "index": 3395,
+      "query": "marco03395",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "8d955f60-b8fd-56dd-9f2d-53882b88ff5d"
+      ],
+      "actual": [
+        "8d955f60-b8fd-56dd-9f2d-53882b88ff5d"
+      ],
+      "passed": true,
+      "duration_ms": 0.7780459995956335
+    },
+    {
+      "index": 3492,
+      "query": "marco03492",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7067609999467095
+    },
+    {
+      "index": 3589,
+      "query": "marco03589",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "663eeecc-bd87-554e-a228-403189795629"
+      ],
+      "actual": [
+        "663eeecc-bd87-554e-a228-403189795629"
+      ],
+      "passed": true,
+      "duration_ms": 0.771313999848644
+    },
+    {
+      "index": 3686,
+      "query": "marco03686",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "4468d3fe-f6db-5642-8f51-986d3b38d19b"
+      ],
+      "actual": [
+        "4468d3fe-f6db-5642-8f51-986d3b38d19b"
+      ],
+      "passed": true,
+      "duration_ms": 0.8012909997887618
+    },
+    {
+      "index": 3783,
+      "query": "marco03783",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "fd99759b-96e9-56cc-a9e5-0dde9d22c875"
+      ],
+      "actual": [
+        "fd99759b-96e9-56cc-a9e5-0dde9d22c875"
+      ],
+      "passed": true,
+      "duration_ms": 0.7812130002093909
+    },
+    {
+      "index": 3880,
+      "query": "marco03880",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "98112e57-32da-5e47-a9c7-716ff1a3292d"
+      ],
+      "actual": [
+        "98112e57-32da-5e47-a9c7-716ff1a3292d"
+      ],
+      "passed": true,
+      "duration_ms": 0.7692799999858835
+    },
+    {
+      "index": 3977,
+      "query": "marco03977",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "1f50f890-718e-58a4-847f-fbc3f49aec68"
+      ],
+      "actual": [
+        "1f50f890-718e-58a4-847f-fbc3f49aec68"
+      ],
+      "passed": true,
+      "duration_ms": 0.774059000377747
+    },
+    {
+      "index": 4074,
+      "query": "marco04074",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.825215999611828
+    },
+    {
+      "index": 4171,
+      "query": "marco04171",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "e2a2a6fe-4159-5963-8d25-475f92a3daa3"
+      ],
+      "actual": [
+        "e2a2a6fe-4159-5963-8d25-475f92a3daa3"
+      ],
+      "passed": true,
+      "duration_ms": 0.8462450000479294
+    },
+    {
+      "index": 4268,
+      "query": "marco04268",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "7023682e-74f6-5417-8b22-87f4339c8b45"
+      ],
+      "actual": [
+        "7023682e-74f6-5417-8b22-87f4339c8b45"
+      ],
+      "passed": true,
+      "duration_ms": 0.7981439998729911
+    },
+    {
+      "index": 4365,
+      "query": "marco04365",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "7a77c687-427d-51ef-af77-6591d7d9426f"
+      ],
+      "actual": [
+        "7a77c687-427d-51ef-af77-6591d7d9426f"
+      ],
+      "passed": true,
+      "duration_ms": 0.7759019999866723
+    },
+    {
+      "index": 4462,
+      "query": "marco04462",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "5d074f73-8398-579c-9917-a7ae20a08fc1"
+      ],
+      "actual": [
+        "5d074f73-8398-579c-9917-a7ae20a08fc1"
+      ],
+      "passed": true,
+      "duration_ms": 0.7798500000717468
+    },
+    {
+      "index": 4559,
+      "query": "marco04559",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "add1cec6-6e31-5a03-8856-4d124d92b102"
+      ],
+      "actual": [
+        "add1cec6-6e31-5a03-8856-4d124d92b102"
+      ],
+      "passed": true,
+      "duration_ms": 0.7893679999142478
+    },
+    {
+      "index": 4656,
+      "query": "marco04656",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7304360001398891
+    },
+    {
+      "index": 4753,
+      "query": "marco04753",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "a4704ea2-5bac-5f4c-9e7f-b8995d01cfb1"
+      ],
+      "actual": [
+        "a4704ea2-5bac-5f4c-9e7f-b8995d01cfb1"
+      ],
+      "passed": true,
+      "duration_ms": 0.7820939999874099
+    },
+    {
+      "index": 4850,
+      "query": "marco04850",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "a9c9afee-c6ce-5f7d-b5ca-3a3099657897"
+      ],
+      "actual": [
+        "a9c9afee-c6ce-5f7d-b5ca-3a3099657897"
+      ],
+      "passed": true,
+      "duration_ms": 0.8028940001167939
+    },
+    {
+      "index": 4947,
+      "query": "marco04947",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "e716ade2-3922-5f86-9bc1-70f7c478d722"
+      ],
+      "actual": [
+        "e716ade2-3922-5f86-9bc1-70f7c478d722"
+      ],
+      "passed": true,
+      "duration_ms": 0.8048780000535771
+    },
+    {
+      "index": 5044,
+      "query": "marco05044",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "68baffb3-38ba-5aa3-9a23-96044c7051d6"
+      ],
+      "actual": [
+        "68baffb3-38ba-5aa3-9a23-96044c7051d6"
+      ],
+      "passed": true,
+      "duration_ms": 0.7872639998822706
+    },
+    {
+      "index": 5141,
+      "query": "marco05141",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "8cafa2ec-2a87-580c-9ba1-c4d94176b8fc"
+      ],
+      "actual": [
+        "8cafa2ec-2a87-580c-9ba1-c4d94176b8fc"
+      ],
+      "passed": true,
+      "duration_ms": 0.8179720002772228
+    },
+    {
+      "index": 5238,
+      "query": "marco05238",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7351049998760573
+    },
+    {
+      "index": 5335,
+      "query": "marco05335",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "77fad9f7-8444-5f02-9f65-1319113c3b1d"
+      ],
+      "actual": [
+        "77fad9f7-8444-5f02-9f65-1319113c3b1d"
+      ],
+      "passed": true,
+      "duration_ms": 0.7969719999891822
+    },
+    {
+      "index": 5432,
+      "query": "marco05432",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "89ac658b-68b9-5d1d-bc8c-dcdf07306e14"
+      ],
+      "actual": [
+        "89ac658b-68b9-5d1d-bc8c-dcdf07306e14"
+      ],
+      "passed": true,
+      "duration_ms": 0.7808310001564678
+    },
+    {
+      "index": 5529,
+      "query": "marco05529",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "0d938b6e-6c7c-508c-ab81-d24d43e74fb8"
+      ],
+      "actual": [
+        "0d938b6e-6c7c-508c-ab81-d24d43e74fb8"
+      ],
+      "passed": true,
+      "duration_ms": 0.795137999830331
+    },
+    {
+      "index": 5626,
+      "query": "marco05626",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "c98b2705-23d5-5713-a960-0561f0b10d92"
+      ],
+      "actual": [
+        "c98b2705-23d5-5713-a960-0561f0b10d92"
+      ],
+      "passed": true,
+      "duration_ms": 0.7945180000206165
+    },
+    {
+      "index": 5723,
+      "query": "marco05723",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "838b56f0-a668-57d5-88c0-80b10bf70c59"
+      ],
+      "actual": [
+        "838b56f0-a668-57d5-88c0-80b10bf70c59"
+      ],
+      "passed": true,
+      "duration_ms": 0.8117399997900066
+    },
+    {
+      "index": 5820,
+      "query": "marco05820",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7630680001966539
+    },
+    {
+      "index": 5917,
+      "query": "marco05917",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "8c507978-7a03-5cd0-a0ef-e4138dfaf144"
+      ],
+      "actual": [
+        "8c507978-7a03-5cd0-a0ef-e4138dfaf144"
+      ],
+      "passed": true,
+      "duration_ms": 0.8327400000780472
+    },
+    {
+      "index": 6014,
+      "query": "marco06014",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "365b89d8-cd6c-5cf2-9f81-f80e3388d433"
+      ],
+      "actual": [
+        "365b89d8-cd6c-5cf2-9f81-f80e3388d433"
+      ],
+      "passed": true,
+      "duration_ms": 0.816629000382818
+    },
+    {
+      "index": 6111,
+      "query": "marco06111",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "b0145fae-210a-5d95-be44-63a44c48b114"
+      ],
+      "actual": [
+        "b0145fae-210a-5d95-be44-63a44c48b114"
+      ],
+      "passed": true,
+      "duration_ms": 0.8047979999901145
+    },
+    {
+      "index": 6208,
+      "query": "marco06208",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "3e9375f2-894e-5393-b50b-33cec9b57fbe"
+      ],
+      "actual": [
+        "3e9375f2-894e-5393-b50b-33cec9b57fbe"
+      ],
+      "passed": true,
+      "duration_ms": 0.8187739999812038
+    },
+    {
+      "index": 6305,
+      "query": "marco06305",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "8d531e0d-067c-57b7-a04c-54095d0ef7ed"
+      ],
+      "actual": [
+        "8d531e0d-067c-57b7-a04c-54095d0ef7ed"
+      ],
+      "passed": true,
+      "duration_ms": 0.8128019999276148
+    },
+    {
+      "index": 6402,
+      "query": "marco06402",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7168709998950362
+    },
+    {
+      "index": 6499,
+      "query": "marco06499",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "9d067b38-4566-5be1-be78-d3e5893ef395"
+      ],
+      "actual": [
+        "9d067b38-4566-5be1-be78-d3e5893ef395"
+      ],
+      "passed": true,
+      "duration_ms": 0.7823139999345585
+    },
+    {
+      "index": 6596,
+      "query": "marco06596",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "72a3863d-6c78-5026-b1f0-f177128070d7"
+      ],
+      "actual": [
+        "72a3863d-6c78-5026-b1f0-f177128070d7"
+      ],
+      "passed": true,
+      "duration_ms": 0.7964209999045124
+    },
+    {
+      "index": 6693,
+      "query": "marco06693",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "af2d7d68-28c2-501e-bb2d-d989b822d5f3"
+      ],
+      "actual": [
+        "af2d7d68-28c2-501e-bb2d-d989b822d5f3"
+      ],
+      "passed": true,
+      "duration_ms": 0.7768739997118246
+    },
+    {
+      "index": 6790,
+      "query": "marco06790",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "a3f8ea35-9e5c-555b-aa10-2033178fdaf7"
+      ],
+      "actual": [
+        "a3f8ea35-9e5c-555b-aa10-2033178fdaf7"
+      ],
+      "passed": true,
+      "duration_ms": 0.7920729999568721
+    },
+    {
+      "index": 6887,
+      "query": "marco06887",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "3a59c197-9113-5d17-b53d-c191d1887f1d"
+      ],
+      "actual": [
+        "3a59c197-9113-5d17-b53d-c191d1887f1d"
+      ],
+      "passed": true,
+      "duration_ms": 0.7677570001760614
+    },
+    {
+      "index": 6984,
+      "query": "marco06984",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7188240001596569
+    },
+    {
+      "index": 7081,
+      "query": "marco07081",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "7fd3d636-b297-5b98-94e4-7a273b198625"
+      ],
+      "actual": [
+        "7fd3d636-b297-5b98-94e4-7a273b198625"
+      ],
+      "passed": true,
+      "duration_ms": 0.7826050000403484
+    },
+    {
+      "index": 7178,
+      "query": "marco07178",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "514130d7-8554-590e-82cc-9f14f7f60cfa"
+      ],
+      "actual": [
+        "514130d7-8554-590e-82cc-9f14f7f60cfa"
+      ],
+      "passed": true,
+      "duration_ms": 0.7768549999127572
+    },
+    {
+      "index": 7275,
+      "query": "marco07275",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "00254c0f-730b-5a39-962a-4bfe4c5273be"
+      ],
+      "actual": [
+        "00254c0f-730b-5a39-962a-4bfe4c5273be"
+      ],
+      "passed": true,
+      "duration_ms": 0.7648010000593786
+    },
+    {
+      "index": 7372,
+      "query": "marco07372",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "382ed630-e209-507f-bef9-5ec0f87451d4"
+      ],
+      "actual": [
+        "382ed630-e209-507f-bef9-5ec0f87451d4"
+      ],
+      "passed": true,
+      "duration_ms": 0.7766039998386987
+    },
+    {
+      "index": 7469,
+      "query": "marco07469",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "4b7ea1a8-3881-54de-8358-3396ff43503f"
+      ],
+      "actual": [
+        "4b7ea1a8-3881-54de-8358-3396ff43503f"
+      ],
+      "passed": true,
+      "duration_ms": 0.7806409998920572
+    },
+    {
+      "index": 7566,
+      "query": "marco07566",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7331910001084907
+    },
+    {
+      "index": 7663,
+      "query": "marco07663",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "f4c5339f-d49b-5eb7-9dab-c667718306d3"
+      ],
+      "actual": [
+        "f4c5339f-d49b-5eb7-9dab-c667718306d3"
+      ],
+      "passed": true,
+      "duration_ms": 0.7768340001348406
+    },
+    {
+      "index": 7760,
+      "query": "marco07760",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "6bb482ba-464a-5db8-9857-273068ef604f"
+      ],
+      "actual": [
+        "6bb482ba-464a-5db8-9857-273068ef604f"
+      ],
+      "passed": true,
+      "duration_ms": 0.7713539998803753
+    },
+    {
+      "index": 7857,
+      "query": "marco07857",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "7ce30fe2-6e8f-5286-9967-4d4b907c9874"
+      ],
+      "actual": [
+        "7ce30fe2-6e8f-5286-9967-4d4b907c9874"
+      ],
+      "passed": true,
+      "duration_ms": 0.7744200001980062
+    },
+    {
+      "index": 7954,
+      "query": "marco07954",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "0f57e6f8-33ab-5bcf-bab9-602bb28d6ba8"
+      ],
+      "actual": [
+        "0f57e6f8-33ab-5bcf-bab9-602bb28d6ba8"
+      ],
+      "passed": true,
+      "duration_ms": 0.7800700000188954
+    },
+    {
+      "index": 8051,
+      "query": "marco08051",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "abb5188b-45b0-5ff4-bf61-f58f412f1118"
+      ],
+      "actual": [
+        "abb5188b-45b0-5ff4-bf61-f58f412f1118"
+      ],
+      "passed": true,
+      "duration_ms": 0.8059689998844988
+    },
+    {
+      "index": 8148,
+      "query": "marco08148",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7143859997995605
+    },
+    {
+      "index": 8245,
+      "query": "marco08245",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "8c2f13cd-5375-5edb-96b7-7083551f0c87"
+      ],
+      "actual": [
+        "8c2f13cd-5375-5edb-96b7-7083551f0c87"
+      ],
+      "passed": true,
+      "duration_ms": 0.7705129996793403
+    },
+    {
+      "index": 8342,
+      "query": "marco08342",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "519c044f-fdf5-598f-b2e8-fa59f81ff72e"
+      ],
+      "actual": [
+        "519c044f-fdf5-598f-b2e8-fa59f81ff72e"
+      ],
+      "passed": true,
+      "duration_ms": 0.7817629998498887
+    },
+    {
+      "index": 8439,
+      "query": "marco08439",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "47121061-8cb3-5635-9242-677e1fc5ce10"
+      ],
+      "actual": [
+        "47121061-8cb3-5635-9242-677e1fc5ce10"
+      ],
+      "passed": true,
+      "duration_ms": 0.7773549996272777
+    },
+    {
+      "index": 8536,
+      "query": "marco08536",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "63a75d09-0a9f-5965-8dc6-2fc19f7b6f12"
+      ],
+      "actual": [
+        "63a75d09-0a9f-5965-8dc6-2fc19f7b6f12"
+      ],
+      "passed": true,
+      "duration_ms": 0.7858210001359112
+    },
+    {
+      "index": 8633,
+      "query": "marco08633",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "b6bd6893-411e-5041-88f8-ee5cf8fec518"
+      ],
+      "actual": [
+        "b6bd6893-411e-5041-88f8-ee5cf8fec518"
+      ],
+      "passed": true,
+      "duration_ms": 0.7651120004084078
+    },
+    {
+      "index": 8730,
+      "query": "marco08730",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7146560001274338
+    },
+    {
+      "index": 8827,
+      "query": "marco08827",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "42974350-1296-541b-971d-f49b2d4ab4df"
+      ],
+      "actual": [
+        "42974350-1296-541b-971d-f49b2d4ab4df"
+      ],
+      "passed": true,
+      "duration_ms": 0.7737379996797245
+    },
+    {
+      "index": 8924,
+      "query": "marco08924",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "bc3904b1-a09b-5027-b968-ce9cbb954ce2"
+      ],
+      "actual": [
+        "bc3904b1-a09b-5027-b968-ce9cbb954ce2"
+      ],
+      "passed": true,
+      "duration_ms": 0.8078319997366634
+    },
+    {
+      "index": 9021,
+      "query": "marco09021",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "cb1be821-5b4f-5008-ab7d-c0111434e0c2"
+      ],
+      "actual": [
+        "cb1be821-5b4f-5008-ab7d-c0111434e0c2"
+      ],
+      "passed": true,
+      "duration_ms": 0.8079830004135147
+    },
+    {
+      "index": 9118,
+      "query": "marco09118",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "6f46aa19-d0a8-5335-9737-0d16c7a85fb2"
+      ],
+      "actual": [
+        "6f46aa19-d0a8-5335-9737-0d16c7a85fb2"
+      ],
+      "passed": true,
+      "duration_ms": 0.800810000328056
+    },
+    {
+      "index": 9215,
+      "query": "marco09215",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "d2f90708-8e37-5b48-a964-0c2477a02156"
+      ],
+      "actual": [
+        "d2f90708-8e37-5b48-a964-0c2477a02156"
+      ],
+      "passed": true,
+      "duration_ms": 0.9240730000783515
+    },
+    {
+      "index": 9312,
+      "query": "marco09312",
+      "project": "aurora",
+      "external": true,
+      "expected": [],
+      "actual": [],
+      "passed": true,
+      "duration_ms": 0.7279920000655693
+    },
+    {
+      "index": 9409,
+      "query": "marco09409",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "3eea7bcf-b99a-5c1e-92ec-e9f37e077b79"
+      ],
+      "actual": [
+        "3eea7bcf-b99a-5c1e-92ec-e9f37e077b79"
+      ],
+      "passed": true,
+      "duration_ms": 0.8076320000327541
+    },
+    {
+      "index": 9506,
+      "query": "marco09506",
+      "project": "aurora",
+      "external": true,
+      "expected": [
+        "f297d6b7-e6f7-564f-abe0-81a4f4c278f0"
+      ],
+      "actual": [
+        "f297d6b7-e6f7-564f-abe0-81a4f4c278f0"
+      ],
+      "passed": true,
+      "duration_ms": 0.8171310000761878
+    },
+    {
+      "index": 9603,
+      "query": "marco09603",
+      "project": "aurora",
+      "external": false,
+      "expected": [
+        "32011e72-598a-5e57-bfe1-82322e377cbb"
+      ],
+      "actual": [
+        "32011e72-598a-5e57-bfe1-82322e377cbb"
+      ],
+      "passed": true,
+      "duration_ms": 0.7949889995870763
+    }
+  ],
+  "precision_of_returned_items_nonempty_ground_truth": 1.0,
+  "recall_up_to_5_nonempty_ground_truth": 1.0,
+  "correct_empty_results": 17,
+  "latency_ms": {
+    "p50": 0.7824594999874535,
+    "p95_nearest_rank": 0.8327400000780472
+  },
+  "cross_project_filtered": true,
+  "missing_query_empty": true,
+  "passed": true,
+  "limitations": "Synthetic unique tokens do not establish semantic retrieval quality or the proposed production latency target."
+}

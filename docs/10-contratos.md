@@ -2,7 +2,7 @@
 
 **Estado:** especificação técnica proposta. Os nomes principais vieram da Fase 4.3; campos, estados e assinaturas abaixo organizam a implementação, não representam código já existente.
 
-Pydantic é a biblioteca proposta. Versão, configuração de validação e API Python definitivas serão fechadas na implementação. Rejeitar campos inesperados nas fronteiras críticas e validar tipos/limites.
+A implementação offline usa Pydantic 2.13.5, com contratos em `src/mist/schemas.py`. Este documento mantém os contratos conceituais mais amplos; campos e interfaces efetivamente implementados estão descritos no [guia do núcleo](16-primeiro-nucleo.md). Rejeitar campos inesperados nas fronteiras críticas e validar tipos/limites.
 
 ## ConversationMessage
 
@@ -115,3 +115,7 @@ Código é estável para testes; mensagem pública é segura. Erros não incluem
 
 Versionar contratos que mudem comportamento entre módulos. Testar substituição de provedor e limites de importação. Exemplos devem ser sintéticos; Pydantic valida estrutura, não a veracidade de conteúdo nem a autorização de transmissão.
 
+
+## Contratos de memória implementados em 0.4.0
+
+`memory_types.py` define candidato, fonte, item versionado, estados e snapshot; `MemorySettings` está em schemas.py. `memory.py` implementa persistência/FTS5, operações versionadas e registro de restauração. `memory_capture.py` captura padrões locais e `memory_cli.py` oferece operações explícitas. A integração com Core conserva a Guarda sobre o envelope final. Campos e limites no [guia executável](25-memoria-persistente.md); esta implementação não realiza todas as propostas conceituais acima.

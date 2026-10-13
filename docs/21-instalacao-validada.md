@@ -1,0 +1,132 @@
+# Instalação e compatibilidade verificadas
+
+Estado: pacote local construído e validado em 12/10/2026. Não publicado no PyPI. Código e evidências publicados na branch de revisão `mist-p0a-validacao` do GitHub.
+
+## Resultado
+
+| Ambiente Linux x86_64 | Pacote instalado em ambiente isolado | Suíte | Comando `mist` fora do repositório |
+|---|---|---|---|
+| Python 3.11.16 | Aprovado | 75 testes aprovados | Aprovado |
+| Python 3.14.7 | Aprovado | 75 testes aprovados | Aprovado |
+
+A instalação foi feita sem modo editável, seguida por uma instalação do arquivo wheel exportado. Os testes importaram a distribuição de `site-packages` em modo isolado do Python. O teste de fluxo offline bloqueou a criação de sockets, carregou as configurações empacotadas, gerou uma resposta explicitamente simulada e verificou auditoria approved/completed. O comando de terminal também foi executado em uma pasta temporária, fora do repositório.
+
+A validação da instalação não usou segredo nem rede; a avaliação real dos modelos foi executada separadamente. A validação de instalação não mede qualidade conversacional.
+
+O arquivo atual `neo_mist-0.3.0-py3-none-any.whl` tem 19.832 bytes e inclui 20 arquivos de execução/configuração, todos comparados byte a byte com o código atual, mais metadados de distribuição. Não inclui resultados, conversas, testes ou credenciais. Seu SHA-256 é:
+
+```text
+8429d54e912da3ef9f80ca7c6b349587384e5e91a7e85660f1ac154f973a2f11
+```
+
+## Instalar a partir do repositório
+
+No diretório do projeto, usando Python 3.11 ou superior:
+
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install -c constraints-tested.txt .
+mist --message 'Olá, Mist'
+```
+
+A instalação pode baixar dependências. O comando acima mantém o FakeModel offline; envio à NVIDIA exige configuração e habilitação explícitas.
+
+`constraints-tested.txt` registra as versões de execução verificadas. É opcional e não representa um lock completo de ferramentas de build ou uma garantia de compilação idêntica. Pydantic continua fixado no projeto. Os comandos apresentados pressupõem Linux ou shell compatível.
+
+Para instalar o arquivo wheel entregue, substitua o último passo de instalação pelo caminho local dele:
+
+```sh
+python -m pip install -c constraints-tested.txt /caminho/neo_mist-0.3.0-py3-none-any.whl
+```
+
+## Reproduzir a verificação
+
+Depois de instalar o pacote, execute a partir do checkout:
+
+```sh
+python tools/verify_installation.py --output runtime/installation-check.json
+```
+
+Crie `runtime/` antes da execução. O arquivo de saída deve ser novo: o verificador não sobrescreve evidências. O script executa a suíte, inspeciona a origem do pacote, testa o comando instalado fora do checkout e registra versões e hashes dos arquivos de código/testes. Dependências de análise do benchmark não são necessárias para essa suíte.
+
+Evidências da distribuição instalada a partir do wheel:
+
+- [Python 3.11](../validation/installation/python-3.11-v0.3.0.json).
+- [Python 3.14](../validation/installation/python-3.14-v0.3.0.json).
+- [Identificação do wheel](../validation/installation/wheel-v0.3.0.json).
+
+As evidências anteriores `python-3.11.json`, `python-3.14.json`, os dois arquivos `*-wheel.json` e `wheel.json` preservam a instalação histórica de 0.2.0 com 66 testes. Não foram sobrescritas. Os registros atuais identificam a revisão `d9277d3`; os módulos e testes não mudaram durante a verificação. Os 20 arquivos de execução/configuração do wheel atual foram comparados byte a byte com `src/mist`.
+
+## Limites e pendências
+
+Esta entrega verifica o limite inferior declarado e a versão 3.14 disponível no ambiente. Python 3.12/3.13, Windows e macOS não foram testados. Não ampliar a conclusão para toda combinação de versão/plataforma nem para instalação sem acesso às dependências.
+
+A pendência de instalação do P0-A foi atendida para os dois ambientes Linux acima. As rodadas comportamentais reais e correções estão no documento 23. Permanecem pendentes as condições de acesso/dados/cotas da conta NVIDIA e a revisão/integração da branch no GitHub. O pacote 0.3.0 não foi publicado em um registro de distribuição.
+
+## Revisão 0.3.1 — controle de requisições NVIDIA
+
+Wheel não editável 0.3.1 instalado nos ambientes Linux/Python 3.11.16 e 3.14.7. Em cada um, os 84 testes passaram importando o pacote instalado em modo isolado, com CLI fora do checkout e smoke offline com rede proibida. Recibos: `validation/installation/python-3.11-v0.3.1.json` e `python-3.14-v0.3.1.json`. A revisão de código registrada nos recibos é `12bab44`; os hashes registram fontes e testes usados.
+
+O wheel tem 20.358 bytes, SHA256 `3caddbda3bbbc8a63abc6480a5eaa18c372af530932f3e474b9d7179b102451c`. Seus 20 arquivos de runtime/configuração foram comparados com o código fonte sem diferenças; recibo `wheel-v0.3.1.json`. O pacote não inclui chave, resultados ou histórico. Nenhuma chamada real nesta revisão. Os recibos anteriores permanecem históricos e não validam mudanças posteriores.
+
+O [documento 24](24-controle-requisicoes-nvidia.md) descreve cadência compartilhada no processo, pausa após 429 e limites da implementação.
+
+## Revisão 0.4.0 — memória persistente
+
+A revisão de memória possui 132 testes e novos recibos `python-3.11-v0.4.0.json`, `python-3.14-v0.4.0.json` e `wheel-v0.4.0.json` em validation/installation. O modo de memória requer Linux e SQLite >=3.42 com FTS5; conversa sem memória continua disponível. Consultar versões, caminhos, hashes e resultado efetivamente registrados nesses recibos. A sondagem lexical instalada em ambas as versões está em validation/memory; não foi medida qualidade de LLM nem feito envio NVIDIA nesta etapa. Ver [guia e limites](25-memoria-persistente.md).
+
+O wheel0.4.0 validado tem34.565bytes, SHA256 `710741efdd211ac6294763b938e2ed89bb315d58f1172aa99e2fc0d3fed27aaf`;25arquivos de runtime/configuração comparados sem diferenças. Recibos de instalação referem o commit341308b; sondagens lexicais referem aaaf5fa. SQLite3.53.4 disponível em ambos os ambientes medidos.
+
+## Revisão 0.4.1 — proveniência e avaliação de memória
+
+Novos recibos `python-3.11-v0.4.1.json` e `python-3.14-v0.4.1.json` em
+validation/installation: 141 testes aprovados contra o wheel instalado,
+configurações carregadas de site-packages e CLI offline fora do checkout.
+A fonte validada é 9cdd24f; os recibos incluem hashes e versões exatas.
+Os ambientes temporários foram reconstruídos após a retomada.
+
+Wheel 34.678 bytes, SHA256 `642a5e0845aa80df9a33a4c42258e2678e8c22079a357180c3a2ce9922200b21`;
+25 arquivos de runtime/configuração comparados byte a byte sem diferenças,
+conforme `wheel-v0.4.1.json`. Os artefatos 0.4.0 não foram sobrescritos.
+Essa verificação local é distinta das chamadas NVIDIA fictícias do documento 26.
+
+## Revisão 0.5.0 — projetos e tarefas
+
+Recibos novos `python-3.11-v0.5.0.json` e `python-3.14-v0.5.0.json`: 166 testes
+aprovados no wheel instalado, configurações de site-packages e CLI offline fora
+do checkout. Runtime/testes da fonte ebba477, com hashes completos nos recibos.
+As dependências verificadas da instalação anterior foram reutilizadas; a tentativa
+de resolução online falhou por DNS restrito e o wheel local foi instalado offline
+sem reinstalar dependências. Isso não altera o sucesso dos testes registrados.
+
+Wheel 41.531 bytes, SHA256 `2f05c82ab43d8d037ef991be840e444c98268244baf5d7f8311f738147e2124e`;
+28 arquivos de runtime/configuração idênticos à fonte, conforme `wheel-v0.5.0.json`.
+Não é publicação no PyPI nem garantia em outras plataformas.
+
+[Fluxo sintético de projetos](../validation/projects/README.md) verificado por
+quatro processos isolados em cada versão: duas sessões CLI, leituras entre
+sessões, IDs/status/prazo/progresso persistentes, arquivamento/retomada, socket
+bloqueado e nenhuma geração. Recibos adjacentes incluem saídas e gabaritos.
+O [guia de projetos](27-projetos-e-tarefas.md) descreve comandos e limites.
+
+
+## Revisão 0.6.0 — interface visual local
+
+Recibos `python-3.11-v0.6.0.json` e `python-3.14-v0.6.0.json`: 190 testes
+aprovados no wheel não editável instalado, fora do checkout. Fonte de runtime e
+testes: 08b749e, com hashes nos recibos. Dependências existentes reutilizadas,
+instalação offline sem resolução adicional.
+
+Wheel 56.914 bytes, SHA256 `045473a09f83badd87db217a013c26d115c34b4c1ff0dddb0176cc78868d71ac`;
+32 arquivos de runtime/defaults/assets comparados byte a byte sem diferenças.
+A distribuição inclui os comandos `mist` e `mist-ui` e todos os assets locais.
+
+O [verificador de interface instalada](../tools/verify_ui.py) executou duas sessões
+HTTP do comando `mist-ui` em cada Python, com fixtures fictícias: geração offline,
+captura automática, projeto, tarefas, prazo, progresso, estado após reinício,
+arquivamento/retomada e rejeição de aba desatualizada. Recibos em
+[validation/ui](../validation/ui/README.md), com hashes dos assets instalados
+e do runner. A correção UTF-8 do runner foi aplicada após o commit de runtime;
+a fonte do app e o wheel permaneceram os mesmos. Isso é validação local,
+sem novas chamadas NVIDIA ou publicação no PyPI.

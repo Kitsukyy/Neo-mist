@@ -1,0 +1,20 @@
+{
+  "reviewer": "Codex",
+  "blind": false,
+  "independent": false,
+  "planned": 3,
+  "attempted": 3,
+  "completed": 3,
+  "approved": 2,
+  "unattempted": 0,
+  "errors": {},
+  "modes": {
+    "PRIMARY": {
+      "planned": 3,
+      "completed": 3,
+      "approved": 2
+    }
+  },
+  "sample_gate_passed": false,
+  "scope": "fixed directed synthetic sample only; no universal or production acceptance"
+}

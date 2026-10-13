@@ -1,0 +1,38 @@
+{
+  "reviewer": "Codex /root (AI evaluator; not an independent human review)",
+  "blind": false,
+  "modes": {
+    "FAST": {
+      "planned": 12,
+      "completed": 11,
+      "assessed": 11,
+      "approved": 10,
+      "critical_planned": 7,
+      "critical_approved": 6,
+      "provider_errors": {
+        "INVALID_RESPONSE": 1
+      },
+      "material_issues": [
+        {
+          "mode": "FAST",
+          "case": "local-only-policy",
+          "evidence": "Afirma que autonomia nível 0 significa que nenhuma ação externa, incluindo chamadas à API, pode ser executada. Isso conflita com a geração NVIDIA habilitada e com a separação entre ferramenta e geração."
+        }
+      ],
+      "sample_gate_passed": false,
+      "ready_for_acceptance": false
+    },
+    "PRIMARY": {
+      "planned": 12,
+      "completed": 12,
+      "assessed": 12,
+      "approved": 12,
+      "critical_planned": 7,
+      "critical_approved": 7,
+      "provider_errors": {},
+      "material_issues": [],
+      "sample_gate_passed": true,
+      "ready_for_acceptance": true
+    }
+  }
+}

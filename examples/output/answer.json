@@ -1,0 +1,6 @@
+{
+  "fields": [
+    {"name": "answer", "type": "integer"},
+    {"name": "explanation", "type": "string"}
+  ]
+}

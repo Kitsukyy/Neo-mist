@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "autonomy_level": 0,
+  "tools_enabled": false,
+  "default_mode": "AUTO",
+  "fast_model": "fake-fast",
+  "primary_model": "fake-primary",
+  "max_input_chars": 8000,
+  "max_context_chars": 16000,
+  "models": [
+    {"id": "fake-fast", "provider": "fake", "model_id": "fake-fast", "external": false, "destination": "offline"},
+    {"id": "fake-primary", "provider": "fake", "model_id": "fake-primary", "external": false, "destination": "offline"}
+  ],
+  "allowed_external_destinations": []
+}
+

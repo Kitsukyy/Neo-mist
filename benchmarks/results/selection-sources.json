@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "modelos-escolhidos",
+      "title": "Escolha provisória FAST e PRIMARY da Mist",
+      "queries": [
+        {
+          "id": "rodada-ajustada",
+          "source": {
+            "label": "Benchmark NVIDIA da Mist — rodada v3",
+            "files": [
+              {
+                "label": "2026-10-12-nvidia-v3/results.jsonl"
+              },
+              {
+                "label": "2026-10-12-nvidia-v3/summary.json"
+              },
+              {
+                "label": "analysis-v3.ipynb"
+              },
+              {
+                "label": "PROTOCOL-v3.md"
+              }
+            ],
+            "links": [
+              {
+                "label": "Referência da API NVIDIA",
+                "href": "https://docs.api.nvidia.com/nim/reference/llm-apis"
+              }
+            ],
+            "metricDefinitions": [
+              {
+                "label": "Qualidade composta",
+                "definition": "A qualidade composta usa 75% do percentual de acertos objetivos e 25% do percentual de comunicação, com 24 pontos possíveis em cada componente."
+              },
+              {
+                "label": "Latência",
+                "definition": "A mediana e o p95 medem a duração completa no Gateway apenas das respostas finais válidas, em segundos."
+              },
+              {
+                "label": "Elegibilidade",
+                "definition": "Um perfil elegível completa 30 tentativas, obtém pelo menos 95% de respostas finais válidas, acerta oito testes críticos e alcança pelo menos 85% de acertos objetivos."
+              }
+            ],
+            "filters": [
+              "Provedor: NVIDIA",
+              "Tarefas sintéticas: 15",
+              "Repetições por tarefa: 2",
+              "Teto de geração: 2.048 tokens",
+              "Timeout de operação: 120 s",
+              "Objetivos: contrato explícito de chaves e tipos JSON",
+              "Chamadas pontuadas: excluem as duas sondagens de disponibilidade"
+            ],
+            "caveats": [
+              "A escolha é provisória para tarefas curtas; os candidatos e as tarefas foram selecionados após a rodada inicial, sem validação independente em tarefas inéditas.",
+              "A comunicação foi pontuada pelo assistente Codex com nomes ocultos, único avaliador e cegamento imperfeito.",
+              "As duas perdas de comunicação do Super foram planos acima de 90 palavras; a vantagem do Kimi não demonstra raciocínio superior em tarefas extensas.",
+              "A CLI configura modelos e parâmetros, mas não acrescenta automaticamente o contrato de cada tarefa estruturada do benchmark."
+            ],
+            "evidenceFlow": [
+              {
+                "kind": "validation",
+                "title": "Cobertura e recálculo",
+                "detail": "Os dois perfis completaram 30/30 chamadas, 24/24 objetivos e 8/8 críticos. O notebook executado recalculou métricas sem importar o agregador e conferiu hashes, ausência de duplicatas e quantis."
+              },
+              {
+                "kind": "calculation",
+                "title": "Regra de escolha",
+                "detail": "Kimi teve 100,00% de qualidade; Super teve 97,92%. A diferença de 2,08 pontos excede o empate prático inferior a dois pontos. Super foi o elegível com menor mediana e ficou a menos de cinco pontos do melhor."
+              }
+            ],
+            "executedAt": "2026-10-12T18:31:12.555874+00:00"
+          },
+          "reportingPeriod": "2026-10-12T18:27:21.406552+00:00 a 2026-10-12T18:31:12.555874+00:00",
+          "capturedAt": "2026-10-12T18:39:50.187254+00:00",
+          "rows": [
+            {
+              "papel": "FAST",
+              "modelo": "Nemotron Super (raciocínio ativo)",
+              "objetivos": 24,
+              "criticos": 8,
+              "comunicacao": 22,
+              "qualidade_pct": 97.92,
+              "respostas": 30,
+              "mediana_s": 2.63,
+              "p95_s": 7.82
+            },
+            {
+              "papel": "PRIMARY",
+              "modelo": "Kimi K3",
+              "objetivos": 24,
+              "criticos": 8,
+              "comunicacao": 24,
+              "qualidade_pct": 100.0,
+              "respostas": 30,
+              "mediana_s": 7.11,
+              "p95_s": 34.38
+            }
+          ],
+          "columns": [
+            {
+              "field": "papel",
+              "label": "Papel"
+            },
+            {
+              "field": "modelo",
+              "label": "Modelo"
+            },
+            {
+              "field": "objetivos",
+              "label": "Objetivos /24"
+            },
+            {
+              "field": "criticos",
+              "label": "Críticos /8"
+            },
+            {
+              "field": "comunicacao",
+              "label": "Comunicação /24"
+            },
+            {
+              "field": "qualidade_pct",
+              "label": "Qualidade (%)"
+            },
+            {
+              "field": "respostas",
+              "label": "Respostas /30"
+            },
+            {
+              "field": "mediana_s",
+              "label": "Mediana (s)"
+            },
+            {
+              "field": "p95_s",
+              "label": "p95 (s)"
+            }
+          ],
+          "preview": {
+            "kind": "aggregate",
+            "note": "Resumo dos dois perfis da rodada ajustada; registros individuais permanecem nas fontes.",
+            "totalRows": 62
+          }
+        }
+      ]
+    }
+  ]
+}

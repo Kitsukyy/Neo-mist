@@ -1,8 +1,8 @@
 # Documentação da Mist
 
-Versão documental: 1.0 · Data: 11 de outubro de 2026 · Idioma: português do Brasil.
+Versão documental: 2.3 · Atualização: 13 de outubro de 2026 · Idioma: português do Brasil.
 
-Este conjunto documenta as decisões recuperadas sobre a nova Mist e organiza a especificação para implementação. Descreve comportamento esperado, não capacidades já demonstradas pelo programa.
+Este conjunto documenta as decisões recuperadas sobre a nova Mist e organiza a especificação para implementação. Os documentos 01–15 preservam a especificação consolidada. Os documentos 16–28 registram o núcleo offline, a integração NVIDIA, o benchmark com seleção provisória de modelos e contratos opcionais de saída estruturada, avaliação local e real da identidade e instalação verificada; capacidades futuras continuam identificadas como tal.
 
 ## Como interpretar o estado de uma informação
 
@@ -24,6 +24,15 @@ Uma diretriz documental não significa implementação concluída. Testes só po
 4. [Memória](07-memoria.md), [provedores](08-provedores.md), [contratos](10-contratos.md) e [configuração](11-configuracao.md).
 5. [Validação](12-validacao.md) e [roadmap](13-roadmap.md).
 6. [Legado](14-legado.md) e [fontes](15-fontes-e-manutencao.md).
+7. [Núcleo executável](16-primeiro-nucleo.md), [integração NVIDIA](17-integracao-nvidia.md) e [benchmark](18-benchmark-modelos.md).
+8. [Saída estruturada](19-saida-estruturada.md), [avaliação da identidade](20-avaliacao-identidade.md), [instalação validada](21-instalacao-validada.md) e [condições NVIDIA](22-condicoes-nvidia.md).
+
+9. [Resultados reais da identidade e correções](23-avaliacao-real-identidade.md).
+10. [Controle preventivo de requisições NVIDIA](24-controle-requisicoes-nvidia.md).
+11. [Memória persistente, captura automática e restauração](25-memoria-persistente.md).
+12. [Avaliação real de memória e ajuste de proveniência](26-avaliacao-real-memoria.md).
+13. [Projetos, tarefas e progresso local](27-projetos-e-tarefas.md).
+14. [Interface visual local](28-interface-visual-local.md).
 
 ## Precedência entre documentos
 
@@ -33,12 +42,14 @@ Para divergências de escopo, consulte o registro de decisões. Para permissões
 
 ## Estado real do repositório
 
-Na inspeção inicial desta publicação, havia apenas um README com o nome do projeto. Não foi encontrado código da nova Mist. Portanto:
+A publicação inicial continha a documentação e um README. A primeira implementação acrescenta:
 
-- a Fase 4 é uma consolidação documental, com pendências técnicas;
-- o P0-A e o P0-B são entregas planejadas;
-- não há benchmark, modelo principal escolhido ou adaptador real validado;
-- exemplos de contratos e configuração são especificações, não arquivos executáveis.
+- CLI offline com FakeModel, contratos validados e configuração JSON;
+- identidade mínima, roteamento manual/automático e contexto transitório;
+- Guarda de Saída, auditoria de metadados e autonomia zero;
+- testes de integração e de bloqueio, descritos no [guia de execução](16-primeiro-nucleo.md).
+
+O P0-A está em andamento: geração NVIDIA e benchmark real foram executados, com seleção provisória FAST/PRIMARY. Consulte [a integração NVIDIA](17-integracao-nvidia.md) e [os resultados do benchmark](18-benchmark-modelos.md). A avaliação real e suas correções estão no [documento 23](23-avaliacao-real-identidade.md). Faltam condições de dados/termos da conta, revisão/integração da branch publicada e critérios restantes de aceitação. A seleção continua provisória, com limites das amostras registrados. A revisão 0.6.0 acrescenta a interface visual local no documento 28, sobre os projetos/tarefas locais no documento 27 e tem memória persistente opcional descrita no documento 25; não há execução de ferramentas. Os exemplos conceituais dos documentos 10 e 11 não substituem os contratos e arquivos executáveis de `src/mist`.
 
 ## Glossário
 
@@ -56,4 +67,3 @@ Na inspeção inicial desta publicação, havia apenas um README com o nome do p
 | FakeModel | Provedor simulado e determinístico para testes. |
 | Fallback | Alternativa limitada após falha recuperável, sujeita a nova avaliação de envio. |
 | P0-A / P0-B | Marcos internos do núcleo mínimo: conversa e memória confiável. |
-

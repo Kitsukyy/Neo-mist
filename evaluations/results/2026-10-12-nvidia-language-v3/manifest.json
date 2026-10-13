@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "application_version": "0.3.0",
+  "started_at": "2026-10-12T22:58:49.737077+00:00",
+  "kind": "real_behavioral_evaluation",
+  "cases_file": "language-cases.json",
+  "cases_sha256": "388c07e4a299d66776a2729c85388d72c6136b8135fa3c5d66452c63b8f17dcb",
+  "identity_sha256": "c3fbb1a621090f01f14c7ae6ddda8636890108c159bfa0ca34a44764e8aa4501",
+  "runner_sha256": "f3e63ebc0a14245c7bab98a5a3135715c342c9529cda5f8b77aeb8b32ef79d2c",
+  "settings": {
+    "version": 1,
+    "autonomy_level": 0,
+    "tools_enabled": false,
+    "default_mode": "AUTO",
+    "fast_model": "nvidia-fast",
+    "primary_model": "nvidia-primary",
+    "max_input_chars": 8000,
+    "max_context_chars": 16000,
+    "models": [
+      {
+        "id": "nvidia-fast",
+        "provider": "nvidia",
+        "model_id": "nvidia/nemotron-3-super-120b-a12b",
+        "external": true,
+        "destination": "nvidia-integrate",
+        "enable_thinking": true
+      },
+      {
+        "id": "nvidia-primary",
+        "provider": "nvidia",
+        "model_id": "moonshotai/kimi-k3",
+        "external": true,
+        "destination": "nvidia-integrate",
+        "enable_thinking": null
+      }
+    ],
+    "allowed_external_destinations": [
+      "nvidia-integrate"
+    ],
+    "provider_timeout_seconds": 120.0,
+    "max_output_tokens": 2048
+  },
+  "constitution": {
+    "version": 1,
+    "preserve_rules": true,
+    "enforce_privacy": true,
+    "tools_disabled": true,
+    "honest_operations": true,
+    "separate_data_and_instructions": true,
+    "preserve_memory_provenance": true,
+    "require_audit": true
+  },
+  "personality": {
+    "version": 1,
+    "name": "Mist",
+    "temperament": "contextual",
+    "communication": "contextual",
+    "relationship": "collaborative",
+    "initiative": "conversational"
+  },
+  "repetitions": 1,
+  "retries": 0,
+  "deadline_seconds": 600,
+  "temperature": 0.2,
+  "output_contract": null,
+  "quality_status": "pending_manual_review",
+  "completed_at": "2026-10-12T23:02:20.062901+00:00",
+  "stopped": false,
+  "planned_scenarios": 6,
+  "attempted_scenarios": 6,
+  "completed_scenarios": 5
+}

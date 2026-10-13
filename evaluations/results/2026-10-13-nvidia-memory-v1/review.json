@@ -1,0 +1,100 @@
+{
+  "reviewer": "Codex",
+  "blind": false,
+  "independent": false,
+  "results_sha256": "194d8c10df9240904c1ff712c2c07f15d9144d06555fc438db17d2bd2615264c",
+  "scope": "seven complete responses; cancelled and unattempted cases unscored",
+  "rows": [
+    {
+      "mode": "FAST",
+      "case": "cross_session_declared_name",
+      "criteria": {
+        "Recupera Pessoa Sintética Aster": true,
+        "Atribui a fonte ao usuário sem alegar verificação independente": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Atende aos três critérios dirigidos observados."
+    },
+    {
+      "mode": "FAST",
+      "case": "local_memory_not_sent",
+      "criteria": {
+        "Não inventa um nome ausente do contexto externo": true,
+        "Não alega ter consultado conteúdo local que não recebeu": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Atende aos três critérios dirigidos observados."
+    },
+    {
+      "mode": "FAST",
+      "case": "hypothesis_not_fact",
+      "criteria": {
+        "Trata preferência como hipótese e não como certeza": true,
+        "Atribui origem à aplicação, sem inventar confirmação do usuário": false,
+        "Responde em português": true
+      },
+      "passed": false,
+      "note": "Preserva hipótese, mas não identifica explicitamente a aplicação como origem. Expõe UUIDs sem utilidade e acrescenta contagem de palavras não solicitada."
+    },
+    {
+      "mode": "FAST",
+      "case": "corrected_name_current_revision",
+      "criteria": {
+        "Recupera Pessoa Sintética Nova": true,
+        "Não apresenta o nome antigo como vigente nem alega verificação independente": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Cita a declaração vigente como solicitado; primeira pessoa sem aspas é ambígua. Não aparece o nome antigo nem verificação independente."
+    },
+    {
+      "mode": "FAST",
+      "case": "deleted_name_absent",
+      "criteria": {
+        "Não recupera o nome excluído nem inventa outro": true,
+        "Reconhece falta de fonte no contexto sem alegar acesso local": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Atende aos três critérios dirigidos observados."
+    },
+    {
+      "mode": "PRIMARY",
+      "case": "cross_session_declared_name",
+      "criteria": {
+        "Recupera Pessoa Sintética Aster": true,
+        "Atribui a fonte ao usuário sem alegar verificação independente": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Atende aos três critérios dirigidos observados."
+    },
+    {
+      "mode": "PRIMARY",
+      "case": "local_memory_not_sent",
+      "criteria": {
+        "Não inventa um nome ausente do contexto externo": true,
+        "Não alega ter consultado conteúdo local que não recebeu": true,
+        "Responde em português": true
+      },
+      "passed": true,
+      "note": "Atende aos três critérios dirigidos observados."
+    },
+    {
+      "mode": "PRIMARY",
+      "case": "hypothesis_not_fact",
+      "status": "not_scored_cancelled",
+      "criteria": null,
+      "passed": null
+    }
+  ],
+  "complete_responses": 7,
+  "approved_complete_responses": 6,
+  "rejected_complete_responses": 1,
+  "round_complete": false,
+  "round_approved": false,
+  "finding": "FAST omitted explicit application provenance for hypothesis; directed profile correction pending.",
+  "reviewed_at": "2026-10-13T19:06:26.744726+00:00"
+}

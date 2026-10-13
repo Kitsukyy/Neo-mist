@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-10-12T18:24:05.253306+00:00",
+  "reason": "Original scheduling deadline; complete unattempted cells only, no retries",
+  "original_status": {
+    "completed": 205,
+    "planned": 210,
+    "halted": true,
+    "active_candidates": [
+      "lightning",
+      "super",
+      "ultra",
+      "kimi",
+      "glm",
+      "glm-flash",
+      "gpt-oss"
+    ],
+    "finished_at": "2026-10-12T18:22:30.938024+00:00"
+  },
+  "original_results_sha256": "ece6d18bd06e880d7d2b03676e1a74135cc2ee557986a991a58667ba9226aed5",
+  "additional_scheduling_deadline_seconds": 600,
+  "remaining": 5,
+  "unchanged": [
+    "cases",
+    "candidates",
+    "identity",
+    "parameters",
+    "scoring",
+    "selection_thresholds"
+  ]
+}

@@ -1,6 +1,6 @@
 # Configuração e operação planejada
 
-Este documento descreve a operação esperada após implementação. Não há CLI, instalação ou arquivos de configuração executáveis entregues nesta etapa.
+Este documento preserva a operação planejada para o P0-A completo. A CLI, os arquivos JSON e o adaptador NVIDIA já estão implementados; consulte o [guia offline](16-primeiro-nucleo.md) e a [integração real](17-integracao-nvidia.md).
 
 ## Separação proposta
 

@@ -1,0 +1,10 @@
+[
+  {"id":"lightning","model_id":"nvidia/nemotron-3.5-lightning-30b-a3b","enable_thinking":false},
+  {"id":"super","model_id":"nvidia/nemotron-3-super-120b-a12b","enable_thinking":false},
+  {"id":"ultra","model_id":"nvidia/nemotron-3-ultra-550b-a55b","enable_thinking":false},
+  {"id":"deepseek-flash","model_id":"deepseek-ai/deepseek-v4.1-flash","enable_thinking":null},
+  {"id":"kimi","model_id":"moonshotai/kimi-k3","enable_thinking":null},
+  {"id":"glm","model_id":"z-ai/glm-5.3","enable_thinking":null},
+  {"id":"glm-flash","model_id":"z-ai/glm-5.3-flash","enable_thinking":null},
+  {"id":"gpt-oss","model_id":"openai/gpt-oss-20b","enable_thinking":null}
+]

@@ -43,9 +43,9 @@ Este registro resolve conflitos entre propostas antigas e o estado mais recente.
 |---|---|---|
 | DOC-DEC-26 | Pydantic | Proposta de validação; versão e ergonomia a verificar. |
 | DOC-DEC-27 | SQLite/FTS5 | Proposta inicial para P0-B; validar disponibilidade, recuperação e migrations. |
-| DOC-DEC-28 | Dois modelos e AUTO/FAST/PRIMARY | Estratégia no documento mestre; regras e parâmetros finais pendentes. |
-| DOC-DEC-29 | Modelo rápido | Documento mestre sugere DeepSeek V4.1 Flash/Token Harbor; não foi localizada escolha explícita correspondente do usuário. |
-| DOC-DEC-30 | Modelo principal | Ainda não escolhido; comparar qualidade, latência e consistência. |
+| DOC-DEC-28 | Dois modelos e AUTO/FAST/PRIMARY | Modos implementados; configuração NVIDIA usa seleção provisória do benchmark de 12/10/2026. |
+| DOC-DEC-29 | Modelo rápido | Nemotron Super com raciocínio ativado, seleção técnica provisória baseada no [benchmark](18-benchmark-modelos.md), substituindo a sugestão histórica não confirmada de DeepSeek/Token Harbor. |
+| DOC-DEC-30 | Modelo principal | Kimi K3, seleção técnica provisória baseada no mesmo benchmark; tarefas extensas e condições da conta ainda requerem avaliação. |
 | DOC-DEC-31 | Credenciais | Ambiente/cofre local em avaliação; mecanismo definitivo não escolhido. |
 | DOC-DEC-32 | Sensibilidade e detecção | Políticas obrigatórias; taxonomia e biblioteca ainda pendentes. |
 | DOC-DEC-33 | Configuração YAML | Formato e estrutura propostos; parser e versões não fechados. |
@@ -69,3 +69,27 @@ Registrar problema, alternativas, evidência, estado, impacto, critérios de ace
 
 Números de desempenho, limites de contexto, contagem de tentativas e pesos de avaliação só se tornam metas quando houver condições de medição definidas.
 
+## 13/10/2026 — Memória automática
+
+**Decisão explícita do usuário:** guardar automaticamente informações úteis, com opção de excluir. A implementação 0.4.0 começa por captura local conservadora de declarações reconhecidas, com fontes e estados, sem gravar toda conversa nem persistir respostas de modelos como fatos. Padrões de captura, orçamento e snapshots manuais são escolhas técnicas deste incremento; não são critérios universais aprovados. Conteúdo novo fica local, e permitir envio externo é operação separada. Ver [documento 25](25-memoria-persistente.md).
+
+
+## 13/10/2026 — Primeiro incremento de P1
+
+**Decisão explícita do usuário:** começar pela organização de projetos e tarefas,
+antes da interface visual ou ferramentas de arquivos. A revisão 0.5.0 oferece
+cadastro local, objetivo, tarefas/status/prioridade/prazo, progresso declarado,
+arquivamento/retomada e exportação. IDs, limites e comandos são escolhas técnicas
+do incremento. Não autoriza execução de tarefas, acesso a pastas de trabalho
+nem envio automático de conteúdo do catálogo. Ver [documento 27](27-projetos-e-tarefas.md).
+
+
+## 13/10/2026 — Interface visual local
+
+**Decisões explícitas do usuário:** escolher a interface visual local como próximo
+incremento; para app, usar visual inspirado no ChatGPT (alternativa de terminal
+seria Claude/OpenCode). A revisão 0.6.0 implementa o app local no navegador,
+com conversa central, projetos, tarefas e memórias. Servidor serial em loopback,
+assets empacotados e chave somente no backend são escolhas técnicas deste
+incremento. Não amplia autonomia, não autoriza ferramentas nem grava todo
+histórico de chats. Ver [documento 28](28-interface-visual-local.md).

@@ -1,0 +1,32 @@
+{
+  "reviewer": "Codex /root (AI evaluator; not an independent human review)",
+  "blind": false,
+  "modes": {
+    "FAST": {
+      "planned": 3,
+      "completed": 3,
+      "assessed": 3,
+      "approved": 3,
+      "critical_planned": 2,
+      "critical_approved": 2,
+      "provider_errors": {},
+      "material_issues": [],
+      "sample_gate_passed": true,
+      "ready_for_acceptance": true
+    },
+    "PRIMARY": {
+      "planned": 3,
+      "completed": 2,
+      "assessed": 2,
+      "approved": 2,
+      "critical_planned": 2,
+      "critical_approved": 1,
+      "provider_errors": {
+        "INVALID_RESPONSE": 1
+      },
+      "material_issues": [],
+      "sample_gate_passed": false,
+      "ready_for_acceptance": false
+    }
+  }
+}

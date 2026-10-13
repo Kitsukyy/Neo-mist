@@ -4,7 +4,7 @@
 
 | Provedor | Informação recuperada | Estado |
 |---|---|---|
-| NVIDIA NIM | Usuário possui acesso e relata vários modelos gratuitos. | Acesso relatado; catálogo/cotas precisam de confirmação. |
+| NVIDIA NIM | Usuário possui acesso e relata vários modelos gratuitos. | Geração real e benchmark registrados; condições/cotas da conta ainda pendentes. |
 | Token Harbor | Usuário possui API com DeepSeek V4.1 Flash, MiMo V2.6 Flash e Claude Haiku 5.5. | Nomes relatados; IDs e condições não verificados aqui. |
 
 Os chats também mencionam candidatos como Nemotron 3 Ultra/Super/Nano, GPT-OSS 120B, Kimi K3 e GLM 5.3/Flash. Essas referências são histórico de pesquisa, não garantia de que tais nomes/versões existem no catálogo acessível nem seleção para implementação.
@@ -26,13 +26,13 @@ O documento mestre propõe dois papéis:
 
 AUTO é o padrão proposto. A seleção manual tem prioridade se a configuração for válida. Modelo ausente não deve ser substituído silenciosamente sem política declarada.
 
-DeepSeek V4.1 Flash/Token Harbor é a indicação de rápido na síntese do assistente. Não foi localizada confirmação explícita do usuário para esse papel nos trechos recuperados. O principal continua pendente.
+DeepSeek V4.1 Flash/Token Harbor era a indicação de rápido na síntese histórica do assistente, sem confirmação explícita do usuário nos trechos recuperados. O [benchmark executado em 12/10/2026](18-benchmark-modelos.md) selecionou provisoriamente Nemotron Super com raciocínio ativado para FAST e Kimi K3 para PRIMARY, ambos na NVIDIA. Token Harbor não foi avaliado por falta de acesso configurado. A escolha não estabelece gratuidade ilimitada.
 
 ## Roteador
 
 Implementação inicial determinística: características da tarefa, profundidade solicitada, necessidade de planejamento e preferências explícitas. Não introduzir um terceiro LLM apenas para decidir qual responde.
 
-Regras, palavras-chave e limiares finais não estão definidos. Testar classificações e registrar modo/modelo escolhidos sem salvar texto sensível desnecessário.
+O roteador inicial usa PRIMARY em AUTO para entradas acima de 600 caracteres ou com palavras-chave de análise/planejamento; a seleção manual prevalece. A adequação dessas regras ainda precisa de avaliação representativa. Testar classificações e registrar modo/modelo escolhidos sem salvar texto sensível desnecessário.
 
 Não rotacionar indiscriminadamente entre dezenas ou centenas de modelos.
 
@@ -60,7 +60,7 @@ No P0-A, capacidade de ferramenta do provedor não habilita ferramentas da aplic
 | Guarda/auditoria/autorização | Bloqueio; sem fallback. |
 | Capacidade incompatível | Recusar ou adaptar explicitamente, conforme política. |
 
-Número de tentativas e duração de timeout são parâmetros pendentes. Retentativas podem duplicar processamento em um provedor que recebeu a primeira solicitação; não prometer execução exatamente uma vez sem suporte.
+A implementação não faz retries ou fallback. O timeout de operação é configurável de 1 a 120 segundos; o exemplo NVIDIA usa 120 segundos. Não é um deadline absoluto de toda a operação de rede. Retentativas podem duplicar processamento em um provedor que recebeu a primeira solicitação; não prometer execução exatamente uma vez sem suporte.
 
 ## Fallback
 
@@ -93,5 +93,8 @@ Compatibilidade com formato OpenAI citada no histórico é hipótese a confirmar
 
 Mesmos cenários em português, mesmas configurações compatíveis e registro de versão/ID. Medir qualidade, consistência da identidade, latência, disponibilidade, erros e adequação ao requisito de custo.
 
-Não há vencedor, benchmark ou catálogo vigente documentado ainda. A documentação atual registra o que foi decidido, sem reabrir seleção de provedores.
+O benchmark NVIDIA está registrado no [documento 18](18-benchmark-modelos.md): oito sondagens, 210 tentativas em v2 e 60 na rodada ajustada v3. Identificadores exatos, parâmetros, falhas, consumo conhecido e seleção provisória estão preservados em `benchmarks/`. A seleção compara perfis de operação; exige contratos explícitos para reproduzir os resultados estruturados e não homologa tarefas extensas.
 
+## Condições públicas consultadas
+
+Fontes oficiais consultadas e pendências específicas da conta estão no [documento 22](22-condicoes-nvidia.md). Não confundir geração bem-sucedida, acesso gratuito para avaliação e autorização de produção.

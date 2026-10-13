@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="mist-token" content="__MIST_TOKEN__">
+  <title>Mist — seu espaço de conversa</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" aria-label="Navegação">
+      <a class="brand" href="/" aria-label="Mist, início"><span class="brand-icon">m</span><span>Mist<span class="brand-sub">ESPAÇO PESSOAL</span></span></a>
+      <button class="new-chat" id="new-chat"><span aria-hidden="true">＋</span> Nova conversa</button>
+      <div class="side-heading"><span>PROJETOS</span><button id="new-project" class="icon-button" aria-label="Criar projeto">＋</button></div>
+      <div id="project-list" class="project-list"></div>
+      <details id="archives"><summary>Projetos arquivados</summary><div id="archive-list"></div></details>
+      <div class="sidebar-bottom"><span class="status-dot"></span><span>Executando neste computador<small>Memórias e tarefas locais</small></span></div>
+    </aside>
+    <main>
+      <header class="topbar"><div><span class="eyebrow">SEU ESPAÇO</span><h1 id="scope-title">Conversa global</h1></div><span class="badge" id="provider-label">Conectando…</span></header>
+      <nav class="tabs" aria-label="Áreas da Mist">
+        <button data-tab="chat" aria-pressed="true">Conversa</button>
+        <button data-tab="tasks" aria-pressed="false">Projetos e tarefas</button>
+        <button data-tab="memories" aria-pressed="false">Memórias</button>
+      </nav>
+      <div id="error" role="alert" hidden></div>
+      <div id="notice" role="status" hidden></div>
+      <section id="chat-panel" class="panel chat-panel" aria-label="Conversa">
+        <div id="messages" class="messages" aria-live="polite"></div>
+        <div class="composer-wrap">
+          <form id="chat-form" class="composer">
+            <label class="sr-only" for="message">Sua mensagem</label>
+            <textarea id="message" placeholder="Converse com a Mist…" rows="3" maxlength="8000" required></textarea>
+            <div class="composer-controls"><label class="privacy"><span class="sr-only">Privacidade desta mensagem</span><select id="privacy"><option value="local">Somente local</option><option value="external">Permitir envio à API configurada</option></select></label><button class="send" type="submit" aria-label="Enviar mensagem">↑</button></div>
+          </form>
+          <div class="conversation-options"><label>Modelo <select id="mode"><option value="AUTO">Automático</option><option value="FAST">Rápido</option><option value="PRIMARY">Principal</option></select></label><label>Resposta <select id="style"><option value="auto">Automática</option><option value="concise">Concisa</option><option value="detailed">Detalhada</option></select></label><span id="busy-label" role="status"></span></div>
+          <p id="chat-help" class="fine-print"></p>
+        </div>
+      </section>
+      <section id="tasks-panel" class="panel content-panel" aria-label="Projetos e tarefas" hidden>
+        <div class="section-heading"><div><span class="eyebrow">UM PASSO DE CADA VEZ</span><h2 id="task-title">Projetos e tarefas</h2></div><div class="actions"><button id="edit-project">Editar projeto</button><button id="archive-project">Arquivar</button></div></div>
+        <p id="objective" class="muted"></p>
+        <div id="progress" class="progress-card"></div>
+        <div class="list-heading"><h3>Suas tarefas</h3><button id="new-task" class="primary">＋ Adicionar tarefa</button></div>
+        <div id="tasks" class="cards"></div>
+        <p class="fine-print">O progresso vem dos estados que você registra. A Mist não executa tarefas automaticamente.</p>
+      </section>
+      <section id="memories-panel" class="panel content-panel" aria-label="Memórias" hidden>
+        <div class="section-heading"><div><span class="eyebrow">CONTINUIDADE COM CONTROLE</span><h2>O que a Mist lembra</h2></div><button id="new-memory" class="primary">＋ Guardar memória</button></div>
+        <p class="muted">Declarações reconhecidas são guardadas automaticamente, somente no seu computador. Você pode revisar, corrigir ou excluir.</p>
+        <label class="search-label"><span class="sr-only">Filtrar memórias exibidas</span><input id="memory-search" type="search" placeholder="Buscar nas memórias exibidas…"></label>
+        <p id="memory-count" class="fine-print"></p><div id="memories" class="cards"></div>
+      </section>
+      <footer>Mist <span id="version"></span><span>Autonomia 0 · ferramentas desabilitadas</span></footer>
+    </main>
+  </div>
+  <dialog id="editor"><form id="editor-form"><div class="dialog-top"><h2 id="dialog-title"></h2><button type="button" id="close-dialog" class="icon-button" aria-label="Fechar">×</button></div><div id="dialog-fields"></div><p id="dialog-help" class="fine-print"></p><div class="dialog-actions"><button type="button" id="cancel-dialog">Cancelar</button><button id="save-dialog" class="primary" type="submit">Salvar</button></div></form></dialog>
+</body>
+</html>

@@ -10,9 +10,9 @@ Não há prazo ou calendário aprovado. As fases descrevem dependências, sem pr
 | Fase 2 — Requisitos | Recuperados parcialmente e revisados. | Visão e prioridades consolidadas neste conjunto. |
 | Fase 3 — Arquitetura | Revisão corretiva como base. | Modularidade, Guarda, autonomia zero e divisão P0. |
 | Fase 4 — Tecnologias e identidade | Consolidação com pendências. | Configuração, modelos e políticas verificáveis. |
-| Fase 5 — Experimentos | Planejada. | Evidência das escolhas técnicas relevantes. |
-| Fase 6 — Núcleo mínimo | Não implementado. | P0-A, seguido de P0-B validado. |
-| Fase 7 — Expansão modular | Futuro. | Ferramentas, projetos e autonomia limitada. |
+| Fase 5 — Experimentos | Provedor NVIDIA e benchmark de modelos executados; sondagem lexical e avaliação real dirigida de memória executadas. | Evidência das escolhas técnicas relevantes. |
+| Fase 6 — Núcleo mínimo | Core, NVIDIA, saída estruturada e memória local 0.4.1 implementados; validação offline/instalação e avaliação incremental; condições da conta e revisão pendentes. | P0-A, seguido de P0-B validado. |
+| Fase 7 — Expansão modular | Projetos/tarefas 0.5.0 e interface visual local 0.6.0 implementados; demais recursos futuros. | Evolução de projetos, ferramentas e autonomia limitada. |
 | Fases 8–9 — Avaliação/estabilização | Futuro. | Comparações, qualidade e operação confiável. |
 | Fase 10 — Evolução contínua | Futuro. | Melhorias controladas e reversíveis. |
 
@@ -28,7 +28,7 @@ Experimentos podem ser incrementais. Não é necessário validar embeddings, voz
 6. Validar acesso/configuração de um provedor real e integrar adaptador.
 7. Executar critérios P0-A, corrigir falhas e documentar uso real.
 
-Pydantic, cliente HTTP e versões precisam ser confirmados quando escolhidos. A seleção do modelo principal não deve bloquear o fluxo offline.
+Python ≥3.11 e Pydantic 2.13.5 são as escolhas iniciais de implementação; o adaptador NVIDIA usa o cliente HTTPS da biblioteca padrão, sem dependência HTTP adicional. A seleção do modelo principal não deve bloquear o fluxo offline.
 
 ## Sequência para o P0-B
 
@@ -57,17 +57,17 @@ Prioridades de P1–P3 são herdadas das propostas de requisitos e devem ser rev
 
 | Tema | O que falta | Quando fechar |
 |---|---|---|
-| Python/dependências | Versões, cliente HTTP e distribuição. | Início do P0-A. |
-| Constituição | Redação/esquema executável inicial. | Antes de habilitar geração real. |
-| Perfis | Diretrizes mínimas e precedência contextual. | P0-A. |
-| APIs | Endpoints, IDs, autenticação, cotas e política de dados. | Antes de integrar cada provedor. |
-| Modelo principal | Avaliação com candidatos reais. | Configuração de operação normal. |
-| Modelo rápido | Confirmar indicação e ID real. | Configuração de operação normal. |
-| Credenciais | Ambiente/.env/cofre e operação segura. | Integração real. |
-| Guarda | Taxonomia, regras e detecção complementar. | Antes de enviar dados. |
-| Auditoria | Storage, erros, retenção e recuperação. | P0-A. |
-| SQLite/FTS5 | Experimento, schema e migrations. | P0-B. |
-| Exclusão/backups | Política e mecanismo contra reaparecimento. | Antes de concluir P0-B. |
+| Python/dependências | Instalação e pacote local verificados em Linux 3.11.16/3.14.7; outras versões/plataformas não testadas. | Início do P0-A. |
+| Constituição | Redação/esquema executáveis implementados e testados. | Antes de habilitar geração real. |
+| Perfis | Regras e duas rodadas reais revisadas; correção final de idioma com regressão direcionada, sem homologação universal. | P0-A. |
+| APIs | Endpoint/IDs/autenticação verificados; fontes públicas consultadas, oferta gratuita e até 40 RPM relatados pelo usuário; política de dados/termos aplicáveis pendentes. | Antes de integrar cada provedor. |
+| Modelo principal | Kimi K3 selecionado provisoriamente; repetir com tarefas inéditas e extensas. | Antes de homologação definitiva. |
+| Modelo rápido | Super com raciocínio selecionado provisoriamente; acompanhar latência e restrições de comunicação. | Antes de homologação definitiva. |
+| Credenciais | Leitura oculta usada com autorização renovada; chave temporária não persistida nem incluída no pacote. | Integração real. |
+| Guarda | Bloqueios, local-only e aprovações vinculadas implementados/testados; detecção complementar é evolução. | Antes de enviar dados. |
+| Auditoria | Metadados privados e falhas com suspensão testados; política operacional de retenção pendente. | P0-A. |
+| SQLite/FTS5 | Schema 1, migração transacional, busca lexical e experimento sintético de dez mil itens implementados; qualidade em conversa livre ainda incremental. | P0-B. |
+| Exclusão/backups | Exclusão de versões/derivados, snapshots manuais e registro sobrevivente contra reaparecimento implementados; não apaga cópias externas/históricas. | P0-B. |
 | Licença | Condições de distribuição do projeto. | Antes de definir distribuição. |
 
 ## Limites da expansão
@@ -78,5 +78,29 @@ A identidade evolui por configuração e preferências verificadas; políticas f
 
 ## Próxima ação concreta
 
-Fechar o primeiro contrato/configuração do P0-A e o fluxo com FakeModel. Esta documentação é a base para isso; não reiniciar o levantamento das escolhas já tomadas.
+A base offline foi implementada e testada: passos 1–5 têm uma versão mínima funcional, com os limites registrados no [guia](16-primeiro-nucleo.md). O adaptador NVIDIA tem geração real verificada e [benchmark com seleção provisória](18-benchmark-modelos.md). A saída estruturada foi implementada no [documento 19](19-saida-estruturada.md); a instalação foi validada no [documento 21](21-instalacao-validada.md). As rodadas reais e os ajustes estão no [documento 23](23-avaliacao-real-identidade.md). Próximo passo: revisar/integrar a branch `mist-p0a-validacao` publicada no GitHub e registrar oferta/cotas/condições de dados da conta conforme [fontes e pendências](22-condicoes-nvidia.md). O usuário concluiu o login do editor e autorizou seu acesso; a árvore publicada foi comparada integralmente com a entrega local. Enquanto as condições da conta permanecem pendentes, o desenvolvimento local do P0-B avançou por autorização do usuário: [memória 0.4.0](25-memoria-persistente.md), com captura automática escolhida explicitamente. Próxima validação é utilidade/qualidade em conversas inéditas sob política de envio definida; recursos P1 exigem escopo e permissões próprios. O envio externo exige configuração permitida e habilitação explícita.
 
+### Incremento atual — 0.4.1
+
+Avaliação real de memória com fixtures e correção de proveniência no documento
+26. Oferta/painel NVIDIA transcritos pelo usuário no documento 22, sem confirmação
+de retenção/treinamento. Próxima decisão de produto: escolher o primeiro recurso
+usável de P1 e seu escopo; execução de ferramentas permanece desabilitada.
+
+### Projetos 0.5.0
+
+O usuário escolheu projetos como primeiro incremento de P1. Cadastro e tarefas
+locais foram implementados no documento 27, ligados ao seletor de memórias.
+Progresso manual, sem execução de tarefas ou montagem automática do catálogo
+no contexto externo. Próximos incrementos: uso em conversa sob política definida,
+relações/consolidação e interface; ferramentas continuam exigindo escopo próprio.
+
+
+### Interface visual 0.6.0
+
+Escolhida pelo usuário, com visual de app inspirado no ChatGPT. Conversa,
+projetos/tarefas e revisão de memórias no documento 28; sem ferramentas,
+execução automática, hospedagem ou chave na página. Próximos recursos de
+planejamento/consolidação e acesso a arquivos exigem requisitos e permissões
+próprios. A aceitação de uso real e a integração da branch continuam etapas
+separadas da validação offline.
